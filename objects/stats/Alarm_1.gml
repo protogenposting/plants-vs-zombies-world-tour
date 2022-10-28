@@ -1,0 +1,22 @@
+if(killed>500)
+{
+killed-=1
+}
+repeat(killed/10)
+{
+zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,tombraiser)
+if(room==endless2)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb)
+}
+if(room==endless3)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb)
+}
+instance_create(room_width,choose(160,160+64,160+128,160+192,160+192+64),zomb)
+}
+action_set_alarm(random_range(2,1000-killed), 1);
+if(alarm[1]<20)
+{
+	alarm[1]=20
+}

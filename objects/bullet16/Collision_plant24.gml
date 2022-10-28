@@ -1,0 +1,9 @@
+audio_play_sound(bewm,1000,false)
+with(basiczombie)
+{
+	if(distance_to_object(other)<=64)
+	{
+		hp-=1
+	}
+}
+instance_destroy()

@@ -1,0 +1,49 @@
+sh-=1
+if(sh<=0 && collision_line(x,y,room_width,y,basiczombie,true,true))
+{
+audio_play_sound(hit,1000,false)
+inst=instance_create(x,y+6,bullet1)
+inst.hspeed=5
+if(powered)
+{
+inst2=instance_create(x-32,y+6,bullet10)
+inst2.hspeed=5
+}
+sh=reload
+}
+
+///kill
+if(hp<=0)
+{
+instance_destroy()
+}
+
+///powering
+if(place_meeting(x,y,tiletypepower))
+{
+powered=true
+sprite_index=poweredmoonbean
+}
+else
+{
+powered=false
+sprite_index=moonbean
+}
+
+if(pfactive)
+{
+	pfi-=1
+	if(pfi<=0)
+	{
+		audio_play_sound(pop,1000,false)
+		inst=instance_create(x,y+random_range(-6,6),bullet10)
+		inst.hspeed=5
+		inst=instance_create(x,y,bullet10)
+		inst.hspeed=5
+		inst.vspeed=2.5
+		inst=instance_create(x,y,bullet10)
+		inst.hspeed=5
+		inst.vspeed=-2.5
+		pfi=pfr
+	}
+}

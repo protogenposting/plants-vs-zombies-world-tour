@@ -1,0 +1,30 @@
+col=collision_line(x-48,y,x-128,y,basiczombie,false,true)
+image_index=col
+if(col)
+{
+col.hp-=0.1
+}
+else
+{
+animspd=20
+anim=0
+}
+
+///kill
+if(hp<=0)
+{
+instance_destroy()
+}
+
+if(pfactive)
+{
+	pfi-=1
+	if(pfi<=0)
+	{
+		instance_create(x+64,y,plant44)
+		instance_create(x-64,y,plant44)
+		instance_create(x,y-64,plant44)
+		instance_create(x,y+64,plant44)
+		pfi=pfr
+	}
+}
