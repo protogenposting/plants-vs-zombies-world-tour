@@ -372,7 +372,7 @@ plant[52]={
 	recharge:200,
 	desc:"peashot fires 1-5 explosive peas in a range"
 }
-plant[52]={
+plant[53]={
 	object: plant55,
 	cost: 100,
 	recharge:200,

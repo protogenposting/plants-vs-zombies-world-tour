@@ -1,7 +1,8 @@
 sh-=1
 if(sh<=0)
 {
-instance_create(x,y,coldsun)
+inst=instance_create(x,y,coldsun)
+inst.flowad=true
 if(instance_exists(basiczombie))
 {
 inst = instance_nearest(x,y,basiczombie)

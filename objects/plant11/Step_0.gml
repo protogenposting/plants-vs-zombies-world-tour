@@ -1,7 +1,8 @@
 sh-=1
 if(sh<=0)
 {
-instance_create(x,y,sun)
+inst=instance_create(x,y,sun)
+inst.flowad=true
 sh=reload
 }
 
