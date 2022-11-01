@@ -207,54 +207,62 @@ plant[26]={
 	cost: 75,
 	recharge:1000,
 	desc:"healyhock heals plants in a 3x3 area and combats lava damage",
-	lawn: tilevolcano
+	lawn: tilevolcano,
+	entry:"He likes hockey what else can I say"
 }
 plant[27]={
 	object: plant27,
 	cost: 25,
 	recharge:200,
 	desc:"windelia blows zombies back",
-	lawn: tilevolcano
+	lawn: tilevolcano,
+	entry:"Flower/god. God of the wind, flower of peace. Don’t mess with her though"
 }
 plant[28]={
 	object: plant28,
 	cost: 0,
 	recharge:1000,
-	desc:"dice fruit becomes a random plant after being planted"
+	desc:"dice fruit becomes a random plant after being planted",
+	entry:"Gamble now zombies! Get some free brains! Right this way! Right this way!’ says Dice fruit. He just wants money."
 }
 plant[29]={
 	object: plant29,
 	cost: 75,
 	recharge:200,
 	desc:"tundra wood freezes peas and allows you to remove lava",
-	lawn: tilevolcano
+	lawn: tilevolcano,
+	entry:"Torchwoods older brother. Too bad they’re enemies."
 }
 plant[30]={
 	object: plant11,
 	cost: 75,
 	recharge:200,
 	desc:"sunflowowers produce sun and scratch enemies",
-	lawn: tilevolcano
+	lawn: tilevolcano,
+	entry:"Sunflower and Sunflowower both argue over whose better. Too bad they don’t know that they’re both needed."
 }
 plant[31]={
 	object: plant47,
 	cost: 100,
 	recharge:200,
 	desc:"toxic flower fires toxic clouds of smoke",
-	lawn: tilevolcano
+	lawn: tilevolcano,
+	entry:"Came straight from the dump. Only reason he’s here is because we use all plants"
 }
 plant[32]={
 	object: plant30,
 	cost: 10000,
 	recharge:200,
-	desc:"george with a gun deletes all plants and zombies"
+	desc:"george with a gun deletes all plants and zombies",
+	entry:"George but more better"
 }
 plant[33]={
 	object: plant31,
 	cost: 0,
 	recharge:500,
 	desc:"puffshroom poisons zombies",
-	lawn: tilevolcano
+	lawn: tilevolcano,
+	entry:"Was overpowered in the first game, got nerfed in the second, and is back for vengeance in talez of time. Will he be nerfed once more, or be stronger than ever? Find out, go on, plant him."
 }
 plant[34]={
 	object: plant32,
@@ -377,6 +385,12 @@ plant[53]={
 	cost: 100,
 	recharge:200,
 	desc:"skeleleaf regenerates"
+}
+plant[54]={
+	object: plant56,
+	cost: 100,
+	recharge:7.5*60,
+	desc:"cumshroom explodes into nut"
 }
 
 

@@ -7,7 +7,7 @@ inst.image_xscale=waterlevel*2
 inst.image_yscale=room_height/64
 inst.alarm[0]=2
 
-if(room==level1&&num>=10&&!instance_exists(basiczombie))
+if(room==level1&&num>=10)
 {
 	audio_stop_all()
 	instance_destroy()
@@ -19,16 +19,15 @@ if(room==level1&&num>=10&&!instance_exists(basiczombie))
 	plants.plant[5].unlocked=true
 	plants.plant[6].unlocked=true
 }
-if(room==level2&&num>=20&&!instance_exists(basiczombie))
+if(room==level2&&num>=20)
 {
 	audio_stop_all()
 	instance_destroy()
 	instance_destroy(slots)
 	room_goto_next()
 	plants.plant[8].unlocked=true
-	show_message(plants.plant[8].desc)
 }
-if(room==level3&&num>=20&&!instance_exists(basiczombie))
+if(room==level3&&num>=20)
 {
 	audio_stop_all()
 	instance_destroy()
@@ -36,7 +35,7 @@ if(room==level3&&num>=20&&!instance_exists(basiczombie))
 	room_goto_next()
 	plants.plant[9].unlocked=true
 }
-if(room==level4&&num>=30&&!instance_exists(basiczombie))
+if(room==level4&&num>=30)
 {
 	audio_stop_all()
 	instance_destroy()
@@ -44,11 +43,43 @@ if(room==level4&&num>=30&&!instance_exists(basiczombie))
 	room_goto_next()
 	plants.plant[10].unlocked=true
 }
-if(room==quest1&&num>=60&&!instance_exists(basiczombie))
+if(room==level5&&num>=35)
 {
 	audio_stop_all()
 	instance_destroy()
 	instance_destroy(slots)
 	room_goto_next()
+	plants.plant[11].unlocked=true
+}
+if(room==level6&&num>=35)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[12].unlocked=true
+}
+if(room==level7&&num>=35)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[14].unlocked=true
+}
+if(room==level8&&num>=35)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[27].unlocked=true
+}
+if(room==quest1&&num>=60)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto(menu)
 	plants.plant[7].unlocked=true
 }

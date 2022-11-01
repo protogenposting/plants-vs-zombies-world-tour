@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+clevel=level1
 button[0]={
 	button:"adventure",
-	roomy: level1
+	roomy: clevel
 }
 button[1]={
 	button:"endless",

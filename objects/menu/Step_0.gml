@@ -26,3 +26,7 @@ else
 {
 	audio_sound_gain(menutheme,0,720)
 }
+button[0]={
+	button:"adventure",
+	roomy: clevel
+}

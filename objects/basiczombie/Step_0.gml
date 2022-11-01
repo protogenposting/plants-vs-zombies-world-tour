@@ -4,7 +4,6 @@ anim2[0]=2
 anim2[1]=3
 
 x-=spd
-
 if(hp<=0)
 {
 instance_destroy()
@@ -67,4 +66,15 @@ if(elected)
 if(place_meeting(x,y,zoybeanzombie))
 {
 hp-=0.1
+}
+
+if(nutted)
+{
+	x+=spd*2
+	image_xscale=-1
+	col=c_ltgray
+}
+else
+{
+	image_xscale=1
 }

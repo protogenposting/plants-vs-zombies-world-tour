@@ -1,5 +1,5 @@
 spd=0.5
-hp=10
+hp=14
 y+=32
 i=0
 
@@ -16,3 +16,4 @@ var p1 = part_type_create();
 elected=false
 
 anim=0
+nutted=false

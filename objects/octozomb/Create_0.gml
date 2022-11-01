@@ -17,3 +17,4 @@ alarm[1]=720
 elected=false
 
 anim=0
+nutted=false

@@ -99,7 +99,11 @@ repeat (20) {
 				hasplant=true
 			}
 		if (!hasplant)
-            break;
+		{
+            slotty += 1
+			ecs+=32
+			continue;
+		}
         if (bnum >= array_length(plants.plant))
             break;
 		if(variable_struct_exists(plants.plant[bnum],"lawn"))

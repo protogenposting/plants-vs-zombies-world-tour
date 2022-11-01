@@ -18,3 +18,4 @@ if(place_meeting(x,y,tiletypewater))
 {
 	instance_destroy()
 }
+nutted=false

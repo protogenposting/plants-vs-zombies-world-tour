@@ -15,6 +15,8 @@ repeat (20) {
 			}
 		if (!hasplant)
 		{
+			slotty += 1
+			ecs+=32
             continue;
 		}
 		if(variable_struct_exists(plants.plant[slotty],"lawn"))

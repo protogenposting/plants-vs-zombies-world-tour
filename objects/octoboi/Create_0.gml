@@ -15,3 +15,4 @@ spd=0
 nspd=0
 
 i=0
+nutted=false
