@@ -1,3 +1,5 @@
+depth=0
+draw_set_halign(fa_left)
 col=c_black
 ecs=32
 why=160
@@ -22,3 +24,4 @@ else
 audio_sound_gain(hats,0.01,600)
 }
 
+depth=-100000

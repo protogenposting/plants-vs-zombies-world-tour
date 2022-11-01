@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "tiletypesteam",
   "spriteId": {
-    "name": "steamhit",
-    "path": "sprites/steamhit/steamhit.yy",
+    "name": "masky",
+    "path": "sprites/masky/masky.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,6 +29,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"plant5","path":"objects/plant5/plant5.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

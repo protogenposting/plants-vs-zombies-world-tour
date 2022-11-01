@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "octozomb",
   "spriteId": {
-    "name": "sprite4",
-    "path": "sprites/sprite4/sprite4.yy",
+    "name": "octopussy",
+    "path": "sprites/octopussy/octopussy.yy",
   },
   "solid": false,
   "visible": true,

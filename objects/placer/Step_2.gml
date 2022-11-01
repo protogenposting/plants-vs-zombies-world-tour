@@ -35,7 +35,7 @@ else
 can=true
 }
 
-if(slot==3||slot==5||slot==36)
+if(variable_struct_exists(plants.plant[slot],"waterplant"))
 {
 if(place_meeting(x,y,tiletypewater))
 {

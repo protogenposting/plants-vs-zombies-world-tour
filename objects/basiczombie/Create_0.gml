@@ -1,5 +1,5 @@
 spd=0.5
-hp=4
+hp=8
 y+=32
 i=0
 
@@ -14,3 +14,7 @@ zapped=false
 var p1 = part_type_create();
 
 elected=false
+
+anim=0
+
+alarm[5]=20

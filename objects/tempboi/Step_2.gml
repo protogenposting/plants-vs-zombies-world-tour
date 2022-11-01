@@ -1,0 +1,21 @@
+with(basiczombie)
+{
+if(place_meeting(x,y,other))
+{
+hp-=0.01
+if(other.powered)
+{
+spd/=2
+}
+}
+}
+
+if(pfactive)
+{
+	pfi-=1
+	if(pfi<=0)
+	{
+		inst=instance_find(basiczombie,irandom(instance_number(basiczombie)))
+		pfi=pfr
+	}
+}

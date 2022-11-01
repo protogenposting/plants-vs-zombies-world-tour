@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "bullet2",
-    "path": "objects/bullet2/bullet2.yy",
+    "name": "bullet1",
+    "path": "objects/bullet1/bullet1.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

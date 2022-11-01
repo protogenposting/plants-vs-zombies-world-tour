@@ -14,3 +14,5 @@ zapped=false
 var p1 = part_type_create();
 
 elected=false
+
+anim=0

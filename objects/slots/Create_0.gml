@@ -1,3 +1,4 @@
+maxslots=7
 slot[0]=0
 slot[1]=0
 slot[2]=0
@@ -14,7 +15,9 @@ reload[4]=5
 reload[5]=5
 reload[6]=5
 
-depth=-10
+depth=-100000
 
 pfcap=4
 pf=1
+
+hasplant=true

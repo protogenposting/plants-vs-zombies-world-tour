@@ -10,3 +10,10 @@ slottyo=0
 draw=false
 str=""
 
+depth=-100000
+
+maxslots=2
+if(room!=level1)
+{
+	maxslots=7
+}

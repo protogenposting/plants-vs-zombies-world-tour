@@ -13,9 +13,26 @@ if(room==endless3)
 {
 	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb)
 }
+if(room==level1)
+{
+	zomb=choose(basiczombie)
+}
+if(room==level2)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie)
+}
+if(room==level3)
+{
+	zomb=choose(basiczombie,coneheadzombie)
+}
+if(room==level4)
+{
+	zomb=choose(basiczombie,coneheadzombie,octozomb)
+}
 instance_create(room_width,choose(160,160+64,160+128,160+192,160+192+64),zomb)
 }
 action_set_alarm(random_range(2,1000-killed), 1);
+num+=1
 if(alarm[1]<20)
 {
 	alarm[1]=20

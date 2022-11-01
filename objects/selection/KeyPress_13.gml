@@ -7,5 +7,6 @@ inst.slot[3]=slot[3]
 inst.slot[4]=slot[4]
 inst.slot[5]=slot[5]
 inst.slot[6]=slot[6]
+inst.maxslots=maxslots
 instance_destroy()
 

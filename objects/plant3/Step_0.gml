@@ -31,6 +31,10 @@ inst2.hspeed=-15
 inst3=instance_create(x,y,bullet2)
 inst3.vspeed=-15
 sh=reload
+rotting=true
+rot=0
+rotnum=0.1
+alarm[2]=30
 }
 
 ///kill
@@ -41,7 +45,7 @@ instance_destroy()
 
 if(pfactive)
 {
-	image_angle+=36
+	rotnum=36
 	pfi-=1
 	if(pfi<=0)
 	{
@@ -57,7 +61,21 @@ if(pfactive)
 		pfi=pfr
 	}
 }
+
+rot+=rotnum
+if(rotting)
+{
+	rotnum+=0.5
+}
 else
 {
-	image_angle=0
+	rotnum-=0.5
+}
+if(rot>0)
+{
+	dir=rot
+}
+else
+{
+	dir=0
 }

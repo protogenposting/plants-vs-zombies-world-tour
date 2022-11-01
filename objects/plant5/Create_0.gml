@@ -1,7 +1,7 @@
 reload=120
 sh=reload
 canhit=false
-hp=10000
+hp=3000
 
 pfactive=false
 pftime=2

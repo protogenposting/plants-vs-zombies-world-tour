@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "bullet1",
+    "path": "objects/bullet1/bullet1.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,

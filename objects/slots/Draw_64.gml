@@ -1,9 +1,15 @@
+draw_set_color(c_gray)
 ecs=64
-repeat(7)
+repeat(maxslots)
 {
 slottyoa=(ecs/64)-1
 slotty=slot[(ecs/64)-1]
 reload[slottyoa]-=1
+hasplant=true
+
+
+if(hasplant)
+{
 if(variable_struct_exists(plants.plant[slotty],"lawn"))
 		{
 			draw_sprite(plants.plant[slotty].lawn, 0, ecs + 32, 32);
@@ -41,10 +47,17 @@ inst.slotselected=(ecs/64)-1
 }
 ecs+=64
 }
-
-draw_rectangle(ecs,0,ecs+64,32,true)
-draw_text(ecs,0,string(pf)+"/"+string(pfcap))
-if(pf>0&&mouse_x<ecs+64&&mouse_x>ecs&&mouse_y<32&&mouse_y>0&&mouse_check_button_pressed(mb_left))
+}
+draw_rectangle(ecs,0,ecs+128+32,32,true)
+draw_text(ecs,0,"plant food: "+string(pf)+"/"+string(pfcap))
+if(pf>0&&mouse_x<ecs+128+32&&mouse_x>ecs&&mouse_y<32&&mouse_y>0&&mouse_check_button_pressed(mb_left))
 {
 	inst=instance_create(x,y,plantfood)
+}
+ecs+=128+32
+draw_rectangle(ecs,0,ecs+128,32,true)
+draw_text(ecs,0,"shovel")
+if(mouse_x<ecs+128&&mouse_x>ecs&&mouse_y<32&&mouse_y>0&&mouse_check_button_pressed(mb_left))
+{
+	inst=instance_create(x,y,shovel)
 }

@@ -13,3 +13,5 @@ var p1 = part_type_create();
 elected=false
 spd=0
 nspd=0
+
+i=0

@@ -6,3 +6,49 @@ inst=instance_create(ecs,why,tiletypewater)
 inst.image_xscale=waterlevel*2
 inst.image_yscale=room_height/64
 inst.alarm[0]=2
+
+if(room==level1&&num>=10&&!instance_exists(basiczombie))
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[2].unlocked=true
+	plants.plant[3].unlocked=true
+	plants.plant[4].unlocked=true
+	plants.plant[5].unlocked=true
+	plants.plant[6].unlocked=true
+}
+if(room==level2&&num>=20&&!instance_exists(basiczombie))
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[8].unlocked=true
+	show_message(plants.plant[8].desc)
+}
+if(room==level3&&num>=20&&!instance_exists(basiczombie))
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[9].unlocked=true
+}
+if(room==level4&&num>=30&&!instance_exists(basiczombie))
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[10].unlocked=true
+}
+if(room==quest1&&num>=60&&!instance_exists(basiczombie))
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[7].unlocked=true
+}

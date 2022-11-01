@@ -17,7 +17,7 @@ inst=instance_nearest(x,y,basiczombie)
 
 if(collision_line(x,y,x+128,y,inst,false,true))
 {
-inst.hp-=0.1
+inst.hp-=0.3
 animspd=5
 anim=1
 }

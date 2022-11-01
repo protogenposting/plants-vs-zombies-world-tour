@@ -1,3 +1,4 @@
+draw_set_halign(fa_left)
 ecs = 0;
 why = 0;
 slotty = 0;
@@ -5,9 +6,17 @@ slotty = 0;
 repeat (20) {
     ecs=0
     repeat ((room_width - 128) / 64) {
-        
-        if (slotty >= array_length(plants.plant))
-            break;
+		if (slotty >= array_length(plants.plant))
+			break;
+			hasplant=false
+			if(variable_struct_exists(plants.plant[slotty],"unlocked")&&plants.plant[slotty].unlocked||room==endless||room==endless2||room==endless3||room==endless4||room==endless5)
+			{
+				hasplant=true
+			}
+		if (!hasplant)
+		{
+            continue;
+		}
 		if(variable_struct_exists(plants.plant[slotty],"lawn"))
 		{
 			draw_sprite(plants.plant[slotty].lawn, 0, ecs + 32, why + 32);
@@ -21,7 +30,7 @@ repeat (20) {
         draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
         ecs += 64;
         
-        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)
+        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots
             ) {
             draw=true
             str=plants.plant[slotty].desc
@@ -33,9 +42,9 @@ repeat (20) {
             if(draw)
 {
 draw_set_colour(c_black)
-draw_rectangle(736,544,736+128,544+360,false)
+draw_rectangle(736-64,544,736+128,544+360,false)
 draw_set_colour(c_white)
-draw_text_ext(736,544,string_hash_to_newline(str),15,20)
+draw_text_ext(736-64,544,string_hash_to_newline(str),15,20)
 }
         }
         else
@@ -49,7 +58,7 @@ draw_text_ext(736,544,string_hash_to_newline(str),15,20)
 
 ecs=room_width-64
 why=0
-repeat(7)
+repeat(maxslots)
 {
 draw_rectangle(ecs,why,ecs+64,why+64,true)
 draw_sprite(object_get_sprite(plants.plant[slot[slottyo]].object),0,ecs+32,why+32)
@@ -57,6 +66,3 @@ slottyo+=1
 why+=64
 }
 slottyo=0
-
-
-

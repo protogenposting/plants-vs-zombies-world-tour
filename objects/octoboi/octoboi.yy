@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "octoboi",
   "spriteId": {
-    "name": "fire",
-    "path": "sprites/fire/fire.yy",
+    "name": "octo",
+    "path": "sprites/octo/octo.yy",
   },
   "solid": false,
   "visible": true,

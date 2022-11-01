@@ -11,4 +11,4 @@ ecs=0
 why+=64
 }
 
-action_set_alarm(720, 0);
+action_set_alarm(720*2, 0);

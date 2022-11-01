@@ -18,12 +18,6 @@ with(inst)
 		y-=32
 		move_snap(64,64)
 	}
-	while(place_meeting(x,y,tiletypewater))
-	{
-		x-=32
-		y=random_range(160,160+(64*5))
-		move_snap(64,64)
-	}
 	}
 	else
 	{
@@ -38,10 +32,6 @@ with(inst)
 			x=random_range(128*3,other.x)
 			y-=32
 			move_snap(64,64)
-		}
-		while(place_meeting(x,y,tiletypewater))
-		{
-			x-=32
 		}
 	}
 }
