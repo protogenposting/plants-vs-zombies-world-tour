@@ -1,3 +1,5 @@
+if(instance_exists(stats))
+{
 stats.killed+=1
 
 if(choose(0,1,2,3,4)==4)
@@ -6,4 +8,5 @@ if(choose(0,1,2,3,4)==4)
 	{
 		slots.pf+=1
 	}
+}
 }

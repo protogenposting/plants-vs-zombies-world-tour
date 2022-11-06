@@ -1,6 +1,7 @@
 if(i<=0)
 {
 hp-=1
+stats.dps+=1
 i=20
 withered=true
 alarm[0]=360

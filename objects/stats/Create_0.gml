@@ -2,12 +2,25 @@ sunny=50
 randomize()
 killed=10
 
+dps=0
+
+dpsy=0
+
+i=0
+
+idps=0
+
 action_set_alarm(360, 0);
 action_set_alarm(2, 1);
 action_set_alarm(1000, 1);
 if(room==endless4)
 {
+	action_set_alarm(2, 1);
 	action_set_alarm(2000, 1);
+}
+if(room==quest1)
+{
+	action_set_alarm(120, 1);
 }
 
 moosic=ooftheroof

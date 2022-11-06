@@ -7,6 +7,7 @@ if(instance_exists(inst))
 inst.frozen=true
 inst.alarm[0]=360
 inst.hp-=0.05
+stats.dps+=0.05
 draw_set_colour(c_aqua)
 draw_line(x,y,inst.x,inst.y)
 draw_set_colour(c_black)

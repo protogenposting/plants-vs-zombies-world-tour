@@ -3,6 +3,7 @@ col=collision_rectangle(x-64,y-4,x+64*3,y+4,basiczombie,true,true)
 if(sh<=0 && col)
 {
 col.hp-=1
+stats.dps+=1
 sh=reload
 }
 
@@ -19,6 +20,7 @@ if(pfactive)
 	if(pfi<=0 && col)
 	{
 		col.hp-=0.01
+		stats.dps+=0.01
 		pfi=pfr
 	}
 }

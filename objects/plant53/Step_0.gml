@@ -7,10 +7,9 @@ if(sh<=0)
 	effect_create_above(ef_explosion,x,y,1,c_red)
 with(basiczombie)
 {
-	
-	if(distance_to_object(other)<=64)
+	if(distance_to_object(other)<64)
 	{
-		hp-=20
+		hp-=21
 	}
 }
 sh=reload

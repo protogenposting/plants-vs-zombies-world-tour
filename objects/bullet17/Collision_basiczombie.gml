@@ -6,6 +6,7 @@ with(basiczombie)
 	if(distance_to_object(other)<=25)
 	{
 		hp-=1
+		stats.dps+=1
 	}
 }
 action_kill_object();

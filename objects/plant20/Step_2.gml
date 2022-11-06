@@ -3,6 +3,7 @@ with(basiczombie)
 if(place_meeting(x,y,other))
 {
 hp-=0.01
+stats.dps+=0.01
 if(other.powered)
 {
 spd/=2

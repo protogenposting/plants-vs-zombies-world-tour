@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "Get_Microphone_volume",
+    "path": "extensions/Get_Microphone_volume/Get_Microphone_volume.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}

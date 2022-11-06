@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+i-=1
+if(i<=0)
+{
+dps=0
+i=room_speed
+}
 ecs=room_width
 why=room_height/2
 inst=instance_create(ecs,why,tiletypewater)

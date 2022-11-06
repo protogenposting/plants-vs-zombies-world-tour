@@ -6,6 +6,7 @@ with(basiczombie)
 if(distance_to_object(other)<=96)
 {
 hp-=5
+stats.dps+=5
 }
 }
 

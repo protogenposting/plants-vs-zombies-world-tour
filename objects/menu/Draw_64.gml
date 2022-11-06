@@ -85,27 +85,37 @@ repeat(1)
 }
 }
 draw_set_halign(fa_left)
-if(room==alminac)
+if(room==alminac&&alminacy)
 {
+draw_text(0,0,"press space to switch alminacs")
 ecs=0
-why=0
+why=16
 bnum=0
 repeat (20) {
     ecs=0
     repeat (17) {
+		if (bnum >= array_length(plants.plant))
+		{
+            break;
+		}
         hasplant=false
 			if(variable_struct_exists(plants.plant[bnum],"unlocked"))
 			{
 				hasplant=true
 			}
-		if (!hasplant)
+			
+			
+			
+
+			
+			
+			
+		/*if (!hasplant)
 		{
             slotty += 1
 			ecs+=32
 			continue;
-		}
-        if (bnum >= array_length(plants.plant))
-            break;
+		}*/
 		if(variable_struct_exists(plants.plant[bnum],"lawn"))
 		{
 			draw_sprite(plants.plant[bnum].lawn, 0, ecs + 32, why + 32);
@@ -148,4 +158,61 @@ repeat (20) {
     why += 64;
 }
 }
+
+if(room==alminac&&!alminacy)
+{
+draw_text(0,0,"press space to switch alminacs")
+ecs=0
+why=16
+bnum=0
+repeat (20) {
+    ecs=0
+    repeat (17) {
+        hasplant=false
+        if (bnum >= array_length(plants.zombie))
+            break;
+		if(variable_struct_exists(plants.zombie[bnum],"lawn"))
+		{
+			draw_sprite(plants.zombie[bnum].lawn, 0, ecs + 32, why + 32);
+		}
+		else
+		{
+			draw_sprite(tilestore, 0, ecs + 32, why + 32);
+		}
+        draw_rectangle(ecs, why, ecs + 64, why + 64, true);
+        draw_sprite(object_get_sprite(plants.zombie[bnum].object), 0, ecs + 32, why + 32);
+        ecs += 64;
+        
+        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)
+            ) {
+            draw=true
+			if(variable_struct_exists(plants.zombie[bnum],"entry"))
+			{
+				str=plants.zombie[bnum].entry
+			}
+			else
+			{
+				str="no entry exists for this zombie yet"
+			}
+            if(draw)
+			{
+			draw_set_colour(c_black)
+			draw_rectangle(64*17,0,(64*18)+256,768,false)
+			draw_set_colour(c_white)
+			draw_text_ext(64*17,0,plants.zombie[bnum].desc,15,256)
+			var stringyboi = plants.zombie[bnum].statsy(plants.zombie[bnum].object)
+			draw_text_ext(64*17,128,stringyboi,15,256)
+			draw_text_ext(64*17,128*2,string_hash_to_newline(str),15,256)
+			}
+        }
+        else
+        {
+        draw=false
+        }
+		bnum += 1;
+    }
+    why += 64;
+}
+}
+
 draw_set_color(c_gray)

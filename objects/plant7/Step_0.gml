@@ -28,17 +28,12 @@ if(pfactive)
 	if(pfi<=0)
 	{
 		audio_play_sound(pop,1000,false)
-		inst=instance_create(x,y+random_range(-6,6),bullet3)
-		inst.hspeed=5
-		if(steamed)
-		{
-			inst=instance_create(x,y+random_range(-6,6),bullet3)
-			.hspeed=2.5
-			inst.vspeed=0.5
-			inst=instance_create(x,y+random_range(-6,6),bullet3)
-			inst.hspeed=2.5
-			inst.vspeed=-0.5
-		}
+		inst=instance_create(x,y+random_range(-6,6),plant7)
+		inst.hspeed=0.1
+		inst.vspeed=0.1
+		inst=instance_create(x,y+random_range(-6,6),plant7)
+		inst.hspeed=0.1
+		inst.vspeed=-0.1
 		pfi=pfr
 	}
 }

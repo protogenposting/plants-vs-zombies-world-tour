@@ -7,5 +7,6 @@ yeetus=part_type_sprite(pl, zapy, true, true, true)
 part_emitter_burst(ps, pl, yeetus, irandom(30));
 part_emitter_burst(ps,pl,yeetus,4)
 hp-=0.1
+stats.dps+=0.1
 }
 

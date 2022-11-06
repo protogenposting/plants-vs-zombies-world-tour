@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+alminacy=true
 clevel=level1
 button[0]={
 	button:"adventure",

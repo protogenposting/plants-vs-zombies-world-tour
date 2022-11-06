@@ -27,6 +27,7 @@ else if(place_meeting(x,y,tiletypestink))
 {
 spd=nspd/2
 hp-=0.1
+stats.dps+=0.1
 }
 else
 {
@@ -56,6 +57,7 @@ spd/=2
 if(withered)
 {
 hp-=0.01
+stats.dps+=0.01
 col=c_black
 }
 
@@ -66,6 +68,7 @@ if(elected)
 if(place_meeting(x,y,zoybeanzombie))
 {
 hp-=0.1
+stats.dps+=0.1
 }
 
 if(nutted)

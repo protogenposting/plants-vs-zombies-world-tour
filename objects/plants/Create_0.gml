@@ -268,13 +268,15 @@ plant[34]={
 	object: plant32,
 	cost: 300,
 	recharge:500,
-	desc:"pea windmill fires peas in all directions"
+	desc:"pea windmill fires peas in all directions",
+	entry:"Peamill loves windmills. He lives near a ton, he owns a ton, he draws a ton. And we all know why he loves him. Because of his name, sigh, all these plants base their personality off of their name"
 }
 plant[35]={
 	object: plant33,
 	cost: 150,
 	recharge:500,
-	desc:"shadewood turns peas into poison peas"
+	desc:"shadewood turns peas into poison peas",
+	entry:"Shadewood is a little different from the others. Only reason is because he’s one of three purple plants and he always brags about it"
 }
 plant[36]={
 	object: plant34,
@@ -392,7 +394,36 @@ plant[54]={
 	recharge:7.5*60,
 	desc:"cumshroom explodes into nut"
 }
-
+plant[55]={
+	object: plant57,
+	cost: 25,
+	recharge:200,
+	desc:"hot potato creates steam"
+}
+plant[56]={
+	object: plant58,
+	cost: 100,
+	recharge:15*60,
+	desc:"ice flower shoots freezing balls"
+}
+plant[57]={
+	object: plant59,
+	cost: 0,
+	recharge:10000,
+	desc:"hypno shroom makes zombie go plant"
+}
+plant[58]={
+	object: plant60,
+	cost: 200,
+	recharge:15*60,
+	desc:"flower of duality fires behind then in front with fire and ice"
+}
+plant[59]={
+	object: plant61,
+	cost: 250,
+	recharge:15*60,
+	desc:"mic plant fires faster the louder you yell"
+}
 
 
 var arrowwoody = {
@@ -408,4 +439,119 @@ array_insert(plant,5,arrowwoody)
 if(instance_exists(plants)&&instance_number(plants)>1)
 {
 	instance_destroy()
+}
+
+zombie[0]={
+	object: basiczombie,
+	desc:"basic zombie does nothing special tbh",
+	lawn: tilegrass,
+	statsy: function(){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd));
+	},
+	entry:"Your normal, boring, ordinary, old fashioned, classic, ugly zombie"
+}
+zombie[1]={
+	object: coneheadzombie,
+	desc:"conehead zombie has slightly more health than a basic",
+	lawn: tilegrass,
+	statsy: function(){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd));
+	},
+	entry:"Your normal, boring, ordinary, old fashioned, classic, ugly zombie but with a traffic cone on top"
+}
+zombie[2]={
+	object: bucketheadzombie,
+	desc:"buckethead zombie has the highest zombie health out of the 3 basics",
+	lawn: tilegrass,
+	statsy: function(){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd));
+	},
+	entry:"Your normal, boring, ordinary, old fashioned, classic, ugly zombie but with a bucket on top"
+}
+zombie[3]={
+	object: tombraiser,
+	desc:"grave planter creates a grave",
+	lawn: tilegrass,
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"He goes to the graveyard to see his family, but now he goes there to eat his family. Kinda dark ending, I know"
+}
+zombie[4]={
+	object: octozomb,
+	desc:"octozombie tf's your plants into octopussies",
+	lawn: tilemud,
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"He owns an aquarium to raise awareness about octopi, nothing BUT octopi."
+}
+zombie[5]={
+	object: octoboi,
+	desc:"octopus disables your plants for a bit",
+	lawn: tilemud,
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"Now that is why we shouldn’t raise awareness about octopi, now mr. Octozombie?"
+}
+zombie[6]={
+	object: zoybeanzombie,
+	desc:"zoybean zombie is like a normal zombie but kewl",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"Your normal, boring, ordinary- THATS ENOUGH JERRY, IM SORRY, YOUR FIRED, AHHHHHHHHHHH"
+}
+zombie[7]={
+	object: zoybeanbuckethead,
+	desc:"zoybean buckethead is like a normal buckethead but kewl",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"Got infected with the zoybean, but that doesn’t stop him from eating brains"
+}
+zombie[8]={
+	object: grave,
+	desc:"grave betz the ass of plants in front of it",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"Your normal, boring, ordinary, old fashioned, classic gra- FUCK JERRY GOT BACK IN"
 }

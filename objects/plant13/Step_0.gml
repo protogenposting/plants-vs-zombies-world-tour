@@ -9,6 +9,7 @@ if(collision_line(x,y,x+128,y,inst,false,true)&&sh<=0)
 {
 ate=false
 inst.hp-=10
+stats.dps+=10
 if(inst.hp>0)
 {
 sh=60

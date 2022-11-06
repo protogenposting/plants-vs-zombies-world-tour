@@ -1,4 +1,5 @@
-
+if(hp<=0)
+{
 effect_create_above(ef_explosion,other.x,other.y,1,c_white)
 
 var _list = ds_list_create();
@@ -10,6 +11,7 @@ if _num > 0
     {
         inst=_list[| i]
 		inst.hp-=5
+		stats.dps+=5
 		inst.nutted=true
     }
 }
@@ -28,3 +30,4 @@ if _num > 0
     }
 }
 ds_list_destroy(_list)
+}
