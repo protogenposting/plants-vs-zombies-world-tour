@@ -7,17 +7,26 @@ repeat (20) {
     ecs=0
     repeat ((room_width - 128) / 64) {
 		if (slotty >= array_length(plants.plant))
-			break;
-			hasplant=false
-			if(variable_struct_exists(plants.plant[slotty],"unlocked")&&plants.plant[slotty].unlocked||room==endless||room==endless2||room==endless3||room==endless4||room==endless5)
+		{
+            break;
+		}
+        hasplant=false
+			if(variable_struct_exists(plants.plant[slotty],"unlocked"))
 			{
 				hasplant=true
 			}
+			
+			
+			
+
+			
+			
+			
 		if (!hasplant)
 		{
-			slotty += 1
+            slotty += 1
 			ecs+=32
-            continue;
+			continue;
 		}
 		if(variable_struct_exists(plants.plant[slotty],"lawn"))
 		{
@@ -68,3 +77,19 @@ slottyo+=1
 why+=64
 }
 slottyo=0
+
+
+if(room==quest2)
+{
+	inst=instance_create(x,y,slots)
+	instance_create(x,y,stats)
+	inst.slot[0]=29
+	inst.slot[1]=29
+	inst.slot[2]=29
+	inst.slot[3]=29
+	inst.slot[4]=29
+	inst.slot[5]=29
+	inst.slot[6]=29
+	inst.maxslots=maxslots
+	instance_destroy()
+}

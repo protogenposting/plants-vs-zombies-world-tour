@@ -89,3 +89,19 @@ if(room==quest1&&num>=60)
 	room_goto(menu)
 	plants.plant[7].unlocked=true
 }
+if(room==quest2&&num>=40)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto(menu)
+	plants.plant[29].unlocked=true
+}
+if(room==quest3&&num>=40)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto(menu)
+	plants.plant[13].unlocked=true
+}

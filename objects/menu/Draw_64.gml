@@ -71,7 +71,7 @@ why=(room_height/2)-128
 bnum=9
 if(room==quests)
 {
-repeat(1)
+repeat(3)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
@@ -110,12 +110,12 @@ repeat (20) {
 			
 			
 			
-		/*if (!hasplant)
+		if (!hasplant)
 		{
-            slotty += 1
+            bnum += 1
 			ecs+=32
 			continue;
-		}*/
+		}
 		if(variable_struct_exists(plants.plant[bnum],"lawn"))
 		{
 			draw_sprite(plants.plant[bnum].lawn, 0, ecs + 32, why + 32);

@@ -7,3 +7,13 @@ slot[5]=0
 slot[6]=0
 selected=0
 
+if(room==quest1)
+{
+	selected=1
+	slot[0]=7
+}
+if(room==quest3)
+{
+	selected=1
+	slot[0]=13
+}

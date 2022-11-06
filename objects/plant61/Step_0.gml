@@ -1,5 +1,5 @@
-sh-=(obj_mic.microphone_volume)/100
-yscale=obj_mic.microphone_volume/2000
+sh-=((obj_mic.microphone_volume)/100)+0.1
+yscale=(obj_mic.microphone_volume/2000)+0.1
 if(sh<=0)
 {
 inst=instance_create(x,y+6,bullet21)

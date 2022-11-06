@@ -17,3 +17,13 @@ if(room!=level1)
 {
 	maxslots=7
 }
+if(room==quest1)
+{
+	selected=1
+	slot[0]=7
+}
+if(room==quest3)
+{
+	selected=1
+	slot[0]=13
+}

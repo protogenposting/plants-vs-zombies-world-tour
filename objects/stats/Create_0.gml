@@ -22,6 +22,14 @@ if(room==quest1)
 {
 	action_set_alarm(120, 1);
 }
+if(room==quest2)
+{
+	action_set_alarm(120, 1);
+}
+if(room==quest3)
+{
+	action_set_alarm(120, 1);
+}
 
 moosic=ooftheroof
 hats=hats1
@@ -34,6 +42,17 @@ if(room==endless4)
 {
 	moosic=moosic3
 	hats=hats3
+}
+if(room==quest1)
+{
+	moosic=loobboon
+	hats=loobboon
+}
+if(room==quest2)
+{
+	moosic=loobboon
+	hats=-1
+	killed=30
 }
 audio_play_sound(moosic,1000,true)
 audio_play_sound(hats,1000,true)
