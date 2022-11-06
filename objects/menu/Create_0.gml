@@ -64,21 +64,9 @@ al=1
 
 save_level=function(){
 	//make epoc array
-	var _saveData = array_create(0)
-	
-	var _saveLevel = menu.clevel
-	array_push(_saveData,_saveLevel)
-	//save the plants that are saved
-	with(plants)
-	{	
-		var num = 0
-		while(num<=array_length(plants.plant)-1)
-		{
-			_saveEntity[num] = 1
-			_saveEntity[num] = variable_struct_exists(plants.plant[num],"unlocked")&&plants.plant[num].unlocked
-			num+=1
-		}
-		array_push(_saveData,_saveEntity)
+	var _saveData = {
+		plantdata: plants.plant,
+		level: menu.clevel
 	}
 	
 	var _string = json_stringify(_saveData)
@@ -98,37 +86,28 @@ load_level=function(){
 		buffer_delete(_buffer)
 		
 		var _loadData = json_parse(_string)
+		show_debug_message("game LOADED DIAPER! "+string(_loadData))
 		instance_destroy(plants)
 		inst=instance_create(0,0,plants)
 		show_debug_message("instance_created")
 		
-		while(array_length(_loadData)>0)
+		if(array_length(inst.plant)>array_length(_loadData.plantdata))
 		{
-			if(array_length(_loadData)>1)
+			var num = array_length(_loadData.plantdata)-1
+			var _array = array_create(0)
+			repeat(array_length(inst.plant)-array_length(_loadData.plantdata))
 			{
-				var _loadEntity = array_pop(_loadData)
-				with(inst)
-				{
-					var num=array_length(_loadEntity)-1
-					repeat(array_length(_loadEntity))
-					{
-						var _loadPlant=array_pop(_loadEntity)
-						plants.plant[num].unlocked=_loadPlant
-						num-=1
-						show_debug_message("loaded plant #"+string(num))
-					}
-				}
-			}
-			else
-			{
-				var _loadEntity = array_pop(_loadData)
-				menu.clevel=_loadEntity
+				var arrayboi=inst.plant[num]
+				array_push(_array,arrayboi)
+				num+=1
 			}
 		}
-		show_debug_message("game LOADED DIAPER! "+_string)
+		inst.plant=_loadData.plantdata
+		menu.clevel=_loadData.level
 	}
 	else
 	{
+		inst=instance_create(0,0,plants)
 		show_debug_message("no file to load")
 	}
 }

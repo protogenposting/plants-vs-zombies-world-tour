@@ -11,7 +11,7 @@ repeat (20) {
             break;
 		}
         hasplant=false
-			if(variable_struct_exists(plants.plant[slotty],"unlocked"))
+			if(variable_struct_exists(plants.plant[slotty],"unlocked")&&plants.plant[slotty].unlocked)
 			{
 				hasplant=true
 			}
