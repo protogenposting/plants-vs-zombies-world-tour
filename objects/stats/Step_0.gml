@@ -81,27 +81,27 @@ if(room==level8&&num>=35)
 	room_goto_next()
 	plants.plant[27].unlocked=true
 }
-if(room==quest1&&num>=60)
+if(room==quest1&&num>=20)
 {
 	audio_stop_all()
 	instance_destroy()
 	instance_destroy(slots)
-	room_goto(menu)
+	room_goto(title)
 	plants.plant[7].unlocked=true
 }
 if(room==quest2&&num>=40)
 {
 	audio_stop_all()
 	instance_destroy()
-	instance_destroy(slots)
+	instance_destroy(title)
 	room_goto(menu)
 	plants.plant[29].unlocked=true
 }
-if(room==quest3&&num>=40)
+if(room==quest3&&num>=30)
 {
 	audio_stop_all()
 	instance_destroy()
-	instance_destroy(slots)
+	instance_destroy(title)
 	room_goto(menu)
 	plants.plant[13].unlocked=true
 }

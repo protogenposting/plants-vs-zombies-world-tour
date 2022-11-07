@@ -154,11 +154,12 @@ plant[19]={
 	entry:"No one likes Spikebean. They can’t hug him, high five him, do anything with him."
 }
 plant[20]={
-	object: plant21,
-	cost: 300,
+	object: plant25,
+	cost: 175,
 	recharge:200,
-	desc:"pineclone clones zombies that are killed by it",
-	entry:"No one has found the original Pineclone, there are just too many."
+	desc:"bamboo shoot shoots spikes in 4 lanes in front of it",
+	lawn: tilesand,
+	entry:"Bambooshots worst enemy is a panda, he’ll do anything to stop them”"
 }
 plant[21]={
 	object: plant22,
@@ -186,12 +187,11 @@ plant[24]={
 	entry:"Waterlily is dating Lilypad, it’s a big suprise I know. But they’re a happy couple"
 }
 plant[23]={
-	object: plant25,
-	cost: 175,
+	object: plant21,
+	cost: 300,
 	recharge:200,
-	desc:"bamboo shoot shoots spikes in 4 lanes in front of it",
-	lawn: tilesand,
-	entry:"Bambooshots worst enemy is a panda, he’ll do anything to stop them”"
+	desc:"pineclone clones zombies that are killed by it",
+	entry:"No one has found the original Pineclone, there are just too many."
 }
 plant[25]={
 	object: plant48,
