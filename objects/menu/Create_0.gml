@@ -50,6 +50,10 @@ button[11]={
 	button:"random rumble",
 	roomy: quest2
 }
+button[12]={
+	button:"the clone wars",
+	roomy: quest4
+}
 draw=false
 
 depth=-100000

@@ -27,3 +27,8 @@ if(room==quest3)
 	selected=1
 	slot[0]=13
 }
+if(room==quest4)
+{
+	selected=1
+	slot[0]=24
+}
