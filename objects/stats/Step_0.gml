@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+audio_sound_set_track_position(aud2,audio_sound_get_track_position(aud1))
+
 i-=1
 if(i<=0)
 {
@@ -80,6 +83,30 @@ if(room==level8&&num>=35)
 	instance_destroy(slots)
 	room_goto_next()
 	plants.plant[27].unlocked=true
+}
+if(room==level9&&num>=35)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[32].unlocked=true
+}
+if(room==level10&&num>=35)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[30].unlocked=true
+}
+if(room==level11&&num>=35)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[31].unlocked=true
 }
 if(room==quest1&&num>=20)
 {

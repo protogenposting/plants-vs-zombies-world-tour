@@ -239,13 +239,13 @@ plant[30]={
 	recharge:200,
 	desc:"sunflowowers produce sun and scratch enemies",
 	lawn: tilevolcano,
-	entry:"Sunflower and Sunflowower both argue over whose better. Too bad they don’t know that they’re both needed."
+	entry:"Sunflower and Sunflowower both argue over whose better. Too bad they don’t know that they’re both needed...... owo"
 }
 plant[31]={
 	object: plant47,
 	cost: 100,
 	recharge:200,
-	desc:"toxic flower fires toxic clouds of smoke",
+	desc:"toxic flower fires toxic clouds of smoke and is immune to volcanic ash damadge",
 	lawn: tilevolcano,
 	entry:"Came straight from the dump. Only reason he’s here is because we use all plants"
 }

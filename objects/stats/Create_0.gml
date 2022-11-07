@@ -61,8 +61,8 @@ if(room==quest2)
 	hats=-1
 	killed=30
 }
-audio_play_sound(moosic,1000,true)
-audio_play_sound(hats,1000,true)
+aud1=audio_play_sound(moosic,1000,true)
+aud2=audio_play_sound(hats,1000,true)
 audio_sound_gain(hats,0.01,0)
 
 waterlevel=0
