@@ -33,12 +33,14 @@ if(room==quest3)
 
 moosic=ooftheroof
 hats=hats1
-if(room==endless2)
+var lay_id = layer_get_id("Compatibility_Colour");
+var bg = layer_background_get_id(lay_id);
+if(layer_background_get_sprite(bg)==tilemud)
 {
 	moosic=moosic2
 	hats=hats2
 }
-if(room==endless4)
+if(layer_background_get_sprite(bg)==tilevolcano)
 {
 	moosic=moosic3
 	hats=hats3
@@ -46,7 +48,12 @@ if(room==endless4)
 if(room==quest1)
 {
 	moosic=loobboon
-	hats=loobboon
+	hats=-1
+}
+if(room==quest3)
+{
+	moosic=loobboon
+	hats=-1
 }
 if(room==quest2)
 {

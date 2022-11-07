@@ -2,12 +2,6 @@
 // You can write your code in this editor
 if(room==title||room==alminac||room==endlessmenu||room==quests)
 {
-draw_text(0,0,"press del to reset progress")
-if(keyboard_check_pressed(vk_delete))
-{
-	del_level()
-	game_end()
-}
 why=16
 ecs=16
 	repeat(room_height/32)
@@ -33,6 +27,15 @@ ecs=16
 		ecs=16
 		why+=64
 	}
+}
+if(room==title||room==endlessmenu||room==quests)
+{
+draw_text(16,16,"press del to reset progress")
+if(keyboard_check_pressed(vk_delete))
+{
+	del_level()
+	game_end()
+}
 }
 draw_set_color(c_black)
 ecs=room_width/2
