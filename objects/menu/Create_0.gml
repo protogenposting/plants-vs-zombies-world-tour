@@ -62,6 +62,23 @@ spr=choose(tilegrass,tilerussia,tilemud,tilevolcano,tilesand)
 pspr = spr
 al=1
 
+del_level=function(){
+	//make epoc array
+	instance_destroy(plants)
+	inst=instance_create(0,0,plants)
+	var _saveData = {
+		plantdata: inst.plant,
+		level: level1
+	}
+	
+	var _string = json_stringify(_saveData)
+	var _buffer = buffer_create(string_byte_length(_string)+1, buffer_fixed,1)
+	buffer_write(_buffer, buffer_string,_string)
+	buffer_save(_buffer,"savedshit.txt")
+	buffer_delete(_buffer)
+	
+	show_debug_message("game reset! "+_string)
+}
 save_level=function(){
 	//make epoc array
 	var _saveData = {
