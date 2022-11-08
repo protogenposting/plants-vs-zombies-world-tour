@@ -126,6 +126,7 @@
     {"id":{"name":"ultraslpit","path":"sprites/ultraslpit/ultraslpit.yy",},"order":68,},
     {"id":{"name":"level7","path":"rooms/level7/level7.yy",},"order":21,},
     {"id":{"name":"zapy","path":"sprites/zapy/zapy.yy",},"order":69,},
+    {"id":{"name":"fatbeet","path":"sprites/fatbeet/fatbeet.yy",},"order":107,},
     {"id":{"name":"zoybeanzombie","path":"objects/zoybeanzombie/zoybeanzombie.yy",},"order":71,},
     {"id":{"name":"mowman","path":"sprites/mowman/mowman.yy",},"order":70,},
     {"id":{"name":"sound0","path":"sounds/sound0/sound0.yy",},"order":1,},

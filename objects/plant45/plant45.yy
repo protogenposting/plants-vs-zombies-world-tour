@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "plant45",
   "spriteId": {
-    "name": "potan",
-    "path": "sprites/potan/potan.yy",
+    "name": "fatbeet",
+    "path": "sprites/fatbeet/fatbeet.yy",
   },
   "solid": false,
   "visible": true,
