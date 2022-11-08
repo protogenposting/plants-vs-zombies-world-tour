@@ -435,8 +435,9 @@ plant[61]={
 	object: plant63,
 	cost: 25,
 	recharge:10*60,
-	desc:"invisibean makes plants invisible for a bit",
-	vineplant:true
+	desc:"Plant Invisibean on top of any other plant to make them temporarily invisible",
+	vineplant:true,
+	entry:"Until now, Invisibean's origin remains unknown. Either he was just like... poof! There he is. Or..."
 }
 
 

@@ -5,10 +5,12 @@ if(!col)
 {
 	instance_destroy()
 }
-col.image_alpha-=1
+if(instance_exists(col))
+{
+	col.image_alpha-=dir
+}
 image_alpha-=dir
-
-if(image_alpha<=0)
+if(image_alpha>1.01)
 {
 	instance_destroy()
 }
