@@ -140,3 +140,11 @@ if(room==quest4&&num>=20)
 	room_goto(menu)
 	plants.plant[24].unlocked=true
 }
+if(room==quest5&&num>=30)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(title)
+	room_goto(menu)
+	plants.plant[61].unlocked=true
+}

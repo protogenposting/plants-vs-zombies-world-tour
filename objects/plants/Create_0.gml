@@ -424,6 +424,13 @@ plant[59]={
 	recharge:15*60,
 	desc:"mic plant fires faster the louder you yell"
 }
+plant[60]={
+	object: plant62,
+	cost: 125,
+	recharge:10*60,
+	desc:"water lily yeets water droplets",
+	waterplant:true
+}
 
 
 var arrowwoody = {

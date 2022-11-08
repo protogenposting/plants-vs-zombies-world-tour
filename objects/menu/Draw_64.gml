@@ -80,7 +80,7 @@ why=(room_height/2)-128
 bnum=9
 if(room==quests)
 {
-repeat(4)
+repeat(5)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
