@@ -1,3 +1,4 @@
+audio_sound_gain(pickyoseeds,0,360)
 inst=instance_create(x,y,slots)
 instance_create(x,y,stats)
 inst.slot[0]=slot[0]

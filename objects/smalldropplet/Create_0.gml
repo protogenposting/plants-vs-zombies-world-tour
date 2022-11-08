@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-vsp=-10
+vsp=-20
 hsp=random_range(-3,3)
 oy=y
 y-=1

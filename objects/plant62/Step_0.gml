@@ -7,15 +7,20 @@ else
 	image_speed=0
 	image_index=0
 }
-if(image_index==16)
+if(image_index>image_number)
 {
-inst=instance_create(x,y,bigdropplet)
-sh=reload
+	image_index=0
 }
-if(image_index==18)
+i-=1
+if(i<=0)
 {
 inst=instance_create(x,y,bigdropplet)
-sh=reload
+i=2
+drop=!drop
+if(drop)
+{
+	i=reload
+}
 }
 
 ///kill

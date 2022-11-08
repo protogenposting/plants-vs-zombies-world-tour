@@ -131,6 +131,7 @@
     {"id":{"name":"hit","path":"sounds/hit/hit.yy",},"order":5,},
     {"id":{"name":"plant39","path":"objects/plant39/plant39.yy",},"order":38,},
     {"id":{"name":"plant51","path":"objects/plant51/plant51.yy",},"order":50,},
+    {"id":{"name":"pickyoseeds","path":"sounds/pickyoseeds/pickyoseeds.yy",},"order":21,},
     {"id":{"name":"endlessmenu","path":"rooms/endlessmenu/endlessmenu.yy",},"order":3,},
     {"id":{"name":"bewm","path":"sounds/bewm/bewm.yy",},"order":7,},
     {"id":{"name":"hats1","path":"sounds/hats1/hats1.yy",},"order":9,},
