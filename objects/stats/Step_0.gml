@@ -120,7 +120,7 @@ if(room==quest2&&num>=20)
 {
 	audio_stop_all()
 	instance_destroy()
-	instance_destroy(title)
+	instance_destroy(slots)
 	room_goto(menu)
 	plants.plant[29].unlocked=true
 }
@@ -128,8 +128,8 @@ if(room==quest3&&num>=20)
 {
 	audio_stop_all()
 	instance_destroy()
-	instance_destroy(title)
-	room_goto(menu)
+	instance_destroy(slots)
+	room_goto(title)
 	plants.plant[13].unlocked=true
 }
 if(room==quest4&&num>=20)
@@ -137,7 +137,7 @@ if(room==quest4&&num>=20)
 	audio_stop_all()
 	instance_destroy()
 	instance_destroy(title)
-	room_goto(menu)
+	room_goto(title)
 	plants.plant[24].unlocked=true
 }
 if(room==quest5&&num>=30)
@@ -145,6 +145,6 @@ if(room==quest5&&num>=30)
 	audio_stop_all()
 	instance_destroy()
 	instance_destroy(title)
-	room_goto(menu)
+	room_goto(title)
 	plants.plant[61].unlocked=true
 }
