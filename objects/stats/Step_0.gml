@@ -115,14 +115,20 @@ if(room==quest1&&num>=20)
 	instance_destroy(slots)
 	room_goto(title)
 	plants.plant[7].unlocked=true
+	var oclevel = menu.clevel
+	menu.save_level()
+	menu.clevel=oclevel
 }
 if(room==quest2&&num>=20)
 {
 	audio_stop_all()
 	instance_destroy()
 	instance_destroy(slots)
-	room_goto(menu)
+	room_goto(title)
 	plants.plant[29].unlocked=true
+	var oclevel = menu.clevel
+	menu.save_level()
+	menu.clevel=oclevel
 }
 if(room==quest3&&num>=20)
 {
@@ -131,6 +137,9 @@ if(room==quest3&&num>=20)
 	instance_destroy(slots)
 	room_goto(title)
 	plants.plant[13].unlocked=true
+	var oclevel = menu.clevel
+	menu.save_level()
+	menu.clevel=oclevel
 }
 if(room==quest4&&num>=20)
 {
@@ -139,6 +148,9 @@ if(room==quest4&&num>=20)
 	instance_destroy(slots)
 	room_goto(title)
 	plants.plant[24].unlocked=true
+	var oclevel = menu.clevel
+	menu.save_level()
+	menu.clevel=oclevel
 }
 if(room==quest5&&num>=30)
 {
@@ -147,6 +159,9 @@ if(room==quest5&&num>=30)
 	instance_destroy(title)
 	room_goto(title)
 	plants.plant[61].unlocked=true
+	var oclevel = menu.clevel
+	menu.save_level()
+	menu.clevel=oclevel
 }
 if(room==quest6&&num>=20)
 {
@@ -155,4 +170,7 @@ if(room==quest6&&num>=20)
 	instance_destroy(title)
 	room_goto(title)
 	plants.plant[62].unlocked=true
+	var oclevel = menu.clevel
+	menu.save_level()
+	menu.clevel=oclevel
 }
