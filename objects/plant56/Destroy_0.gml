@@ -1,3 +1,5 @@
+if(instance_exists(slots))
+{
 if(hp<=0)
 {
 effect_create_above(ef_explosion,other.x,other.y,1,c_white)
@@ -16,4 +18,5 @@ if _num > 0
     }
 }
 ds_list_destroy(_list)
+}
 }

@@ -114,9 +114,30 @@ repeat (20) {
 			}
 			
 			
-			
+			var statsy= function(object,bnum){
+				inst=instance_create(-64,-64,object)
+				if(variable_instance_exists(inst,"hp"))
+				{
+					var hp=inst.hp
+				}
+				else
+				{
+					var hp=0
+				}
+				if(variable_instance_exists(inst,"reload"))
+				{
+					var reload=inst.reload
+				}
+				else
+				{
+					var reload=0
+				}
+				var recharge=plants.plant[bnum].recharge
+				instance_destroy(inst)
+				return ("hp "+string(hp)+" reload "+string(reload/60)+" recharge "+string(recharge/60));
+			}
 
-			
+			var statboi=statsy(plants.plant[bnum].object,bnum)
 			
 			
 		if (!hasplant)
@@ -155,7 +176,8 @@ repeat (20) {
 			draw_rectangle(64*17,0,(64*18)+256,768,false)
 			draw_set_colour(c_white)
 			draw_text_ext(64*17,0,plants.plant[bnum].desc,15,256)
-			draw_text_ext(64*17,128,string_hash_to_newline(str),15,256)
+			draw_text_ext(64*17,256,string_hash_to_newline(str),15,256)
+			draw_text_ext(64*17,128,statboi,15,256)
 			}
         }
         else
