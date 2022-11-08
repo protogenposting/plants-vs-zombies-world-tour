@@ -46,4 +46,19 @@ else
 can=false
 }
 }
+if(place_meeting(x,y,plant1))
+{
+	can=false
+}
+if(variable_struct_exists(plants.plant[slot],"vineplant"))
+{
+if(place_meeting(x,y,plant1))
+{
+can=true
+}
+else
+{
+can=false
+}
+}
 

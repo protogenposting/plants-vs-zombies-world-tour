@@ -34,6 +34,10 @@ if(room==quest5)
 {
 	action_set_alarm(120, 1);
 }
+if(room==quest6)
+{
+	action_set_alarm(120, 1);
+}
 
 moosic=ooftheroof
 hats=hats1
@@ -71,6 +75,11 @@ if(room==quest2)
 	killed=30
 }
 if(room==quest5)
+{
+	moosic=loobboon
+	hats=-1
+}
+if(room==quest6)
 {
 	moosic=loobboon
 	hats=-1

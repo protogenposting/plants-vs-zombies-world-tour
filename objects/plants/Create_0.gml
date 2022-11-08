@@ -431,6 +431,13 @@ plant[60]={
 	desc:"water lily yeets water droplets",
 	waterplant:true
 }
+plant[61]={
+	object: plant63,
+	cost: 25,
+	recharge:10*60,
+	desc:"invisibean makes plants invisible for a bit",
+	vineplant:true
+}
 
 
 var arrowwoody = {

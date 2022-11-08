@@ -34,9 +34,14 @@ else
 spd=nspd
 }
 coly=instance_place(x,y,plant44)
-if(place_meeting(x,y,plant1))
+colyo=instance_place(x,y,plant1)
+if(colyo)
+{
+if(colyo.image_alpha>=1)
 {
 spd=0
+colyo.hp-=1
+}
 image_index=anim2[anim]
 if(coly&&coly.image_index==0)
 {

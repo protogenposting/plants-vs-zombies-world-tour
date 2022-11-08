@@ -58,6 +58,10 @@ button[13]={
 	button:"water lily time",
 	roomy: quest5
 }
+button[14]={
+	button:"BEANNNS WTF",
+	roomy: quest6
+}
 draw=false
 
 depth=-100000

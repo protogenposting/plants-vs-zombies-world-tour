@@ -8,3 +8,4 @@ pfactive=false
 pftime=120
 pfi=0
 pfr=3
+image_alpha=1

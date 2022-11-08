@@ -6,7 +6,7 @@ if(instance_exists(stats)||instance_exists(selection))
 	instance_destroy(selection)
 	instance_destroy(slots)
 	instance_destroy(stats)
-	if(room!=quest1&&room!=quest2&&room!=quest3&&room!=quest4&&room!=quest5)
+	if(room!=quest1&&room!=quest2&&room!=quest3&&room!=quest4&&room!=quest5&&room!=quest6)
 	{
 		clevel=room
 		save_level()

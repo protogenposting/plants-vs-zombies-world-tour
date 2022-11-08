@@ -1,4 +1,4 @@
-if(!place_meeting(x,y,plant1)&&can)
+if(can)
 {
 inst=instance_create(x,y,plants.plant[slot].object)
 stats.sunny-=plants.plant[slot].cost

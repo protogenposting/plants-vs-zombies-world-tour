@@ -4,6 +4,7 @@ if(collision_line(x, y, room_width, y, basiczombie, true, true))
 }
 else
 {
+	i=16*(room_speed/sprite_get_speed(sprite_index))
 	image_speed=0
 	image_index=0
 }

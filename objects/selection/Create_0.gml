@@ -37,4 +37,9 @@ if(room==quest5)
 	selected=1
 	slot[0]=61
 }
+if(room==quest6)
+{
+	selected=1
+	slot[0]=62
+}
 audio_play_sound(pickyoseeds,1000,true)
