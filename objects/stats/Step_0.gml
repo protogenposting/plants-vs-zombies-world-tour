@@ -108,6 +108,38 @@ if(room==level11&&num>=25)
 	room_goto_next()
 	plants.plant[31].unlocked=true
 }
+if(room==level12&&num>=25)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[34].unlocked=true
+}
+if(room==level13&&num>=25)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[21].unlocked=true
+}
+if(room==level14&&num>=25)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[22].unlocked=true
+}
+if(room==level15&&num>=25)
+{
+	audio_stop_all()
+	instance_destroy()
+	instance_destroy(slots)
+	room_goto_next()
+	plants.plant[23].unlocked=true
+}
 if(room==quest1&&num>=20)
 {
 	audio_stop_all()
