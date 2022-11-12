@@ -108,7 +108,7 @@ repeat (20) {
             break;
 		}
         hasplant=false
-			if(variable_struct_exists(plants.plant[bnum],"unlocked"))
+			if(variable_struct_exists(plants.plant[bnum],"unlocked")&&plants.plant[bnum].unlocked)
 			{
 				hasplant=true
 			}
@@ -246,4 +246,4 @@ repeat (20) {
 }
 }
 
-draw_set_color(c_gray)
+draw_set_color(c_purple)

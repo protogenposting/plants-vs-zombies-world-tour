@@ -73,13 +73,54 @@ nextbeat=beatlen
 spr=choose(tilegrass,tilerussia,tilemud,tilevolcano,tilesand)
 pspr = spr
 al=1
-
+plantdataget=function(){
+			var num = 0
+			var array = array_create(0)
+			repeat(array_length(plants.plant))
+			{
+				var planty=false
+				if(variable_struct_exists(plants.plant[num],"unlocked")&&plants.plant[num].unlocked)
+				{
+					var planty=true
+				}
+				array_push(array,planty)
+				num+=1
+			}
+			return array
+		}
+plantdatareset=function(){
+			var array = array_create(2)
+			array[0]={
+	object: plant1,
+	cost: 100,
+	recharge:200,
+	desc:"peashooter fires peas at zombies",
+	lawn: tilegrass,
+	unlocked:true,
+	entry:"'I began fighting zombies in 2009,' Peashooter says. 'Little did I know, I'd be doing that for the rest of my life.'"
+}
+array[1]={
+	object: plant2,
+	cost: 50,
+	recharge:200,
+	desc:"sunflower produces sun",
+	lawn: tilegrass,
+	unlocked:true,
+	entry:"After her hit single 'Zombies on Your Lawn' 13 years ago, Sunflower immediately gained tons of fans. 'Ironically, they're all after my autograph. Not what I wanted.' she says."
+}
+			repeat(array_length(plants.plant)-2)
+			{
+				var planty=false
+				array_push(array,planty)
+			}
+			return array
+		}
 del_level=function(){
 	//make epoc array
 	instance_destroy(plants)
 	inst=instance_create(0,0,plants)
 	var _saveData = {
-		plantdata: inst.plant,
+		plantdata: menu.plantdatareset(),
 		level: level1
 	}
 	
@@ -94,7 +135,7 @@ del_level=function(){
 save_level=function(){
 	//make epoc array
 	var _saveData = {
-		plantdata: plants.plant,
+		plantdata: menu.plantdataget(),
 		level: menu.clevel
 	}
 	
@@ -120,24 +161,31 @@ load_level=function(){
 		inst=instance_create(0,0,plants)
 		show_debug_message("instance_created")
 		
-		if(array_length(inst.plant)>array_length(_loadData.plantdata))
+		var num = 0
+		repeat(array_length(plants.plant))
 		{
-			var num = array_length(_loadData.plantdata)-1
-			var _array = array_create(0)
-			repeat(array_length(inst.plant)-array_length(_loadData.plantdata))
+			if(num>array_length(_loadData.plantdata)-1)
 			{
-				var arrayboi=inst.plant[num]
-				array_push(_array,arrayboi)
-				num+=1
+				plants.plant[num].unlocked=false
 			}
+			else
+			{
+				plants.plant[num].unlocked=_loadData.plantdata[num]
+			}
+			num+=1
 		}
-		inst.plant=_loadData.plantdata
 		menu.clevel=_loadData.level
 	}
 	else
 	{
 		inst=instance_create(0,0,plants)
-		show_debug_message("no file to load")
+		var num = 2
+		repeat(array_length(plants.plant)-2)
+		{
+			plants.plant[num].unlocked=false
+			num+=1
+		}
+		show_message("no file to load")
 	}
 }
 

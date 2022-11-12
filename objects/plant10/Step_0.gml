@@ -1,4 +1,8 @@
 sh-=1
+if(inst!=-1&&!instance_exists(inst))
+{
+	inst=-1
+}
 if(sh<=0)
 {
 inst=instance_create(x,y,coldsun)

@@ -58,6 +58,11 @@ if(layer_background_get_sprite(bg)==tilesand)
 	moosic=moosic4
 	hats=hats4
 }
+if(layer_background_get_sprite(bg)==tilerussia)
+{
+	moosic=moosic5
+	hats=hats5
+}
 if(room==quest1)
 {
 	moosic=loobboon

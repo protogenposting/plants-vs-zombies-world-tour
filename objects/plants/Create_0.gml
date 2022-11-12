@@ -570,3 +570,27 @@ zombie[8]={
 	},
 	entry:"Your normal, boring, ordinary, old fashioned, classic gra- FUCK JERRY GOT BACK IN"
 }
+zombie[9]={
+	object: gardener,
+	desc:"gardener creates evil plants",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"Your normal, boring, ordinary, old fashioned, classic gra- FUCK JERRY GOT BACK IN"
+}
+zombie[10]={
+	object: evilplant1,
+	desc:"zombie pea shoots to the right at your plants",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"Your normal, boring, ordinary, old fashioned, classic gra- FUCK JERRY GOT BACK IN"
+}
