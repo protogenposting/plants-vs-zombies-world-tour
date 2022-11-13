@@ -50,6 +50,10 @@ if(place_meeting(x,y,plant1))
 {
 	can=false
 }
+if(place_meeting(x,y,plant4))
+{
+	can=true
+}
 if(variable_struct_exists(plants.plant[slot],"vineplant"))
 {
 if(place_meeting(x,y,plant1))

@@ -61,7 +61,7 @@ why=(room_height/2)-128
 bnum=4
 if(room==endlessmenu)
 {
-repeat(5)
+repeat(6)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)

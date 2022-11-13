@@ -26,3 +26,13 @@ if(!waterboi&&place_meeting(x,y,tiletypewater)&&!place_meeting(x,y,plant4))
 {
 	hp-=0.1
 }
+var lay_id = layer_get_id("Compatibility_Colour");
+var bg = layer_background_get_id(lay_id);
+if(layer_background_get_sprite(bg)==tiledesert)
+{
+	hp-=1
+	if(collision_rectangle(x - 65, y - 65, x + 65, y + 65, plant64, false, true)||collision_rectangle(x - 65, y - 65, x + 65, y + 65, plant65, false, true))
+	{
+		hp+=1
+	}
+}

@@ -1,6 +1,6 @@
-reload=360
+reload=60
 sh=reload
-hp=100
+hp=5
 image_speed=1
 
 action_set_alarm(30, 0);

@@ -198,7 +198,6 @@ plant[25]={
 	cost: 25,
 	recharge:250,
 	desc:"starfish flower produces sun inside water",
-	lawn: tilesand,
 	waterplant:true,
 	entry:"Starfish flower is best friends with kelpshot. They only play hide and seek and they always blend in with everything"
 }
@@ -265,18 +264,18 @@ plant[33]={
 	entry:"Was overpowered in the first game, got nerfed in the second, and is back for vengeance in talez of time. Will he be nerfed once more, or be stronger than ever? Find out, go on, plant him."
 }
 plant[34]={
-	object: plant32,
-	cost: 300,
-	recharge:500,
-	desc:"pea windmill fires peas in all directions",
-	entry:"Peamill loves windmills. He lives near a ton, he owns a ton, he draws a ton. And we all know why he loves him. Because of his name, sigh, all these plants base their personality off of their name"
+	object: plant64,
+	cost: 75,
+	recharge:5*60,
+	desc:"Sun bush provides shade to nearby plants and produces extra sun, can regenerate over time ",
+	lawn: tiledesert
 }
 plant[35]={
-	object: plant33,
-	cost: 150,
-	recharge:500,
-	desc:"shadewood turns peas into poison peas",
-	entry:"Shadewood is a little different from the others. Only reason is because he’s one of three purple plants and he always brags about it"
+	object: plant65,
+	cost: 175,
+	recharge:5*60,
+	desc:"Launches at powerfully blade at any tile on the lawn, cutting everything in its path. Provides shade to nearby plants",
+	lawn: tiledesert
 }
 plant[36]={
 	object: plant34,
@@ -438,6 +437,20 @@ plant[61]={
 	desc:"Plant Invisibean on top of any other plant to make them temporarily invisible",
 	vineplant:true,
 	entry:"Until now, Invisibean's origin remains unknown. Either he was just like... poof! There he is. Or..."
+}
+plant[62]={
+	object: plant32,
+	cost: 300,
+	recharge:500,
+	desc:"pea windmill fires peas in all directions",
+	entry:"Peamill loves windmills. He lives near a ton, he owns a ton, he draws a ton. And we all know why he loves him. Because of his name, sigh, all these plants base their personality off of their name"
+}
+plant[63]={
+	object: plant33,
+	cost: 150,
+	recharge:500,
+	desc:"shadewood turns peas into poison peas",
+	entry:"Shadewood is a little different from the others. Only reason is because he’s one of three purple plants and he always brags about it"
 }
 
 

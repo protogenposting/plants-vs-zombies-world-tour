@@ -66,6 +66,12 @@ draw=false
 
 depth=-100000
 
+var _strucc = {
+	button:"Saharah desert endless",
+	roomy: endless6
+}
+array_insert(button,8,_strucc)
+
 aud=audio_play_sound(menutheme,1000,false)
 beatlen=0.5
 nextbeat=beatlen
@@ -110,7 +116,8 @@ array[1]={
 }
 			repeat(array_length(plants.plant)-2)
 			{
-				var planty=false
+				var planty=true
+				planty=false
 				array_push(array,planty)
 			}
 			return array

@@ -18,6 +18,11 @@ if(room==endless4)
 	action_set_alarm(2, 1);
 	action_set_alarm(2000, 1);
 }
+if(room==endless6)
+{
+	action_set_alarm(2, 1);
+	action_set_alarm(3000, 1);
+}
 if(room==quest1)
 {
 	action_set_alarm(120, 1);
@@ -62,6 +67,11 @@ if(layer_background_get_sprite(bg)==tilerussia)
 {
 	moosic=moosic5
 	hats=hats5
+}
+if(layer_background_get_sprite(bg)==tiledesert)
+{
+	moosic=moosic6
+	hats=hats6
 }
 if(room==quest1)
 {

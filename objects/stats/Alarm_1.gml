@@ -13,6 +13,18 @@ if(room==endless3)
 {
 	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb)
 }
+if(room==endless4)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,tombraiser,gardener)
+}
+if(room==endless5)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,tombraiser,gardener)
+}
+if(room==endless6)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,tombraiser,gardener)
+}
 if(room==level1)
 {
 	zomb=choose(basiczombie)
@@ -55,15 +67,15 @@ if(room==level10)
 }
 if(room==level11)
 {
-	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,gardener)
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie)
 }
 if(room==level12)
 {
-	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,gardener)
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie)
 }
 if(room==level13)
 {
-	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,gardener)
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie)
 }
 if(room==level14)
 {
@@ -71,7 +83,23 @@ if(room==level14)
 }
 if(room==level15)
 {
-	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,gardener,octozomb,grave,tombraiser)
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb,grave,tombraiser)
+}
+if(room==level16)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb,grave,tombraiser)
+}
+if(room==level17)
+{
+	zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,octozomb,grave,tombraiser)
+}
+if(room==level18)
+{
+	zomb=choose(basiczombie,basiczombie,coneheadzombie,gardener)
+}
+if(room==level19)
+{
+	zomb=choose(basiczombie,basiczombie,coneheadzombie,gardener)
 }
 instance_create(room_width,choose(160,160+64,160+128,160+192,160+192+64),zomb)
 }
