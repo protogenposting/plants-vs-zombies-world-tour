@@ -268,7 +268,8 @@ plant[34]={
 	cost: 75,
 	recharge:5*60,
 	desc:"Sun bush provides shade to nearby plants and produces extra sun, can regenerate over time ",
-	lawn: tiledesert
+	lawn: tiledesert,
+	entry:"Sunbush thinks that the sun is sentient and is her rival. If that would be the case, why isn’t the sun crashing into earth? OH WAIT I JYNXED IT WAIT NO-"
 }
 plant[35]={
 	object: plant65,
@@ -593,11 +594,11 @@ zombie[9]={
 		instance_destroy(inst)
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
-	entry:"Your normal, boring, ordinary, old fashioned, classic gra- FUCK JERRY GOT BACK IN"
+	entry:"It’s kinda weird how a zombie is planting and cloning his rivals, oh well. I’m not the gardener zombie"
 }
 zombie[10]={
 	object: evilplant1,
-	desc:"zombie pea shoots to the right at your plants",
+	desc:"zombie pea shoots to the left at your plants",
 	statsy: function(object){
 		inst=instance_create(0,0,object)
 		hp=inst.hp
@@ -605,5 +606,5 @@ zombie[10]={
 		instance_destroy(inst)
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
-	entry:"Your normal, boring, ordinary, old fashioned, classic gra- FUCK JERRY GOT BACK IN"
+	entry:"Boy oh boy, you’d think that plants are immune to zombies. Well look at this, a zombie peashooter. You better be ready to kill em, because this is the equivalent of a zombie with a gun"
 }

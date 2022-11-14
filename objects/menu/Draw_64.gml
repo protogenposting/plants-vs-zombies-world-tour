@@ -77,7 +77,7 @@ repeat(6)
 draw_set_halign(fa_left)
 ecs=room_width/2
 why=(room_height/2)-128
-bnum=9
+bnum=10
 if(room==quests)
 {
 repeat(6)

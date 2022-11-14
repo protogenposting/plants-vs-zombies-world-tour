@@ -1,4 +1,4 @@
-reload=60
+reload=180
 sh=reload
 canhit=false
 hp=100
@@ -15,4 +15,4 @@ rotnum=0
 dir=0
 image_speed=1
 
-sprite_index=palmsaw
+sprite_index=sunbush
