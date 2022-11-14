@@ -48,7 +48,7 @@ repeat(4)
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
 	draw_text(ecs,why,button[bnum].button)
-	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left))
+	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs-64,why-32,ecs+64,why+32)&&global.tapping)
 	{
 		room_goto(button[bnum].roomy)
 	}
@@ -66,7 +66,7 @@ repeat(6)
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
 	draw_text(ecs,why,button[bnum].button)
-	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left))
+	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs-64,why-32,ecs+64,why+32)&&global.tapping)
 	{
 		room_goto(button[bnum].roomy)
 	}
@@ -85,7 +85,7 @@ repeat(6)
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
 	draw_text(ecs,why,button[bnum].button)
-	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left))
+	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_Y,global.Touch_Y,ecs-64,why-32,ecs+64,why+32)&&global.tapping)
 	{
 		room_goto(button[bnum].roomy)
 	}
@@ -113,7 +113,6 @@ repeat (20) {
 				hasplant=true
 			}
 			
-			
 			var statsy= function(object,bnum){
 				inst=instance_create(-64,-64,object)
 				if(variable_instance_exists(inst,"hp"))
@@ -136,8 +135,10 @@ repeat (20) {
 				instance_destroy(inst)
 				return ("hp "+string(hp)+" reload "+string(reload/60)+" recharge "+string(recharge/60));
 			}
-
-			var statboi=statsy(plants.plant[bnum].object,bnum)
+			if(!variable_struct_exists(plants.plant[bnum],"statboi")&&os_browser != browser_opera)
+			{
+				plants.plant[bnum].statboi=statsy(plants.plant[bnum].object,bnum)
+			}
 			
 			
 		if (!hasplant)
@@ -177,7 +178,10 @@ repeat (20) {
 			draw_set_colour(c_white)
 			draw_text_ext(64*17,0,plants.plant[bnum].desc,15,256)
 			draw_text_ext(64*17,256,string_hash_to_newline(str),15,256)
-			draw_text_ext(64*17,128,statboi,15,256)
+				if(os_browser != browser_opera)
+				{
+				draw_text_ext(64*17,128,plants.plant[bnum].statboi,15,256)
+				}
 			}
         }
         else
@@ -246,4 +250,33 @@ repeat (20) {
 }
 }
 
+ecs=room_width
+why=0
+draw_rectangle(ecs,why,ecs-128,why+64,true)
+draw_text(ecs-128,why,"back")
+if(point_in_rectangle(mouse_x,mouse_y,ecs-128,why,ecs,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs-128,why,ecs,why+64)&&global.tapping)
+{
+if(instance_exists(stats)||instance_exists(selection))
+{
+	instance_destroy(stats)
+	instance_destroy(selection)
+	instance_destroy(slots)
+	instance_destroy(stats)
+	if(room>=16)
+	{
+		clevel=room
+		save_level()
+	}
+	else
+	{
+		save_level()
+	}
+	room_goto(title)
+	audio_stop_all()
+}
+else if(room==endlessmenu||room==alminac||room==quests)
+{
+	room_goto(title)
+}
+}
 draw_set_color(c_purple)

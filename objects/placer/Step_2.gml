@@ -1,5 +1,10 @@
 y=mouse_y
 x=mouse_x
+if(os_device==os_android)
+{
+	x=global.Touch_X
+	y=global.Touch_Y
+}
 move_snap(64,64)
 
 while(y<160+32)
@@ -66,3 +71,22 @@ can=false
 }
 }
 
+if(mouse_check_button_pressed(mb_left)||global.tapping)
+{
+	if(can)
+{
+inst=instance_create(x,y,plants.plant[slot].object)
+stats.sunny-=plants.plant[slot].cost
+slots.reload[slotselected]=plants.plant[slot].recharge
+if(variable_struct_exists(plants.plant[slot],"waterplant"))
+{
+	inst.waterboi=true
+}
+else
+{
+	inst.waterboi=false
+}
+}
+action_kill_object();
+
+}

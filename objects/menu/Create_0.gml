@@ -197,3 +197,7 @@ load_level=function(){
 }
 
 slotty=0
+
+global.tapping=false
+global.Touch_X=0
+global.Touch_Y=0

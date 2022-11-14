@@ -41,11 +41,11 @@ repeat (20) {
         draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
         ecs += 64;
         
-        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots
+        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs-64, why, ecs, why+64)&&selected<maxslots
             ) {
             draw=true
             str=plants.plant[slotty].desc
-            if(mouse_check_button_pressed(mb_left))
+            if(mouse_check_button_pressed(mb_left)||global.tapping)
             {
             slot[selected] = slotty;
             selected += 1;
@@ -81,6 +81,7 @@ slottyo=0
 
 if(room==quest2)
 {
+	audio_sound_gain(pickyoseeds,0.00001,360*2)
 	inst=instance_create(x,y,slots)
 	instance_create(x,y,stats)
 	inst.slot[0]=29
@@ -92,4 +93,24 @@ if(room==quest2)
 	inst.slot[6]=29
 	inst.maxslots=maxslots
 	instance_destroy()
+}
+
+ecs=room_width-128
+why=room_height-64
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+draw_text(ecs,why,"START")
+if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+{
+	audio_sound_gain(pickyoseeds,0.00001,360*2)
+inst=instance_create(x,y,slots)
+instance_create(x,y,stats)
+inst.slot[0]=slot[0]
+inst.slot[1]=slot[1]
+inst.slot[2]=slot[2]
+inst.slot[3]=slot[3]
+inst.slot[4]=slot[4]
+inst.slot[5]=slot[5]
+inst.slot[6]=slot[6]
+inst.maxslots=maxslots
+instance_destroy()
 }
