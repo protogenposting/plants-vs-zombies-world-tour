@@ -30,8 +30,9 @@ ecs=16
 }
 if(room==title||room==endlessmenu||room==quests)
 {
-draw_text(16,16,"press del to reset progress")
-if(keyboard_check_pressed(vk_delete))
+draw_rectangle(0,0,128,64,true)
+draw_text(16,16,"press to reset progress")
+if(keyboard_check_pressed(vk_delete)||point_in_rectangle(mouse_x,mouse_y,0,0,128,64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,0,0,128,64)&&global.tapping)
 {
 	del_level()
 	game_end()
@@ -137,7 +138,8 @@ repeat (20) {
 			}
 			if(!variable_struct_exists(plants.plant[bnum],"statboi")&&os_browser != browser_opera)
 			{
-				plants.plant[bnum].statboi=statsy(plants.plant[bnum].object,bnum)
+				//plants.plant[bnum].statboi=statsy(plants.plant[bnum].object,bnum)
+				plants.plant[bnum].statboi="stats are disabled in this release sorry :("
 			}
 			
 			
@@ -250,11 +252,11 @@ repeat (20) {
 }
 }
 
-ecs=room_width
-why=0
-draw_rectangle(ecs,why,ecs-128,why+64,true)
-draw_text(ecs-128,why,"back")
-if(point_in_rectangle(mouse_x,mouse_y,ecs-128,why,ecs,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs-128,why,ecs,why+64)&&global.tapping)
+ecs=0
+why=room_height-64
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+draw_text(ecs,why,"back")
+if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
 if(instance_exists(stats)||instance_exists(selection))
 {
@@ -277,6 +279,19 @@ if(instance_exists(stats)||instance_exists(selection))
 else if(room==endlessmenu||room==alminac||room==quests)
 {
 	room_goto(title)
+}
+}
+draw_circle(global.Touch_X,global.Touch_Y,8,true)
+
+if(room==title)
+{
+	ecs=room_width-128
+why=room_height-64
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+draw_text(ecs,why,"discord")
+if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+{
+	url_open("https://discord.gg/AnGgzRQtgm")
 }
 }
 draw_set_color(c_purple)

@@ -37,8 +37,8 @@ repeat (20) {
 			draw_sprite(tilestore, 0, ecs + 32, why + 32);
 		}
         draw_rectangle(ecs, why, ecs + 64, why + 64, true);
-        draw_sprite(object_get_sprite(plants.plant[slotty].object), 0, ecs + 32, why + 32);
-        draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
+	    draw_sprite(object_get_sprite(plants.plant[slotty].object), 0, ecs + 32, why + 32);
+		draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
         ecs += 64;
         
         if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs-64, why, ecs, why+64)&&selected<maxslots
@@ -48,7 +48,8 @@ repeat (20) {
             if(mouse_check_button_pressed(mb_left)||global.tapping)
             {
             slot[selected] = slotty;
-            selected += 1;
+            selected += 0.5;
+			menu.alarm[0]=10
             }
             if(draw)
 {
@@ -72,7 +73,10 @@ why=0
 repeat(maxslots)
 {
 draw_rectangle(ecs,why,ecs+64,why+64,true)
+if(slottyo<selected)
+{
 draw_sprite(object_get_sprite(plants.plant[slot[slottyo]].object),0,ecs+32,why+32)
+}
 slottyo+=1
 why+=64
 }
@@ -113,4 +117,49 @@ inst.slot[5]=slot[5]
 inst.slot[6]=slot[6]
 inst.maxslots=maxslots
 instance_destroy()
+}
+ecs-=128
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+draw_text(ecs,why,"CLEAR")
+if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+{
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+draw_text(ecs,why,"START")
+if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+{
+slot[0]=0
+slot[1]=0
+slot[2]=0
+slot[3]=0
+slot[4]=0
+slot[5]=0
+slot[6]=0
+selected=0
+
+if(room==quest1)
+{
+	selected=1
+	slot[0]=7
+}
+if(room==quest3)
+{
+	selected=1
+	slot[0]=13
+}
+if(room==quest4)
+{
+	selected=1
+	slot[0]=24
+}
+if(room==quest5)
+{
+	selected=1
+	slot[0]=61
+}
+if(room==quest6)
+{
+	selected=1
+	slot[0]=62
+}
+}
 }

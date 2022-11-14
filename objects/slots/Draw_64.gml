@@ -1,4 +1,4 @@
-draw_set_color(c_gray)
+draw_set_color(c_black)
 ecs=64
 repeat(maxslots)
 {
@@ -48,16 +48,16 @@ inst.slotselected=(ecs/64)-1
 ecs+=64
 }
 }
-draw_rectangle(ecs,0,ecs+128+32,32,true)
+draw_rectangle(ecs,0,ecs+128+32,64,true)
 draw_text(ecs,0,"plant food: "+string(pf)+"/"+string(pfcap))
-if(pf>0&&mouse_x<ecs+128+32&&mouse_x>ecs&&mouse_y<32&&mouse_y>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128+32, 32)&&global.tapping)
+if(pf>0&&mouse_x<ecs+128+32&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128+32, 64)&&global.tapping)
 {
 	inst=instance_create(x,y,plantfood)
 }
 ecs+=128+32
-draw_rectangle(ecs,0,ecs+128,32,true)
+draw_rectangle(ecs,0,ecs+128,64,true)
 draw_text(ecs,0,"shovel")
-if(mouse_x<ecs+128&&mouse_x>ecs&&mouse_y<32&&mouse_y>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128, 32)&&global.tapping)
+if(mouse_x<ecs+128&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128, 64)&&global.tapping)
 {
 	inst=instance_create(x,y,shovel)
 }
