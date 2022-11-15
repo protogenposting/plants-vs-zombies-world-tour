@@ -113,3 +113,107 @@ if(instance_exists(tiletypeunplantable))
 {
 	tiletypeunplantable.alarm[1]=60
 }
+
+
+
+mnum=999999999999999999
+if(room==quest1)
+{
+	mnum=10
+}
+if(room==quest2)
+{
+	mnum=30
+}
+if(room==quest3)
+{
+	mnum=20
+}
+if(room==quest4)
+{
+	mnum=30
+}
+if(room==quest5)
+{
+	mnum=20
+}
+if(room==quest6)
+{
+	mnum=7
+}
+if(room==level1)
+{
+	mnum=5
+}
+if(room==level2)
+{
+	mnum=10
+}
+if(room==level3)
+{
+	mnum=15
+}
+if(room==level4)
+{
+	mnum=15
+}
+if(room==level5)
+{
+	mnum=15
+}
+if(room==level6)
+{
+	mnum=15
+}
+if(room==level7)
+{
+	mnum=15
+}
+if(room==level8)
+{
+	mnum=15
+}
+if(room==level9)
+{
+	mnum=20
+}
+if(room==level10)
+{
+	mnum=20
+}
+if(room==level11)
+{
+	mnum=20
+}
+if(room==level12)
+{
+	mnum=20
+}
+if(room==level13)
+{
+	mnum=20
+}
+if(room==level14)
+{
+	mnum=20
+}
+if(room==level15)
+{
+	mnum=20
+}
+if(room==level16)
+{
+	mnum=20
+}
+if(room==level17)
+{
+	mnum=20
+}
+if(room==level18)
+{
+	mnum=20
+}
+if(room==level19)
+{
+	mnum=20
+}

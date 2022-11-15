@@ -9,7 +9,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "blockbuster",
+    "path": "sprites/blockbuster/blockbuster.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "plant1",
