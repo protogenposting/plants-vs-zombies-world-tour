@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "plant55",
-  "spriteId": {
-    "name": "absorber",
-    "path": "sprites/absorber/absorber.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

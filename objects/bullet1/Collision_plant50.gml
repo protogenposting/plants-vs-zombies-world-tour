@@ -3,4 +3,4 @@
 hspeed=0
 vspeed=0
 direction=other.dir
-speed*=2
+speed+=0.1

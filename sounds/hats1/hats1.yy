@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "hats1",
-  "duration": 339.53958,
+  "soundFile": "hats1.ogg",
+  "duration": 105.0,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

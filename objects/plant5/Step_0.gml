@@ -16,35 +16,33 @@ if(pfactive)
 }
 if(storedsteam<=0)
 {
-	if(image_index>=12)
-	{
-		image_index=0
-	}
+	sprite_index=sucknutidle
 }
 if(storedsteam>0&&!instance_exists(tiletypesteam))
 {
-	if(image_index<20)
+	if(collision_line(x, y, room_width, y, basiczombie, true, true))
 	{
-		image_index=20
+		sprite_index=sucknutshoot
+		if(sh<=0)
+		{
+			hp-=1
+			inst=instance_create(x,y+6,bullet3)
+			inst.hspeed=5
+			audio_play_sound(hit,1000,false)
+			storedsteam-=1
+			sh=reload/4
+		}
 	}
-	if(sh<=0)
+	else
 	{
-		hp-=1
-		inst=instance_create(x,y+6,bullet3)
-		inst.hspeed=5
-		audio_play_sound(hit,1000,false)
-		storedsteam-=1
-		sh=reload/4
+		sprite_index=sucknuthold
 	}
 }
 if(instance_exists(tiletypesteam))
 {
-	if(image_index<13)
+	sprite_index=sucknutsuck
+	if(image_index<=0)
 	{
-		image_index=13
-	}
-	if(image_index>=19)
-	{
-		image_index=0
+		image_index+=1
 	}
 }

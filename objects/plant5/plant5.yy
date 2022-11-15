@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "plant5",
   "spriteId": {
-    "name": "absorber",
-    "path": "sprites/absorber/absorber.yy",
+    "name": "sucknuthold",
+    "path": "sprites/sucknuthold/sucknuthold.yy",
   },
   "solid": false,
   "visible": true,
