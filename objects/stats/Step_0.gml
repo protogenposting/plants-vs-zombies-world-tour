@@ -22,9 +22,10 @@ if(num>=mnum)
 	instance_destroy()
 	instance_destroy(slots)
 	room_goto_next()
-	plants.plant[2].unlocked=true
-	plants.plant[3].unlocked=true
-	plants.plant[4].unlocked=true
-	plants.plant[5].unlocked=true
-	plants.plant[6].unlocked=true
+	var numy = 0
+	repeat(array_length(plant))
+	{
+		plants.plant[plant[numy]].unlocked=true
+		numy+=1
+	}
 }

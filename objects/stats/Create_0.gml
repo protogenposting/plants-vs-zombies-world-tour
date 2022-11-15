@@ -10,6 +10,8 @@ i=0
 
 idps=0
 
+num=0
+
 action_set_alarm(360, 0);
 action_set_alarm(2, 1);
 action_set_alarm(1000, 1);
@@ -117,101 +119,126 @@ if(instance_exists(tiletypeunplantable))
 
 
 mnum=999999999999999999
+plant=[1]
 if(room==quest1)
 {
 	mnum=10
+	plant=[7]
 }
 if(room==quest2)
 {
 	mnum=30
+	plant=[28]
 }
 if(room==quest3)
 {
 	mnum=20
+	plant=[13]
 }
 if(room==quest4)
 {
 	mnum=30
+	plant=[24]
 }
 if(room==quest5)
 {
 	mnum=20
+	plant=[61]
 }
 if(room==quest6)
 {
 	mnum=7
+	plant=[62]
 }
 if(room==level1)
 {
 	mnum=15
+	plant=[2,3,4,5,6]
 }
 if(room==level2)
 {
 	mnum=15
+	plant=[8]
 }
 if(room==level3)
 {
 	mnum=15
+	plant=[9]
 }
 if(room==level4)
 {
 	mnum=15
+	plant=[10]
 }
 if(room==level5)
 {
 	mnum=15
+	plant=[11]
 }
 if(room==level6)
 {
 	mnum=15
+	plant=[12]
 }
 if(room==level7)
 {
 	mnum=15
+	plant=[14]
 }
 if(room==level8)
 {
 	mnum=15
+	plant=[27]
 }
 if(room==level9)
 {
 	mnum=20
+	plant=[29]
 }
 if(room==level10)
 {
 	mnum=20
+	plant=[30]
 }
 if(room==level11)
 {
 	mnum=20
+	plant=[31]
 }
 if(room==level12)
 {
 	mnum=20
+	plant=[32]
 }
 if(room==level13)
 {
 	mnum=20
+	plant=[34]
 }
 if(room==level14)
 {
 	mnum=20
+	plant=[21]
 }
 if(room==level15)
 {
 	mnum=20
+	plant=[22]
 }
 if(room==level16)
 {
 	mnum=20
+	plant=[23]
 }
 if(room==level17)
 {
 	mnum=20
+	plant=[35]
 }
 if(room==level18)
 {
 	mnum=20
+	plant=[36]
 }
 if(room==level19)
 {

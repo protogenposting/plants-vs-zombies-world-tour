@@ -62,4 +62,4 @@ if(mouse_x<ecs+128&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_press
 	inst=instance_create(x,y,shovel)
 }
 ecs+=128
-draw_healthbar(ecs,0,ecs+128,64,(stats.num/stats.mnum)*100,c_black,c_red,c_green,0,true,true)
+draw_healthbar(ecs,0,ecs+128,64,((stats.num+1)/stats.mnum)*100,c_black,c_red,c_green,0,true,true)

@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "ooftheroof.ogg",
-  "duration": 105.0,
+  "soundFile": "ooftheroof.wav",
+  "duration": 65.0,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
