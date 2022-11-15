@@ -128,7 +128,7 @@ if(room==quest1)
 if(room==quest2)
 {
 	mnum=30
-	plant=[28]
+	plant=[29]
 }
 if(room==quest3)
 {
@@ -193,7 +193,7 @@ if(room==level8)
 if(room==level9)
 {
 	mnum=20
-	plant=[29]
+	plant=[28]
 }
 if(room==level10)
 {
