@@ -20,11 +20,11 @@ if(!variable_instance_exists(self,"waterboi"))
 }
 if(waterboi&&!place_meeting(x,y,tiletypewater))
 {
-	hp-=0.1
+	hp-=1
 }
 if(!waterboi&&place_meeting(x,y,tiletypewater)&&!place_meeting(x,y,plant4))
 {
-	hp-=0.1
+	hp-=1
 }
 var lay_id = layer_get_id("Compatibility_Colour");
 var bg = layer_background_get_id(lay_id);

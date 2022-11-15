@@ -2,13 +2,9 @@ if(canny)
 {
 y=mouse_y
 x=mouse_x
-if(os_device==os_android)
-{
-	x=global.Touch_X
-	y=global.Touch_Y
-}
 move_snap(64,64)
-
+var lay_id = layer_get_id("Compatibility_Colour");
+var bg = layer_background_get_id(lay_id);
 while(y<160+32)
 {
 y+=32
@@ -52,6 +48,10 @@ else
 {
 can=false
 }
+if(layer_background_get_sprite(bg)==tilesand)
+{
+	can=true
+}
 }
 if(place_meeting(x,y,plant1))
 {
@@ -73,7 +73,7 @@ can=false
 }
 }
 
-if(mouse_check_button_pressed(mb_left)||global.tapping)
+if(mouse_check_button_pressed(mb_left))
 {
 	if(can)
 {
