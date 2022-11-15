@@ -120,35 +120,42 @@ if(instance_exists(tiletypeunplantable))
 
 mnum=999999999999999999
 plant=[1]
+quest=false
 if(room==quest1)
 {
 	mnum=10
 	plant=[7]
+	quest=true
 }
 if(room==quest2)
 {
 	mnum=30
 	plant=[29]
+	quest=true
 }
 if(room==quest3)
 {
 	mnum=20
 	plant=[13]
+	quest=true
 }
 if(room==quest4)
 {
 	mnum=30
 	plant=[24]
+	quest=true
 }
 if(room==quest5)
 {
 	mnum=20
 	plant=[61]
+	quest=true
 }
 if(room==quest6)
 {
 	mnum=7
 	plant=[62]
+	quest=true
 }
 if(room==level1)
 {

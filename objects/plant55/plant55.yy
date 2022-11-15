@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "plant55",
-  "spriteId": null,
+  "spriteId": {
+    "name": "bamb_proj",
+    "path": "sprites/bamb_proj/bamb_proj.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

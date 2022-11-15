@@ -28,4 +28,14 @@ if(num>=mnum)
 		plants.plant[plant[numy]].unlocked=true
 		numy+=1
 	}
+	if(quest)
+	{
+		instance_destroy(stats)
+		instance_destroy(selection)
+		instance_destroy(slots)
+		instance_destroy(stats)
+		menu.save_level()
+		room_goto(title)
+		audio_stop_all()
+	}
 }
