@@ -143,11 +143,11 @@ if(room==quest6)
 }
 if(room==level1)
 {
-	mnum=5
+	mnum=15
 }
 if(room==level2)
 {
-	mnum=10
+	mnum=15
 }
 if(room==level3)
 {
