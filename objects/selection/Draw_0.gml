@@ -41,14 +41,14 @@ repeat (20) {
 		draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
         ecs += 64;
         
-        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs-64, why, ecs, why+64)&&selected<maxslots
+        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots
             ) {
             draw=true
             str=plants.plant[slotty].desc
-            if(mouse_check_button_pressed(mb_left)||global.tapping)
+            if(mouse_check_button_pressed(mb_left))
             {
             slot[selected] = slotty;
-            selected += 0.5;
+            selected += 1;
 			menu.alarm[0]=10
             }
             if(draw)

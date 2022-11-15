@@ -281,7 +281,6 @@ else if(room==endlessmenu||room==alminac||room==quests)
 	room_goto(title)
 }
 }
-draw_circle(global.Touch_X,global.Touch_Y,8,true)
 
 if(room==title)
 {

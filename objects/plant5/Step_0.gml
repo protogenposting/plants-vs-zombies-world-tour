@@ -13,3 +13,41 @@ if(pfactive)
 		pfi=pfr
 	}
 }
+if(storedsteam<=0)
+{
+	if(image_index>=12)
+	{
+		image_index=0
+	}
+}
+if(storedsteam>0&&!instance_exists(tiletypesteam))
+{
+	if(image_index<20)
+	{
+		image_index=20
+	}
+	if(image_index==23)
+	{
+		hp-=1
+		inst=instance_create(x,y+6,bullet3)
+		inst.hspeed=5
+		audio_play_sound(hit,1000,false)
+		storedsteam-=1
+		if(image_index<20)
+		{
+			image_index=20
+		}
+		sh=reload/4
+	}
+}
+if(instance_exists(tiletypesteam))
+{
+	if(image_index<13)
+	{
+		image_index=13
+	}
+	if(image_index>=19)
+	{
+		image_index=0
+	}
+}
