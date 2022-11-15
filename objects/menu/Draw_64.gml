@@ -292,5 +292,26 @@ if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_butto
 {
 	url_open("https://discord.gg/AnGgzRQtgm")
 }
-}
+ecs+=128
 draw_set_color(c_purple)
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+if(room_speed==30)
+{
+draw_text(ecs,why,"60 fps")
+}
+if(room_speed==60)
+{
+draw_text(ecs,why,"30 fps")
+}
+if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+{
+	if(room_speed==30)
+{
+room_speed=60
+}
+if(room_speed==60)
+{
+room_speed=30
+}
+}
+}
