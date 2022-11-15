@@ -50,7 +50,7 @@ ecs+=64
 }
 draw_rectangle(ecs,0,ecs+128+32,64,true)
 draw_text(ecs,0,"plant food: "+string(pf)+"/"+string(pfcap))
-if(pf>0&&mouse_x<ecs+128+32&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128+32, 64)&&global.tapping)
+if(pf>0&&mouse_x<ecs+128+32&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_pressed(mb_left))
 {
 	inst=instance_create(x,y,plantfood)
 }

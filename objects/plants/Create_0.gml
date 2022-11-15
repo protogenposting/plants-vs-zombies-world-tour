@@ -42,7 +42,7 @@ plant[4]={
 }
 plant[5]={
 	object: plant24,
-	cost: 75,
+	cost: 175,
 	recharge:200,
 	desc:"torchwood ignites peas",
 	lawn: tilegrass,

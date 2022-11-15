@@ -1,23 +1,2 @@
 y=mouse_y
 x=mouse_x
-if(os_device==os_android)
-{
-	x=global.Touch_X
-	y=global.Touch_Y
-}
-move_snap(64,64)
-if(global.tapping)
-{
-	col=instance_place(x,y,plant1)
-if(col)
-{
-col.pfactive=true
-col.alarm[5]=col.pftime
-if(slots.pf>0)
-{
-slots.pf-=1
-}
-}
-
-action_kill_object();
-}
