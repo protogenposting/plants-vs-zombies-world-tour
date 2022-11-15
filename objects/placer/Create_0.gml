@@ -3,4 +3,4 @@ can=true
 var num = 0
 
 canny=false
-alarm[0]=20
+alarm[0]=5
