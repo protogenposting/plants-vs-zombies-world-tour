@@ -1,3 +1,5 @@
+if(canny)
+{
 y=mouse_y
 x=mouse_x
 if(os_device==os_android)
@@ -89,4 +91,5 @@ else
 }
 action_kill_object();
 
+}
 }
