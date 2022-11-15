@@ -201,3 +201,5 @@ slotty=0
 global.tapping=false
 global.Touch_X=0
 global.Touch_Y=0
+
+game_set_speed(60, gamespeed_fps);

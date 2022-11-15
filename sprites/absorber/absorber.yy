@@ -54,7 +54,6 @@
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"985e3136-366c-4ae2-a193-4751703da201",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87fa2ece-dc8a-4949-8164-d35af104b6c2",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c87e9509-bf6c-4769-bc10-761f8ec82e37",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2ff6dc1e-05b7-4466-968f-e2509d0716fa",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -66,7 +65,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 27.0,
+    "length": 26.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -97,7 +96,6 @@
             {"id":"acc8d48c-2052-404b-aea1-a44b04538956","Key":23.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"985e3136-366c-4ae2-a193-4751703da201","path":"sprites/absorber/absorber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0b44db07-a89e-400d-8383-752c401a50c0","Key":24.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"87fa2ece-dc8a-4949-8164-d35af104b6c2","path":"sprites/absorber/absorber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8c342d86-b3b7-4948-bb8c-5cbe021cc94c","Key":25.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c87e9509-bf6c-4769-bc10-761f8ec82e37","path":"sprites/absorber/absorber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2848d137-47c5-44f7-af66-7cb5e057ec3e","Key":26.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ff6dc1e-05b7-4466-968f-e2509d0716fa","path":"sprites/absorber/absorber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
