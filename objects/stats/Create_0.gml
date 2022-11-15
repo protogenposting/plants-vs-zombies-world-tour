@@ -108,3 +108,8 @@ waterlevel=0
 depth=-100000
 
 num=0
+
+if(instance_exists(tiletypeunplantable))
+{
+	tiletypeunplantable.alarm[1]=60
+}
