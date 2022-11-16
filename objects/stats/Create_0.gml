@@ -220,22 +220,22 @@ if(room==level12)
 if(room==level13)
 {
 	mnum=20
-	plant=[34]
+	plant=[34,21]
 }
 if(room==level14)
 {
 	mnum=20
-	plant=[21]
+	plant=[22]
 }
 if(room==level15)
 {
 	mnum=20
-	plant=[22]
+	plant=[23]
 }
 if(room==level16)
 {
 	mnum=20
-	plant=[23]
+	plant=[25]
 }
 if(room==level17)
 {
