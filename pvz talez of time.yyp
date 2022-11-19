@@ -267,6 +267,7 @@
     {"id":{"name":"plant34","path":"objects/plant34/plant34.yy",},"order":33,},
     {"id":{"name":"plant52","path":"objects/plant52/plant52.yy",},"order":51,},
     {"id":{"name":"alminac","path":"rooms/alminac/alminac.yy",},"order":3,},
+    {"id":{"name":"healyhockheal","path":"sprites/healyhockheal/healyhockheal.yy",},"order":125,},
     {"id":{"name":"endless3","path":"rooms/endless3/endless3.yy",},"order":14,},
     {"id":{"name":"plant35","path":"objects/plant35/plant35.yy",},"order":34,},
     {"id":{"name":"micheal","path":"sprites/micheal/micheal.yy",},"order":102,},

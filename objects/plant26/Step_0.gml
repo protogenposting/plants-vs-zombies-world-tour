@@ -17,6 +17,8 @@ repeat(instance_number(plant1))
 	sh=reload
 	num+=1
 }
+sprite_index=healyhockheal
+alarm[1]=image_number*(room_speed/sprite_get_speed(sprite_index))
 }
 
 if(sh<=100)
