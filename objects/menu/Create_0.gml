@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+plantnum=0
 plantselected=0
 zombieselected=0
 areaselected=0
@@ -86,6 +86,11 @@ var _strucc2 = {
 	roomy: editor
 }
 array_insert(button,4,_strucc2)
+var _strucc3 = {
+	button:"teirlister",
+	roomy: teirlist
+}
+array_insert(button,5,_strucc3)
 
 aud=audio_play_sound(menutheme,1000,false)
 beatlen=2

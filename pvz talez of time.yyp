@@ -125,6 +125,7 @@
     {"id":{"name":"voidwood","path":"sprites/voidwood/voidwood.yy",},"order":57,},
     {"id":{"name":"level4","path":"rooms/level4/level4.yy",},"order":20,},
     {"id":{"name":"tiletypeunplantable","path":"objects/tiletypeunplantable/tiletypeunplantable.yy",},"order":120,},
+    {"id":{"name":"teirlist","path":"rooms/teirlist/teirlist.yy",},"order":39,},
     {"id":{"name":"plant62","path":"objects/plant62/plant62.yy",},"order":62,},
     {"id":{"name":"grave","path":"objects/grave/grave.yy",},"order":80,},
     {"id":{"name":"tilegrass","path":"sprites/tilegrass/tilegrass.yy",},"order":80,},
@@ -357,6 +358,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"title","path":"rooms/title/title.yy",},},
     {"roomId":{"name":"editor","path":"rooms/editor/editor.yy",},},
+    {"roomId":{"name":"teirlist","path":"rooms/teirlist/teirlist.yy",},},
     {"roomId":{"name":"quests","path":"rooms/quests/quests.yy",},},
     {"roomId":{"name":"endless3","path":"rooms/endless3/endless3.yy",},},
     {"roomId":{"name":"endless","path":"rooms/endless/endless.yy",},},

@@ -44,7 +44,7 @@ why=(room_height/2)-128
 var bnum=0
 if(room==title)
 {
-repeat(5)
+repeat(6)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
@@ -59,7 +59,7 @@ repeat(5)
 }
 ecs=room_width/2
 why=(room_height/2)-128
-bnum=5
+bnum=6
 if(room==endlessmenu)
 {
 repeat(6)
@@ -78,7 +78,7 @@ repeat(6)
 draw_set_halign(fa_left)
 ecs=room_width/2
 why=(room_height/2)-128
-bnum=11
+bnum=12
 if(room==quests)
 {
 repeat(6)
@@ -287,7 +287,7 @@ if(instance_exists(stats)||instance_exists(selection))
 	room_goto(title)
 	audio_stop_all()
 }
-else if(room==endlessmenu||room==alminac||room==quests||room==editor)
+else if(room==endlessmenu||room==alminac||room==quests||room==editor||room==teirlist)
 {
 	room_goto(title)
 	audio_stop_all()

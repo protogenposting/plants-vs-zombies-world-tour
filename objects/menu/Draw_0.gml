@@ -173,3 +173,44 @@ why+=64
 	}
 	}
 }
+
+if(room==teirlist)
+{
+	draw_text(0,128,"S")
+	draw_rectangle(64,128,room_width,128+128,true)
+	draw_text(0,128+128,"A")
+	draw_rectangle(64,128+128,room_width,128+256,true)
+	draw_text(0,128+256,"B")
+	draw_rectangle(64,128+256,room_width,256*2,true)
+	draw_text(0,256*2,"C")
+	draw_rectangle(64,256*2,room_width,256*2+128,true)
+	draw_text(0,256*2+128,"F")
+	draw_rectangle(64,256*2+128,room_width,256*2+256,true)
+	draw_text(0,256*2+256,"F")
+	draw_rectangle(64,256*2+256,room_width,256*2+256+128,true)
+	
+	draw_sprite(object_get_sprite(plants.plant[plantnum].object),0,mouse_x,mouse_y)
+	if(mouse_check_button_pressed(mb_left))
+		{
+			array_push(instlist,insty)
+			insty=instance_create(mouse_x,mouse_y,temp)
+			insty.thing=plants.plant[plantnum]
+			with(insty)
+			{
+				move_snap(64,64)
+			}
+			plantnum+=1
+		}
+		if(keyboard_check_pressed(vk_left))
+		{
+			if(array_length(instlist)>0)
+			{
+				
+				insty.colly=true
+				instance_destroy(insty)
+				plantnum-=1
+				insty=instlist[plantnum]
+				array_delete(instlist,plantnum,1)
+			}
+		}
+}
