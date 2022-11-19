@@ -17,12 +17,11 @@ plant[1]={
 	entry:"After her hit single 'Zombies on Your Lawn' 13 years ago, Sunflower immediately gained tons of fans. 'Ironically, they're all after my autograph. Not what I wanted.' she says."
 }
 plant[2]={
-	object: plant3,
-	cost: 175,
-	recharge:200,
-	desc:"star anise shoots seeds in four directions",
+	object: plant66,
+	cost: 50,
+	recharge:1000,
+	desc:"wallnut blocks zombies",
 	lawn: tilegrass,
-	entry: "'Contrary to popular belief, I actually don't like Christmas all that much in general' Star Anise says. 'In fact, I'd prefer to probably not be associated with it.' You heard 'em. They said it."
 }
 plant[3]={
 	object: plant9,
@@ -279,22 +278,27 @@ plant[35]={
 	lawn: tiledesert
 }
 plant[36]={
-	object: plant34,
-	cost: 850,
-	recharge:200,
-	desc:"octopea... imma leave this one up to you"
+	object: plant67,
+	cost: 25,
+	recharge:400,
+	desc:"Sticky Sticker Latches onto the closet zombie and hurts it and any nearby zombies.",
+	lawn: tiledesert,
+	entry: "'Contrary to popular belief, I actually don't like Christmas all that much in general' Star Anise says. 'In fact, I'd prefer to probably not be associated with it.' You heard 'em. They said it."
 }
 plant[37]={
-	object: plant35,
-	cost: 10000,
+	object: plant68,
+	cost: 225,
 	recharge:200,
-	desc:"rngpea fires dicefruit across the lawn"
+	desc:"Octoshot Launches Octopuses that binds zombies and makes them passive and damages then until destroyed. ",
+	lawn: tiledesert,
+	entry: "'Contrary to popular belief, I actually don't like Christmas all that much in general' Star Anise says. 'In fact, I'd prefer to probably not be associated with it.' You heard 'em. They said it."
 }
 plant[38]={
-	object: plant36,
-	cost: 0,
-	recharge:20000,
-	desc:"sunmill spins to create sun"
+	object: plant69,
+	cost: 50,
+	recharge:200,
+	desc:"Magnifying Grass uses sun to shoot powerful blasts of light",
+	lawn: tiledesert,
 }
 plant[39]={
 	object: plant37,
@@ -453,8 +457,32 @@ plant[63]={
 	desc:"shadewood turns peas into poison peas",
 	entry:"Shadewood is a little different from the others. Only reason is because he’s one of three purple plants and he always brags about it"
 }
-
-
+plant[64]={
+	object: plant3,
+	cost: 175,
+	recharge:200,
+	desc:"star anise shoots seeds in four directions",
+	lawn: tilegrass,
+	entry: "'Contrary to popular belief, I actually don't like Christmas all that much in general' Star Anise says. 'In fact, I'd prefer to probably not be associated with it.' You heard 'em. They said it."
+}
+plant[65]={
+	object: plant34,
+	cost: 850,
+	recharge:200,
+	desc:"octopea... imma leave this one up to you"
+}
+plant[66]={
+	object: plant35,
+	cost: 10000,
+	recharge:200,
+	desc:"rngpea fires dicefruit across the lawn"
+}
+plant[67]={
+	object: plant36,
+	cost: 0,
+	recharge:20000,
+	desc:"sunmill spins to create sun"
+}
 var arrowwoody = {
 	object: plant50,
 	cost: 75,
@@ -607,4 +635,16 @@ zombie[10]={
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
 	entry:"Boy oh boy, you’d think that plants are immune to zombies. Well look at this, a zombie peashooter. You better be ready to kill em, because this is the equivalent of a zombie with a gun"
+}
+zombie[11]={
+	object: redcup,
+	desc:"Red Solo Cup Zombie is slow when armored but fast when unarmored",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"hey guys coolkid95 here and today i'm gonna eat some brains!"
 }

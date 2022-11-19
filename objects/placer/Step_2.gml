@@ -57,7 +57,8 @@ if(place_meeting(x,y,plant1))
 {
 	can=false
 }
-if(place_meeting(x,y,plant4))
+
+if(place_meeting(x,y,plant4)&&!place_meeting(x,y,plant1))
 {
 	can=true
 }
@@ -71,6 +72,10 @@ else
 {
 can=false
 }
+}
+if(slot==8&&place_meeting(x,y,plant1)&&!place_meeting(x,y,plant4)&&layer_background_get_sprite(bg)==tilesand)
+{
+	can=true
 }
 
 if(mouse_check_button_pressed(mb_left))

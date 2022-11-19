@@ -7,10 +7,11 @@ repeat(instance_number(plant1))
 	inst=instance_find(plant1,num)
 	with(inst)
 	{
-		if(distance_to_object(other)<=64+32)
+		if(distance_to_object(other)<=68)
 		{
-			hp+=6.1
-			effect_create_above(ef_spark,x,y,1,c_white)
+			hp+=6.1*5
+			inst=instance_create(x,y,effect)
+			inst.depth=depth-100
 		}
 	}
 	sh=reload

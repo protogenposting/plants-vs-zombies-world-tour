@@ -59,6 +59,7 @@ if(layer_background_get_sprite(bg)==tilevolcano)
 {
 	moosic=moosic3
 	hats=hats3
+	action_set_alarm(3000, 1);
 }
 if(layer_background_get_sprite(bg)==tilesand)
 {
@@ -74,6 +75,7 @@ if(layer_background_get_sprite(bg)==tiledesert)
 {
 	moosic=moosic6
 	hats=hats6
+	action_set_alarm(3000, 1);
 }
 if(room==quest1)
 {
@@ -142,7 +144,7 @@ if(room==quest3)
 if(room==quest4)
 {
 	mnum=30
-	plant=[24]
+	plant=[40]
 	quest=true
 }
 if(room==quest5)
@@ -250,4 +252,20 @@ if(room==level18)
 if(room==level19)
 {
 	mnum=20
+	plant=[37]
+}
+if(room==level20)
+{
+	mnum=25
+	plant=[38]
+}
+if(room==level21)
+{
+	mnum=25
+	plant=[39]
+}
+if(room==level22)
+{
+	mnum=25
+	plant=[41]
 }

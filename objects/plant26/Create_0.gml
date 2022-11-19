@@ -1,5 +1,5 @@
-reload=60
-sh=reload+random_range(0,50)
+reload=60*5
+sh=random_range(0,reload)
 hp=200
 col=c_white
 image_speed=0

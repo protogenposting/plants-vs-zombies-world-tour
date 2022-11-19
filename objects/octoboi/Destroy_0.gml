@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(instance_exists(stats))
+{
 inst=instance_create(x,y,planttype)
 waterboi=false
 	var num=0
@@ -16,3 +18,4 @@ waterboi=false
 		}
 	num+=1
 	}
+}

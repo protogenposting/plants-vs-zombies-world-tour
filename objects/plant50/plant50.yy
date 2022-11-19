@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "plant50",
   "spriteId": {
-    "name": "arrowwood",
-    "path": "sprites/arrowwood/arrowwood.yy",
+    "name": "arrowwood1",
+    "path": "sprites/arrowwood1/arrowwood1.yy",
   },
   "solid": false,
   "visible": true,

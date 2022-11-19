@@ -15,3 +15,5 @@ var p1 = part_type_create();
 
 elected=false
 nutted=false
+
+anim=false

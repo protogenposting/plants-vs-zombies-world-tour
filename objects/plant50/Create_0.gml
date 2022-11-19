@@ -9,3 +9,5 @@ pfi=0
 pfr=5
 
 dir=0
+
+doubled=false

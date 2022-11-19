@@ -8,7 +8,7 @@ ecs=16
 	{
 		repeat(room_width/32)
 		{
-			draw_sprite(spr,0,ecs,why)
+			draw_sprite(bgtypes[spr],0,ecs,why)
 			ecs+=64
 		}
 		ecs=16
@@ -21,7 +21,7 @@ ecs=16
 	{
 		repeat(room_width/32)
 		{
-			draw_sprite_ext(pspr,0,ecs,why,1,1,0,c_white,al)
+			draw_sprite_ext(bgtypes[pspr],0,ecs,why,1,1,0,c_white,al)
 			ecs+=64
 		}
 		ecs=16
@@ -44,7 +44,7 @@ why=(room_height/2)-128
 var bnum=0
 if(room==title)
 {
-repeat(4)
+repeat(5)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
@@ -59,7 +59,7 @@ repeat(4)
 }
 ecs=room_width/2
 why=(room_height/2)-128
-bnum=4
+bnum=5
 if(room==endlessmenu)
 {
 repeat(6)
@@ -78,7 +78,7 @@ repeat(6)
 draw_set_halign(fa_left)
 ecs=room_width/2
 why=(room_height/2)-128
-bnum=10
+bnum=11
 if(room==quests)
 {
 repeat(6)
@@ -95,11 +95,17 @@ repeat(6)
 }
 }
 draw_set_halign(fa_left)
+iy-=1
 if(room==alminac&&alminacy)
 {
-draw_text(0,0,"press space to switch alminacs")
+draw_text(0,0,"press to switch alminacs")
+draw_rectangle(0,0,128,32,true)
+ if (point_in_rectangle(mouse_x, mouse_y, 0,0,128,32)&&mouse_check_button_pressed(mb_left)&&iy<=0) {
+	alminacy=false
+	iy=2
+ }
 ecs=0
-why=16
+why=32
 bnum=0
 repeat (20) {
     ecs=0
@@ -198,9 +204,14 @@ repeat (20) {
 
 if(room==alminac&&!alminacy)
 {
-draw_text(0,0,"press space to switch alminacs")
+draw_text(0,0,"press to switch alminacs")
+draw_rectangle(0,0,128,32,true)
+ if (point_in_rectangle(mouse_x, mouse_y, 0,0,128,32)&&mouse_check_button_pressed(mb_left)&&iy<=0) {
+	alminacy=true
+	iy=2
+ }
 ecs=0
-why=16
+why=32
 bnum=0
 repeat (20) {
     ecs=0
@@ -276,9 +287,10 @@ if(instance_exists(stats)||instance_exists(selection))
 	room_goto(title)
 	audio_stop_all()
 }
-else if(room==endlessmenu||room==alminac||room==quests)
+else if(room==endlessmenu||room==alminac||room==quests||room==editor)
 {
 	room_goto(title)
+	audio_stop_all()
 }
 }
 

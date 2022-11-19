@@ -39,7 +39,7 @@ if(pfactive)
 	pfi-=1
 	if(pfi<=0)
 	{
-		instance_create(x+random_range(x-6,x+6),y,sun)
+		instance_create(x+random_range(-6,6),y,sun)
 		pfi=pfr
 	}
 }

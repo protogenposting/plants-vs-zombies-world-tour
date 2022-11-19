@@ -1,5 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+plantselected=0
+zombieselected=0
+areaselected=0
+bgselected=0
+tileselected=0
+bgtypes=[tilegrass,tilemud,tilevolcano,tilesand,tiledesert,tilerussia]
+tiletypes=[tiletypepom,tiletypepower,tiletypesteam,tiletypesteammaker,tiletypestink,tiletypeunplantable,tiletypewater]
+
 alminacy=true
 clevel=level1
 button[0]={
@@ -51,7 +61,7 @@ button[11]={
 	roomy: quest2
 }
 button[12]={
-	button:"the clone wars",
+	button:"sea my balls?",
 	roomy: quest4
 }
 button[13]={
@@ -71,12 +81,17 @@ var _strucc = {
 	roomy: endless6
 }
 array_insert(button,8,_strucc)
+var _strucc2 = {
+	button:"level editor",
+	roomy: editor
+}
+array_insert(button,4,_strucc2)
 
 aud=audio_play_sound(menutheme,1000,false)
-beatlen=0.5
+beatlen=2
 nextbeat=beatlen
 
-spr=choose(tilegrass,tilerussia,tilemud,tilevolcano,tilesand)
+spr=irandom(array_length(bgtypes)-1)
 pspr = spr
 al=1
 plantdataget=function(){
@@ -203,3 +218,5 @@ global.Touch_X=0
 global.Touch_Y=0
 
 game_set_speed(60, gamespeed_fps);
+
+iy=0

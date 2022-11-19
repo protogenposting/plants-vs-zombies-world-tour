@@ -7,10 +7,10 @@ if(audio_sound_get_track_position(aud)>=nextbeat)
 {
 	pspr = spr
 	al=1
-	spr=choose(tilegrass,tilerussia,tilemud,tilevolcano,tilesand)
+	spr=irandom(array_length(bgtypes)-1)
 	while(spr==pspr)
 	{
-		spr=choose(tilegrass,tilerussia,tilemud,tilevolcano,tilesand)
+		spr=irandom(array_length(bgtypes)-1)
 	}
 	show_debug_message("a")
 	nextbeat+=beatlen

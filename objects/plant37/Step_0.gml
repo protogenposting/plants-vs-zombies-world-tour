@@ -1,5 +1,5 @@
 sh-=1
-if(sh<=0 && collision_line(x, y, x+64*3, y, basiczombie, true, true))
+if(sh<=0 && collision_line(x, y, x+64*5, y, basiczombie, true, true))
 {
 inst=instance_create(x,y+16,bullet10)
 inst.hspeed=5

@@ -1,4 +1,4 @@
-draw_sprite_ext(sprite_index,0,x,y,-1,1,0,c_green,1)
+draw_sprite_ext(sprite_index,image_index,x,y,-1,1,0,c_green,1)
 draw_text(x,y-32,string_hash_to_newline(string(hp)))
 if(zapped)
 {

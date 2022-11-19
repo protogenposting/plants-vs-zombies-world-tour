@@ -10,3 +10,8 @@ if(choose(0,1,2,3,4)==4)
 	}
 }
 }
+inst=instance_place(x,y,bullet22)
+if(inst)
+{
+	instance_destroy(inst)
+}

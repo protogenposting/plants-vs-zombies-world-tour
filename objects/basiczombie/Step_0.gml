@@ -35,7 +35,7 @@ spd=nspd
 }
 coly=instance_place(x,y,plant44)
 colyo=instance_place(x,y,plant1)
-if(colyo)
+if(colyo&&!place_meeting(x,y,bullet22))
 {
 if(colyo.image_alpha>=1)
 {

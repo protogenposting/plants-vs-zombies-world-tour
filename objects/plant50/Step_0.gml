@@ -6,17 +6,14 @@ instance_destroy()
 
 if(pfactive)
 {
-	pfi-=1
-	if(pfi<=0)
-	{
-		hp*=2
-		pfi=pfr
-	}
+	doubled=true
 }
 if(instance_exists(basiczombie))
 {
 inst=instance_nearest(x,y,basiczombie)
 dir=point_direction(x,y,inst.x,inst.y)
+inst=instance_furthest(x,y,basiczombie)
+odir=point_direction(x,y,inst.x,inst.y)
 if(collision_point(inst.x,inst.y,tiletypesteam,true,true))
 {
 	dir=random_range(-45,45)

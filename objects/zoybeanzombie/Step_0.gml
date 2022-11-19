@@ -1,5 +1,10 @@
 x+=spd
 
+anim1[0]=0
+anim1[1]=1
+anim2[0]=2
+anim2[1]=3
+
 if(hp<=0)
 {
 instance_destroy()
@@ -7,11 +12,12 @@ instance_destroy()
 
 i-=1
 
-
+image_index=anim1[anim]
 ///speed
 col=c_white
 if(place_meeting(x,y,basiczombie))
 {
+image_index=anim2[anim]
 spd=0
 }
 else if(place_meeting(x,y,tiletypewater))

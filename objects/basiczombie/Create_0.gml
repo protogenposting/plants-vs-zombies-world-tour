@@ -20,3 +20,5 @@ anim=0
 alarm[5]=20
 
 nutted=false
+
+col=c_white

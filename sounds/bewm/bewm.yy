@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "bewm",
-  "duration": 0.0,
+  "duration": 0.835918,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

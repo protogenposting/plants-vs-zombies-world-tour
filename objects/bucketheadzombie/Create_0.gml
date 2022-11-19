@@ -16,3 +16,5 @@ var p1 = part_type_create();
 elected=false
 anim=0
 nutted=false
+
+alarm[5]=20

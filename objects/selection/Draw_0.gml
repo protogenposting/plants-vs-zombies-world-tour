@@ -149,7 +149,7 @@ if(room==quest3)
 if(room==quest4)
 {
 	selected=1
-	slot[0]=24
+	slot[0]=40
 }
 if(room==quest5)
 {
