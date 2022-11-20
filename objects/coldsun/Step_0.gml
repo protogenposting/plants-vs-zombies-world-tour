@@ -7,6 +7,7 @@ if(flowad)
 	else
 	{
 		vsp=0
+		hsp=0
 	}
 }
 y+=vsp

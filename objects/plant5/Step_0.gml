@@ -20,17 +20,20 @@ if(storedsteam<=0)
 }
 if(storedsteam>0&&!instance_exists(tiletypesteam))
 {
-	if(collision_line(x, y, room_width, y, basiczombie, true, true))
+	if(collision_line(x+32, y-64, x+32, y+64, basiczombie, true, true))
 	{
-		sprite_index=sucknutshoot
 		if(sh<=0)
 		{
-			hp-=1
-			inst=instance_nearest(x,y,basiczombie)
-			inst.x+=32
-			effect_create_above(ef_smoke,inst.x,inst.y,1,c_white)
-			storedsteam-=1
-			sh=reload/4
+			if(instance_exists(basiczombie))
+			{
+				sprite_index=sucknutshoot
+				hp-=1
+				inst=instance_nearest(x,y,basiczombie)
+				inst.x+=128
+				effect_create_above(ef_smoke,inst.x,inst.y,1,c_white)
+				storedsteam-=1
+				sh=reload/4
+			}
 		}
 	}
 	else

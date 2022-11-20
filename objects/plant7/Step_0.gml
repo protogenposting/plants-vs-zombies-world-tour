@@ -29,11 +29,13 @@ if(pfactive)
 	{
 		audio_play_sound(pop,1000,false)
 		inst=instance_create(x,y+random_range(-6,6),plant7)
-		inst.hspeed=0.1
-		inst.vspeed=0.1
+		inst.hspeed=1
+		inst.vspeed=1
+		inst.alarm[1]=1024
 		inst=instance_create(x,y+random_range(-6,6),plant7)
-		inst.hspeed=0.1
-		inst.vspeed=-0.1
+		inst.hspeed=1
+		inst.vspeed=-1
+		inst.alarm[1]=1024
 		pfi=pfr
 	}
 }

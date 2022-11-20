@@ -1,4 +1,4 @@
-reload=60
+reload=160
 sh=reload
 hp=100
 

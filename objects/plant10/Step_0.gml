@@ -7,12 +7,6 @@ if(sh<=0)
 {
 inst=instance_create(x,y,coldsun)
 inst.flowad=true
-if(instance_exists(basiczombie))
-{
-inst = instance_nearest(x,y,basiczombie)
-drawing=true
-alarm[1]=30
-}
 sh=reload
 }
 
@@ -33,11 +27,5 @@ instance_destroy()
 
 if(pfactive)
 {
-	pfi-=1
-	if(instance_exists(basiczombie))
-	{
-		inst = instance_nearest(x,y,basiczombie)
-		drawing=true
-		alarm[1]=30
-	}
+	
 }
