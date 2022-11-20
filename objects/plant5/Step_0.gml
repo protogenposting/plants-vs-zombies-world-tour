@@ -26,9 +26,9 @@ if(storedsteam>0&&!instance_exists(tiletypesteam))
 		if(sh<=0)
 		{
 			hp-=1
-			inst=instance_create(x,y+6,bullet3)
-			inst.hspeed=5
-			audio_play_sound(hit,1000,false)
+			inst=instance_nearest(x,y,basiczombie)
+			inst.x+=32
+			effect_create_above(ef_smoke,inst.x,inst.y,1,c_white)
 			storedsteam-=1
 			sh=reload/4
 		}

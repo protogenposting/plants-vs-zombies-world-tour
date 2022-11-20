@@ -8,8 +8,8 @@ image_index=2
 if(collision_line(x,y,x+128,y,inst,false,true)&&sh<=0)
 {
 ate=false
-inst.hp-=10
-stats.dps+=10
+inst.hp-=6000
+stats.dps+=6000
 if(inst.hp>0)
 {
 sh=60

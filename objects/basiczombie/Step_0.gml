@@ -3,7 +3,7 @@ anim1[1]=1
 anim2[0]=2
 anim2[1]=3
 
-x-=spd
+x-=spd/2
 if(hp<=0)
 {
 instance_destroy()

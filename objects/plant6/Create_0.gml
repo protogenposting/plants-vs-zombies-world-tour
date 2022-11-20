@@ -7,3 +7,5 @@ pfactive=false
 pftime=60
 pfi=0
 pfr=10
+
+image_speed=0

@@ -113,7 +113,7 @@ if(room==level22)
 {
 	zomb=choose(basiczombie,basiczombie,coneheadzombie,gardener,tombraiser)
 }
-instance_create(room_width,choose(160,160+64,160+128,160+192,160+192+64),zomb)
+instance_create(32+(64*11),choose(160,160+64,160+128,160+192,160+192+64),zomb)
 }
 action_set_alarm(random_range(2,1000-killed), 1);
 num+=1

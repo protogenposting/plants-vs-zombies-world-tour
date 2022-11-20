@@ -233,9 +233,9 @@ plant[29]={
 }
 plant[30]={
 	object: plant11,
-	cost: 75,
+	cost: 175,
 	recharge:200,
-	desc:"sunflowowers produce sun and scratch enemies",
+	desc:"toadstool toads and stools",
 	lawn: tilevolcano,
 	entry:"Sunflower and Sunflowower both argue over whose better. Too bad they don’t know that they’re both needed...... owo"
 }
@@ -485,7 +485,7 @@ plant[67]={
 }
 var arrowwoody = {
 	object: plant50,
-	cost: 75,
+	cost: 125,
 	recharge:200,
 	desc:"arrow wood points projectiles towards somewhere else",
 	lawn: tilegrass,

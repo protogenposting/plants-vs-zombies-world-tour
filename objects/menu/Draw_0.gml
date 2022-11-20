@@ -6,7 +6,7 @@ if(room==editor)
 	var why=160
 	repeat(5)
 	{
-repeat((room_width/64))
+repeat(11)
 {
 draw_set_colour(c_black)
 draw_rectangle(ecs,why,ecs+64,why+64,true)

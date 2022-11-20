@@ -5,17 +5,14 @@ x=mouse_x
 move_snap(64,64)
 var lay_id = layer_get_id("Compatibility_Colour");
 var bg = layer_background_get_id(lay_id);
-while(y<160+32)
-{
-y+=32
-}
-while(y>480-32)
-{
-y-=32
-}
-if(x<32)
+
+while(x<32)
 {
 x+=64
+}
+while(x>32+(64*11))
+{
+x-=64
 }
 if(!place_meeting(x,y,tiletypewater))
 {
@@ -80,6 +77,16 @@ if(slot==8&&place_meeting(x,y,plant1)&&!place_meeting(x,y,plant4)&&layer_backgro
 
 if(mouse_check_button_pressed(mb_left))
 {
+	if(y<160+32)
+{
+instance_destroy()
+can=false
+}
+if(y>480-32)
+{
+instance_destroy()
+can=false
+}
 	if(can)
 {
 inst=instance_create(x,y,plants.plant[slot].object)

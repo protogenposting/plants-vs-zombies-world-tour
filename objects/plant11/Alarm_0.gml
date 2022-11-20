@@ -1,7 +1,3 @@
-image_index+=1
-if(image_index>maxanim[anim])
-{
-image_index=minanim[anim]
-}
-
-action_set_alarm(animspd, 0);
+/// @description Insert description here
+// You can write your code in this editor
+instance_create(x,y,sun)

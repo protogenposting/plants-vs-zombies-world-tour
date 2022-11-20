@@ -36,6 +36,10 @@ if(mouse_x<ecs+64&&mouse_x>ecs&&mouse_y<64&&mouse_y>0||point_in_rectangle(global
 {
 if(mouse_check_button_pressed(mb_left)||global.tapping)
 {
+	if(instance_exists(placer))
+	{
+	instance_destroy(placer)
+}
 if(stats.sunny>=plants.plant[slotty].cost&&reload[(ecs/64)-1]<=0)
 {
 instance_destroy(placer)

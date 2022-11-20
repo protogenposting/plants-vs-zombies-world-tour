@@ -1,31 +1,35 @@
 sh-=1
-if(sh<=0)
-{
-inst=instance_create(x,y,sun)
-inst.flowad=true
-sh=reload
-}
-
-if(sh<=100)
-{
-col=c_gray
-}
-else
-{
-col=c_white
-}
 inst=instance_nearest(x,y,basiczombie)
 
-if(collision_line(x,y,x+128,y,inst,false,true))
+if(ate)
 {
-inst.hp-=0.3
-animspd=5
-anim=1
+image_index=2
+}
+if(collision_line(x,y,x+128,y,inst,false,true)&&sh<=0)
+{
+ate=false
+inst.hp-=30
+stats.dps+=30
+if(inst.hp>0)
+{
+sh=60
+image_index=1
 }
 else
 {
-animspd=20
-anim=0
+sh=reload
+alarm[0]=reload
+ate=true
+}
+}
+else
+{
+image_index=0
+}
+
+if(ate)
+{
+image_index=2
 }
 
 ///kill
@@ -33,13 +37,8 @@ if(hp<=0)
 {
 instance_destroy()
 }
-
+col=collision_line(x,y,room_width,y,basiczombie,false,true)
 if(pfactive)
 {
-	pfi-=1
-	if(pfi<=0)
-	{
-		instance_create(x+random_range(-6,6),y,sun)
-		pfi=pfr
-	}
+	instance_destroy(col)
 }
