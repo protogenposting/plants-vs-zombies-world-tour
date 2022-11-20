@@ -10,3 +10,5 @@ if(flowad)
 	}
 }
 y+=vsp
+
+image_angle+=2

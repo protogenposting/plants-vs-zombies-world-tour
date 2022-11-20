@@ -12,3 +12,5 @@ if(flowad)
 }
 y+=vsp
 x+=hsp
+
+image_angle+=vsp*hsp
