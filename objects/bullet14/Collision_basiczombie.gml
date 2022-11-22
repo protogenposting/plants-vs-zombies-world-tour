@@ -1,9 +1,9 @@
 hspeed-=1
 
 other.x+=32
-while(other.x>=room_width)
+while(other.x>32+(64*11)+64*5)
 {
-	nspd-=0.1
+	other.nspd-=0.1
 	x-=32
 }
 other.hitty=true
