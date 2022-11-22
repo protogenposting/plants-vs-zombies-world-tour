@@ -24,3 +24,8 @@ zapped=false
 elected=false
 
 i=1
+shooting=false
+while(place_meeting(x,y,evilplant1))
+{
+	y+=64
+}

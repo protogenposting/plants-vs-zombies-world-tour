@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "evilplant1",
   "spriteId": {
-    "name": "potan",
-    "path": "sprites/potan/potan.yy",
+    "name": "droididle",
+    "path": "sprites/droididle/droididle.yy",
   },
   "solid": false,
   "visible": true,

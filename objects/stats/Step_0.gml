@@ -16,26 +16,10 @@ inst.image_xscale=waterlevel*2
 inst.image_yscale=room_height/64
 inst.alarm[0]=2
 
-if(num>=mnum)
+if(num>=mnum&&!instance_exists(basiczombie)&&!video)
 {
 	audio_stop_all()
-	instance_destroy()
-	instance_destroy(slots)
-	room_goto_next()
-	var numy = 0
-	repeat(array_length(plant))
-	{
-		plants.plant[plant[numy]].unlocked=true
-		numy+=1
-	}
-	if(quest)
-	{
-		instance_destroy(stats)
-		instance_destroy(selection)
-		instance_destroy(slots)
-		instance_destroy(stats)
-		menu.save_level()
-		room_goto(title)
-		audio_stop_all()
-	}
+	my_video = video_open("endthing.mp4");
+	alarm[2]=360+120
+	video=true
 }

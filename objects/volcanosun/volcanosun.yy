@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "volcanosun",
   "spriteId": {
-    "name": "sunn",
-    "path": "sprites/sunn/sunn.yy",
+    "name": "Sprite133",
+    "path": "sprites/Sprite133/Sprite133.yy",
   },
   "solid": false,
   "visible": true,

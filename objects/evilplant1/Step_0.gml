@@ -1,4 +1,4 @@
-col=c_red
+col=c_white
 if(elected)
 {
 	col=c_yellow
@@ -6,7 +6,7 @@ if(elected)
 }
 if(frozen)
 {
-col=c_aqua
+col=c_blue
 sh-=0.5
 }
 else
@@ -15,11 +15,27 @@ sh-=1
 }
 if(sh<=0)
 {
-inst=instance_create(x,y-6,bulletbad)
-inst.hspeed=-5
-audio_play_sound(pop,1000,false)
-sh=reload
+	if(shooting)
+	{
+
+	}
+	else
+	{
+		shooting=true
+		image_index=0
+		sprite_index=droidshoot
+		sh=4*(room_speed/sprite_get_speed(sprite_index))
+	}
 }
+if(shooting&&sh<=0)
+	{
+		shooting=false
+		sprite_index=droididle
+		inst=instance_create(x,y-6,bulletbad)
+		inst.hspeed=-5
+		audio_play_sound(pop,1000,false)
+		sh=reload
+	}
 
 ///kill
 if(hp<=0)
@@ -35,3 +51,7 @@ col=c_black
 }
 
 i-=1
+while(x<160)
+{
+	y+=64
+}

@@ -8,4 +8,11 @@ inst.alarm[1]=60*10
 inst.hp=10
 }
 }
-
+if(other.i<=0)
+{
+other.i=10
+other.hp-=1
+other.hp-=1
+other.hitty=true
+other.alarm[1]=10
+}

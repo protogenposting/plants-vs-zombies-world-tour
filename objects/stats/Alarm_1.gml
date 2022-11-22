@@ -1,7 +1,10 @@
+if(num<mnum)
+{
 if(killed>500)
 {
 killed-=1
 }
+var numyo=0
 repeat(killed/10)
 {
 zomb=choose(basiczombie,coneheadzombie,bucketheadzombie,tombraiser,gardener)
@@ -113,11 +116,28 @@ if(room==level22)
 {
 	zomb=choose(basiczombie,basiczombie,coneheadzombie,gardener,tombraiser)
 }
-instance_create(32+(64*11),choose(160,160+64,160+128,160+192,160+192+64),zomb)
+if(room==minigamebeach)
+{
+	zomb=choose(crab)
+}
+instance_create(32+(64*11)+64*5,choose(160,160+64,160+128,160+192,160+192+64),zomb)
+numyo+=1
+if(room==minigamebeach)
+{
+	if(numyo>=4)
+	{
+		break;
+	}
+}
 }
 action_set_alarm(random_range(2,1000-killed), 1);
+if(room==minigamebeach)
+{
+	alarm[1]=60
+}
 num+=1
 if(alarm[1]<20)
 {
 	alarm[1]=20
+}
 }

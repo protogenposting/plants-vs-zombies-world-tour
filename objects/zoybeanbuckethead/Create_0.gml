@@ -17,3 +17,4 @@ elected=false
 nutted=false
 
 anim=false
+hitty=false

@@ -1,27 +1,49 @@
-/// @description Insert description here
-// You can write your code in this editor
-if(hp<0)
+
+x-=spd/4
+if(hp<=0)
 {
-	instance_destroy()
+instance_destroy()
 }
+
 i-=1
-col=c_white
-if(place_meeting(x,y,plant1))
+
+///speed
+col=c_gray
+if(place_meeting(x,y,tiletypewater))
 {
-spd=0
+if(room==endless5)
+{
+	frozen=true
+	alarm[0]=360
 }
-else if(place_meeting(x,y,tiletypewater))
-{
-spd=nspd/2
 }
 else if(place_meeting(x,y,tiletypestink))
 {
 spd=nspd/2
 hp-=0.1
+stats.dps+=0.1
 }
 else
 {
 spd=nspd
+}
+coly=instance_place(x,y,plant44)
+colyo=instance_place(x,y,plant1)
+if(colyo&&!place_meeting(x,y,bullet22))
+{
+if(colyo.image_alpha>=1)
+{
+spd=0
+colyo.hp-=3
+}
+if(coly&&coly.image_index==0)
+{
+	spd=1
+}
+}
+if(place_meeting(x,y,zoybeanzombie))
+{
+spd=0
 }
 
 if(frozen)
@@ -33,10 +55,31 @@ spd/=2
 if(withered)
 {
 hp-=0.01
+stats.dps+=0.01
 col=c_black
 }
 
-while(place_meeting(x,y,tiletypewater))
-		{
-			x-=32
-		}
+if(elected)
+{
+	spd=0
+}
+if(place_meeting(x,y,zoybeanzombie))
+{
+hp-=0.1
+stats.dps+=0.1
+}
+
+if(nutted)
+{
+	x+=spd*2
+	image_xscale=-1
+	col=c_ltgray
+}
+else
+{
+	image_xscale=1
+}
+if(hitty)
+{
+	col=c_white
+}

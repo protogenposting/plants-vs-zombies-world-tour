@@ -24,7 +24,11 @@ if(pfactive)
 	{
 		audio_play_sound(pop,1000,false)
 		inst2=instance_create(x,y+64,bullet6)
+		inst1=instance_create(x,y-64,bullet6)
+		inst3=instance_create(x,y,bullet6)
 		inst2.hspeed=30
+		inst1.hspeed=30
+		inst3.hspeed=30
 		pfi=pfr
 	}
 }

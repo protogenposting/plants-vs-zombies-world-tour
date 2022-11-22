@@ -18,6 +18,7 @@ repeat(instance_number(plant1))
 	num+=1
 }
 sprite_index=healyhockheal
+image_index=0
 alarm[1]=image_number*(room_speed/sprite_get_speed(sprite_index))
 }
 

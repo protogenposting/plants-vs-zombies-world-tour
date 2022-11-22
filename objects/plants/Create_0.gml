@@ -32,10 +32,10 @@ plant[3]={
 	entry:"Icepeas favorite season is Winter but he always eats the yellow snow. No one knows why but he’s done it multiple times."
 }
 plant[4]={
-	object: plant14,
+	object: plant53,
 	cost: 100,
-	recharge:200,
-	desc:"snapdragons shoot fire in 3 lanes",
+	recharge:2000,
+	desc:"cherry bomb go BEWM",
 	lawn: tilegrass,
 	entry:"Snapdragons brothers hate Snapdragons cooking because he always burns it. His mouth is basically an oven that overheats, after all."
 }
@@ -198,7 +198,8 @@ plant[25]={
 	recharge:250,
 	desc:"starfish flower produces sun inside water",
 	waterplant:true,
-	entry:"Starfish flower is best friends with kelpshot. They only play hide and seek and they always blend in with everything"
+	entry:"Starfish flower is best friends with kelpshot. They only play hide and seek and they always blend in with everything",
+	lawn: tilesand
 }
 plant[26]={
 	object: plant26,
@@ -375,7 +376,7 @@ plant[50]={
 	desc:"ghost pepper hurts zombies in a radius"
 }
 plant[51]={
-	object: plant53,
+	object: plant14,
 	cost: 125,
 	recharge:2000,
 	desc:"cherry bomb explodes in a 3x3 radius"

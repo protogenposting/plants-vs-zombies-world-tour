@@ -11,5 +11,7 @@ inst4=instance_create(x-32,y,tiletypestink)
 inst4.alarm[0]=5
 inst1.hspeed=-1
 effect_create_below(ef_explosion,x,y,1,c_green)
-
+other.hp-=1
+other.hitty=true
+other.alarm[1]=10
 action_kill_object();

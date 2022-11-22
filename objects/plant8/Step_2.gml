@@ -1,13 +1,8 @@
-if(place_meeting(x+32,y,basiczombie))
+if(place_meeting(x,y,tiletypestink))
 {
-hp-=1
+reload=10
 }
 else
 {
 reload=60
 }
-if(place_meeting(x,y,tiletypestink))
-{
-reload=10
-}
-

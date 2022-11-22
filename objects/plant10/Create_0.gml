@@ -2,7 +2,6 @@ reload=500
 sh=random_range(0,reload)
 hp=100
 col=c_white
-image_speed=0
 drawing=false
 
 alarm[1]=60

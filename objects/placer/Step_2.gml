@@ -6,11 +6,11 @@ move_snap(64,64)
 var lay_id = layer_get_id("Compatibility_Colour");
 var bg = layer_background_get_id(lay_id);
 
-while(x<32)
+while(x<32+64*5)
 {
 x+=64
 }
-while(x>32+(64*11))
+while(x>32+(64*11)+64*5)
 {
 x-=64
 }

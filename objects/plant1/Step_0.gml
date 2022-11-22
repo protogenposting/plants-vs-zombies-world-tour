@@ -1,12 +1,28 @@
 sh-=1
 if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
 {
-inst=instance_create(x,y-6,bullet1)
-inst.hspeed=5
-audio_play_sound(pop,1000,false)
-sh=reload
-}
+	if(shooting)
+	{
 
+	}
+	else
+	{
+		shooting=true
+		image_index=0
+		sprite_index=peashot
+		sh=5*(room_speed/sprite_get_speed(sprite_index))
+	}
+}
+if(shooting&&sh<=0)
+	{
+		shooting=false
+		sprite_index=potan
+		inst=instance_create(x,y-6,bullet1)
+		inst.hspeed=5
+		audio_play_sound(pop,1000,false)
+		sprite_index=potan
+		sh=reload
+	}
 ///kill
 if(hp<=0)
 {
@@ -15,6 +31,7 @@ instance_destroy()
 
 if(pfactive)
 {
+	sprite_index=PEASHOOTERPF
 	pfi-=1
 	if(pfi<=0)
 	{

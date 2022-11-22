@@ -19,3 +19,4 @@ nutted=false
 alarm[5]=20
 
 anim=false
+hitty=false

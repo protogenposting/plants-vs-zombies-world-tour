@@ -1,0 +1,26 @@
+spd=10
+hp=0.1
+y+=32
+i=0
+
+nspd=10
+
+frozen=false
+
+withered=false
+
+zapped=false
+
+var p1 = part_type_create();
+
+elected=false
+
+anim=0
+
+alarm[5]=20
+
+nutted=false
+
+col=c_gray
+
+hitty=false

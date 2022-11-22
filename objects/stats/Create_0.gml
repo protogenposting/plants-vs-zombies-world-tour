@@ -103,9 +103,6 @@ if(room==quest6)
 	moosic=loobboon
 	hats=-1
 }
-aud1=audio_play_sound(moosic,1000,true)
-aud2=audio_play_sound(hats,1000,true)
-audio_sound_gain(hats,0.01,0)
 
 waterlevel=0
 
@@ -269,3 +266,15 @@ if(room==level22)
 	mnum=25
 	plant=[41]
 }
+if(room==minigamebeach)
+{
+	mnum=100
+	alarm[1]=5
+	plant=[26]
+	moosic=loobboon
+	hats=-1
+}
+aud1=audio_play_sound(moosic,1000,true)
+aud2=audio_play_sound(hats,1000,true)
+audio_sound_gain(hats,0.01,0)
+video=false

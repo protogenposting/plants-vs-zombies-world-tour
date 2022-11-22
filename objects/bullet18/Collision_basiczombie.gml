@@ -28,3 +28,5 @@ else
 {
 action_kill_object();
 }
+other.hitty=true
+other.alarm[1]=10

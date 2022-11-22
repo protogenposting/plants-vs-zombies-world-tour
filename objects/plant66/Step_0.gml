@@ -8,6 +8,7 @@ instance_destroy()
 
 if(pfactive)
 {
+	i=10
 	pfi-=1
 	if(pfi<=0)
 	{
