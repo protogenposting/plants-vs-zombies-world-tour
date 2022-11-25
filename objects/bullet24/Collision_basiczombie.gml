@@ -1,0 +1,11 @@
+audio_play_sound(hit,1000,false)
+other.hp-=0.01
+stats.dps+=0.01
+if(other.hp>10)
+{
+	inst=instance_create(other.x,other.y,basiczombie)
+	inst.y=other.y
+	instance_destroy(other)
+}
+other.hitty=true
+other.alarm[1]=10

@@ -1,7 +1,3 @@
-anim1[0]=0
-anim1[1]=1
-anim2[0]=2
-anim2[1]=3
 
 x-=spd/4
 if(hp<=0)
@@ -11,9 +7,8 @@ instance_destroy()
 
 i-=1
 
-image_index=anim1[anim]
 ///speed
-col=c_gray
+col=c_white
 if(place_meeting(x,y,tiletypewater))
 {
 if(room==endless5)
@@ -32,16 +27,20 @@ else
 {
 spd=nspd
 }
+sprite_index=ogsprite
+hitsprite=brownflash
 coly=instance_place(x,y,plant44)
 colyo=instance_place(x,y,plant1)
 if(colyo&&!place_meeting(x,y,bullet22))
 {
 if(colyo.image_alpha>=1)
 {
+sprite_index=zeat
+hitsprite=zeathit
 spd=0
 colyo.hp-=0.3
 }
-image_index=anim2[anim]
+//PUT THE STUFF FOR SPRITE CHANGING HERE BITCH
 if(coly&&coly.image_index==0)
 {
 	spd=1
@@ -51,9 +50,10 @@ if(place_meeting(x,y,zoybeanzombie))
 {
 spd=0
 }
-
+image_speed=1
 if(frozen)
 {
+image_speed=0.5
 col=c_aqua
 spd=nspd/2
 }
@@ -88,4 +88,10 @@ else
 if(hitty)
 {
 	col=c_white
+}
+
+if(hp<=10)
+{
+	armor=-1
+	armorhit=-1
 }

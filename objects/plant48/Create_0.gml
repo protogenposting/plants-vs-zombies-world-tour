@@ -1,4 +1,4 @@
-reload=750
+reload=1250
 sh=reload+random_range(0,50)
 hp=10
 col=c_white

@@ -238,7 +238,7 @@ plant[30]={
 	recharge:200,
 	desc:"toadstool toads and stools",
 	lawn: tilevolcano,
-	entry:"Sunflower and Sunflowower both argue over whose better. Too bad they don’t know that they’re both needed...... owo"
+	entry:"Don't you dare make a joke about toad from Super Mario"
 }
 plant[31]={
 	object: plant47,
@@ -276,7 +276,8 @@ plant[35]={
 	cost: 175,
 	recharge:5*60,
 	desc:"Launches at powerfully blade at any tile on the lawn, cutting everything in its path. Provides shade to nearby plants",
-	lawn: tiledesert
+	lawn: tiledesert,
+	entry:"Use this TOTALLY HEAT RESISTANT metal plant as an umbrella. Don't touch it though, its TOTALLY NOT MELTING."
 }
 plant[36]={
 	object: plant67,
@@ -284,7 +285,7 @@ plant[36]={
 	recharge:400,
 	desc:"Sticky Sticker Latches onto the closet zombie and hurts it and any nearby zombies.",
 	lawn: tiledesert,
-	entry: "'Contrary to popular belief, I actually don't like Christmas all that much in general' Star Anise says. 'In fact, I'd prefer to probably not be associated with it.' You heard 'em. They said it."
+	entry: "Don't be nostalgic and put him on your hand, he will literally chop it off."
 }
 plant[37]={
 	object: plant68,
@@ -292,7 +293,7 @@ plant[37]={
 	recharge:200,
 	desc:"Octoshot Launches Octopuses that binds zombies and makes them passive and damages then until destroyed. ",
 	lawn: tiledesert,
-	entry: "'Contrary to popular belief, I actually don't like Christmas all that much in general' Star Anise says. 'In fact, I'd prefer to probably not be associated with it.' You heard 'em. They said it."
+	entry: "Same with him but instead of making you bleed out, he will stick on you... f o r e v e r."
 }
 plant[38]={
 	object: plant69,
@@ -300,19 +301,23 @@ plant[38]={
 	recharge:200,
 	desc:"Magnifying Grass uses sun to shoot powerful blasts of light",
 	lawn: tiledesert,
+	entry:"Your ordinary living magnifying glass, but please, PLEASE, don't use him to set ants on fire, you will instead send a heat beam straight down to the earths core."
 }
 plant[39]={
 	object: plant37,
 	cost: 0,
 	recharge:200,
 	desc:"seashroom fires close range poison balls and can be in water",
-	waterplant:true
+	waterplant:true, 
+	entry:"Poor guy, hasn't even gotten nutrients for years, unless he get nutrients from water. But, thats impossible!? He would have to be algea... But hes a shroom! So how is he alive? Is he being fed fertilizer? What would he even need to survive!? Let me to a brain blast for a second."
 }
 plant[40]={
-	object: plant38,
-	cost: 225,
-	recharge:200,
-	desc:"blockbuster destroys graves and zombies between them"
+	object: plant70,
+	cost: 150,
+	recharge:4000,
+	desc:"Metal Petal shoots a drill that goes through all enemies in a lane",
+	lawn: tiledesert,
+	entry:"Your ordinary living magnifying glass, but please, PLEASE, don't use him to set ants on fire, you will instead send a heat beam straight down to the earths core."
 }
 plant[41]={
 	object: plant39,
@@ -484,6 +489,12 @@ plant[67]={
 	recharge:20000,
 	desc:"sunmill spins to create sun"
 }
+plant[68]={
+	object: plant38,
+	cost: 225,
+	recharge:200,
+	desc:"blockbuster destroys graves and zombies between them"
+}
 var arrowwoody = {
 	object: plant50,
 	cost: 125,
@@ -623,11 +634,11 @@ zombie[9]={
 		instance_destroy(inst)
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
-	entry:"It’s kinda weird how a zombie is planting and cloning his rivals, oh well. I’m not the gardener zombie"
+	entry:"Lol engineer from TF2 died. WAIT IT WAS A JOKE DON'T KILL ME-"
 }
 zombie[10]={
 	object: evilplant1,
-	desc:"zombie pea shoots to the left at your plants",
+	desc:"zombie droid shoots to the left at your plants",
 	statsy: function(object){
 		inst=instance_create(0,0,object)
 		hp=inst.hp
@@ -635,7 +646,7 @@ zombie[10]={
 		instance_destroy(inst)
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
-	entry:"Boy oh boy, you’d think that plants are immune to zombies. Well look at this, a zombie peashooter. You better be ready to kill em, because this is the equivalent of a zombie with a gun"
+	entry:"Got some aliens in the house. No for real though zombies came from space and are in your home. Run."
 }
 zombie[11]={
 	object: redcup,

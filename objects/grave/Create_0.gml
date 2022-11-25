@@ -4,7 +4,7 @@ spd=0
 hp=20
 i=0
 
-nspd=1
+nspd=0
 
 frozen=false
 
@@ -19,3 +19,16 @@ if(place_meeting(x,y,tiletypewater))
 	instance_destroy()
 }
 nutted=false
+
+elected=false
+
+hitty=false
+
+hitsprite=brownflash
+
+armor=conehead
+armorhit=conehit
+
+ogsprite=sprite1
+
+col=c_white

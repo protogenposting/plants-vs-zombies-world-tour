@@ -18,3 +18,14 @@ anim=0
 nutted=false
 
 alarm[5]=20
+
+hitty=false
+
+hitsprite=brownflash
+
+armor=conehead
+armorhit=conehit
+
+ogsprite=sprite1
+
+col=c_white

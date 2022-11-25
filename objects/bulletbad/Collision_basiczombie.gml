@@ -1,1 +1,1 @@
-hspeed*=1.01
+hspeed*=1.1

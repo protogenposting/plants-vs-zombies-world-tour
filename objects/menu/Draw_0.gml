@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(room==editor)
 {
-	var ecs=32
+	var ecs=32+64*5
 	var why=160
 	repeat(5)
 	{
@@ -13,7 +13,7 @@ draw_rectangle(ecs,why,ecs+64,why+64,true)
 draw_set_colour(c_white)
 ecs+=64
 }
-ecs=32
+ecs=32+64*5
 why+=64
 }
 	if(keyboard_check_pressed(vk_right))

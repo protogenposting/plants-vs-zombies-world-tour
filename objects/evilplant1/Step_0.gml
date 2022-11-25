@@ -24,6 +24,7 @@ if(sh<=0)
 		shooting=true
 		image_index=0
 		sprite_index=droidshoot
+		hitsprite=droidhitshoot
 		sh=4*(room_speed/sprite_get_speed(sprite_index))
 	}
 }
@@ -31,6 +32,7 @@ if(shooting&&sh<=0)
 	{
 		shooting=false
 		sprite_index=droididle
+		hitsprite=droidflash
 		inst=instance_create(x,y-6,bulletbad)
 		inst.hspeed=-5
 		audio_play_sound(pop,1000,false)
@@ -54,4 +56,8 @@ i-=1
 while(x<160)
 {
 	y+=64
+}
+if(hitty)
+{
+	col=c_white
 }

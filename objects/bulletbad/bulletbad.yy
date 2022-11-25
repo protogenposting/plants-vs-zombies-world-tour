@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "bulletbad",
   "spriteId": {
-    "name": "bullety",
-    "path": "sprites/bullety/bullety.yy",
+    "name": "Sprite146",
+    "path": "sprites/Sprite146/Sprite146.yy",
   },
   "solid": false,
   "visible": true,

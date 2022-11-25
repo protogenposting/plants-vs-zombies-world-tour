@@ -17,3 +17,12 @@ nspd=0
 i=0
 nutted=false
 hitty=false
+
+hitsprite=brownflash
+
+armor=conehead
+armorhit=conehit
+
+ogsprite=sprite1
+
+col=c_white

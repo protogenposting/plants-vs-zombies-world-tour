@@ -9,7 +9,7 @@ pftime=120
 pfi=0
 pfr=3
 image_alpha=1
-col=c_red
+col=c_white
 
 move_snap(64,64)
 
@@ -29,3 +29,13 @@ while(place_meeting(x,y,evilplant1))
 {
 	y+=64
 }
+hitty=false
+
+hitsprite=brownflash
+
+armor=-1
+armorhit=-1
+
+ogsprite=sprite1
+
+col=c_white

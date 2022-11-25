@@ -10,7 +10,7 @@ if(flowad)
 		hsp=0
 	}
 }
-y+=vsp*2
+y+=vsp*4
 x+=hsp*2
 
 image_angle+=vsp*hsp

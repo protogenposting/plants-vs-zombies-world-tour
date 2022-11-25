@@ -21,3 +21,14 @@ nutted=false
 alarm[5]=20
 
 hitty=false
+
+col=c_white
+
+hitty=false
+
+hitsprite=brownflash
+
+armor=conehead
+armorhit=conehit
+
+ogsprite=sprite1

@@ -24,3 +24,12 @@ nutted=false
 col=c_gray
 
 hitty=false
+
+hitsprite=brownflash
+
+armor=conehead
+armorhit=conehit
+
+ogsprite=sprite1
+
+col=c_white

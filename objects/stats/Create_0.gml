@@ -259,7 +259,7 @@ if(room==level20)
 if(room==level21)
 {
 	mnum=25
-	plant=[39]
+	plant=[39,41]
 }
 if(room==level22)
 {
@@ -273,6 +273,13 @@ if(room==minigamebeach)
 	plant=[26]
 	moosic=loobboon
 	hats=-1
+}
+if(room==editor)
+{
+	mnum=instance_number(temp)
+	plant=[1]
+	quest=true
+	alarm[1]=0
 }
 aud1=audio_play_sound(moosic,1000,true)
 aud2=audio_play_sound(hats,1000,true)

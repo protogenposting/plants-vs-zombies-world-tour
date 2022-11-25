@@ -12,9 +12,21 @@ if(pfactive)
 	pfi-=1
 	if(pfi<=0)
 	{
-		hp*=2
+		hp=6000
 		pfi=pfr
 	}
+}
+if(hp>5000)
+{
+	sprite_index=wallnut4
+}
+if(hp>4000)
+{
+	sprite_index=wallnut5
+}
+if(hp>3000)
+{
+	sprite_index=wallnut6
 }
 if(hp>2000)
 {

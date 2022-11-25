@@ -8,7 +8,7 @@ instance_destroy()
 i-=1
 
 ///speed
-col=c_gray
+col=c_white
 if(place_meeting(x,y,tiletypewater))
 {
 if(room==endless5)

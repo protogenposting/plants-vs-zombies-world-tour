@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "bullet1",
+    "path": "objects/bullet1/bullet1.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,
@@ -27,7 +30,6 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"basiczombie","path":"objects/basiczombie/basiczombie.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"plant50","path":"objects/plant50/plant50.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],

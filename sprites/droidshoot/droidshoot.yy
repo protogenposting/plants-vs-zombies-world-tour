@@ -28,11 +28,11 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df3aac33-7c16-44a1-8fbe-abd0f9444f81",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"27c6c408-028f-4c5b-bae9-3ae069b650bc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4b42268c-d12c-40a5-a0f2-624d5127bb38",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"183d7c1c-6dd2-46de-bca5-8f11f27eb758",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4e537e9-8aa2-4397-83eb-e437e8e069e9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2782fa68-dce3-40c6-820a-1307e77a2e18",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"47284a86-46d2-4083-bb27-9643473e4594",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f7802015-b034-40ce-b5b6-4e1f183d8b3b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bcd3ae64-37c9-4fe5-80f1-a93e5bbab351",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2f6f7f8f-e447-4489-895d-4b7e9ee68122",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -49,11 +49,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7af171a6-7fec-481c-ad87-839dcf85954f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"df3aac33-7c16-44a1-8fbe-abd0f9444f81","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"78fb9f34-f700-46ea-9ce8-6c3e4f64ab0b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27c6c408-028f-4c5b-bae9-3ae069b650bc","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2862069a-9dce-4d88-a189-e1af170c9160","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4b42268c-d12c-40a5-a0f2-624d5127bb38","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"f27603bf-d2a6-47fa-8698-c1b1a2e27156","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"183d7c1c-6dd2-46de-bca5-8f11f27eb758","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"049086b8-2baf-4a3f-9cab-5273410d01c2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4e537e9-8aa2-4397-83eb-e437e8e069e9","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f5b5af1e-9eb5-47ae-b71a-f1a1da3659c3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2782fa68-dce3-40c6-820a-1307e77a2e18","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ccaad646-2193-4dce-833c-cabd0af9d871","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"47284a86-46d2-4083-bb27-9643473e4594","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f71ce407-ae63-4aab-b77b-57139ca9caa1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f7802015-b034-40ce-b5b6-4e1f183d8b3b","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1ab62ca2-175c-40c6-9f0c-eade9495df19","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bcd3ae64-37c9-4fe5-80f1-a93e5bbab351","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d3617e15-06e2-45ba-a695-c5b749bf88d2","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2f6f7f8f-e447-4489-895d-4b7e9ee68122","path":"sprites/droidshoot/droidshoot.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -72,7 +72,7 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5f35fc1e-7f60-471d-bcd8-122a08e6ee59","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8c5f158d-80f1-4b7a-aa7b-8b1388e6ea2d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
