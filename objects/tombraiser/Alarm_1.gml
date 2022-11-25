@@ -1,38 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-inst=instance_create(random_range(128*3,x),random_range(160,160+(64*5)),grave)
+
+inst=instance_create(x,y,grave)
+hp=0
 with(inst)
 {
 	move_snap(64,64)
-	if(room!=endless3)
-	{
-	while(y<=160)
-	{
-		x=random_range(128*3,other.x)
-		y+=32
-		move_snap(64,64)
-	}
-	while(y>160+256)
-	{
-		x=random_range(128*3,other.x)
-		y-=32
-		move_snap(64,64)
-	}
-	}
-	else
-	{
-		while(y<=160)
-		{
-			x=random_range(128*3,other.x)
-			y+=32
-			move_snap(64,64)
-		}
-		while(y>160+256)
-		{
-			x=random_range(128*3,other.x)
-			y-=32
-			move_snap(64,64)
-		}
-	}
 }
-alarm[1]=720

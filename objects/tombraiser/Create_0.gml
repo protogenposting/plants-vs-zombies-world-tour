@@ -13,7 +13,6 @@ zapped=false
 
 var p1 = part_type_create();
 
-alarm[1]=2
 elected=false
 anim=0
 nutted=false
@@ -21,11 +20,13 @@ nutted=false
 alarm[5]=20
 hitty=false
 
-hitsprite=brownflash
+hitsprite=tombraiserflash
 
-armor=conehead
-armorhit=conehit
+armor=-1
+armorhit=-1
 
-ogsprite=sprite1
+ogsprite=sprite4
 
 col=c_white
+
+doney=false
