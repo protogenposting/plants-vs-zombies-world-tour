@@ -1,16 +1,28 @@
 sh-=1
-if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true)||sh<=0 && collision_line(x, y+32, room_width, y+32, basiczombie, true, true)||sh<=0 && collision_line(x, y-32, room_width, y-32, basiczombie, true, true))
+if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
 {
-inst=instance_create(x,y,bullet1)
-inst.hspeed=5
-inst2=instance_create(x,y+64,bullet1)
-inst2.hspeed=5
-inst3=instance_create(x,y-64,bullet1)
-inst3.hspeed=5
-audio_play_sound(pop,1000,false)
-sh=reload
-}
+	if(shooting)
+	{
 
+	}
+	else
+	{
+		shooting=true
+		image_index=0
+		sprite_index=threepeatershoot
+		sh=9*(room_speed/sprite_get_speed(sprite_index))
+	}
+}
+if(shooting&&sh<=0)
+	{
+		shooting=false
+		sprite_index=threepeater
+		inst=instance_create(x,y-6,bullet1)
+		inst.hspeed=5
+		audio_play_sound(pop,1000,false)
+		sprite_index=threepeater
+		sh=reload
+	}
 ///kill
 if(hp<=0)
 {
@@ -23,14 +35,8 @@ if(pfactive)
 	if(pfi<=0)
 	{
 		audio_play_sound(pop,1000,false)
-		inst=instance_create(x,y+random_range(-6,6),bullet1)
+		inst=instance_create(x,y+random_range(-64,64),bullet1)
 		inst.hspeed=5
-		inst=instance_create(x,y,bullet1)
-		inst.hspeed=5
-		inst.vspeed=2.5
-		inst=instance_create(x,y,bullet1)
-		inst.hspeed=5
-		inst.vspeed=-2.5
 		pfi=pfr
 	}
 }

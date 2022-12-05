@@ -30,3 +30,17 @@ button[0]={
 	button:"adventure",
 	roomy: clevel
 }
+	
+	view_enabled=false
+	view_visible[0]=true
+	view_set_wport(0,1366)
+	view_set_hport(0,768)
+	view_set_wport(0,0)
+	view_set_hport(0,0)
+if(instance_exists(stats))
+{
+	view_enabled=true
+	view_visible[0]=true
+	view_set_wport(0,64*13)
+	view_set_hport(0,view_get_yport(0)/1.641826923)
+}

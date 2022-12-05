@@ -27,5 +27,10 @@ instance_destroy()
 
 if(pfactive)
 {
-	
+	pfi-=1
+	if(pfi<=0)
+	{
+		instance_create(x+random_range(-6,6),y,coldsun)
+		pfi=pfr
+	}
 }

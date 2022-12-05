@@ -1,1 +1,1 @@
-action_set_alarm(360, 0);
+action_set_alarm(180, 0);

@@ -4,11 +4,15 @@ repeat(room_height/64)
 {
 repeat((room_width/64))
 {
-instance_create(ecs+32,why+32,tiletypesteam)
+inst=instance_create(ecs+32,why+32,tiletypesteam)
+if(instance_exists(inst))
+{
+inst.col=c_black
+}
 ecs+=64
 }
 ecs=0
 why+=64
 }
 
-action_set_alarm(720, 0);
+action_set_alarm(60, 0);

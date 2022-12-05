@@ -1,19 +1,22 @@
 sh-=1
 inst=instance_nearest(x,y,basiczombie)
-
-if(ate)
+if(collision_line(x,y,x+128,y,inst,false,true)&&sh>0)
 {
-image_index=2
+	sprite_index=toadeat
+}
+else
+{
+	sprite_index=toadidle
 }
 if(collision_line(x,y,x+128,y,inst,false,true)&&sh<=0)
 {
 ate=false
-inst.hp-=30
-stats.dps+=30
+inst.hp-=10
+stats.dps+=10
 if(inst.hp>0)
 {
-sh=60
-image_index=1
+sh=20
+sprite_index=toadeat
 }
 else
 {
@@ -29,7 +32,7 @@ image_index=0
 
 if(ate)
 {
-image_index=2
+sprite_index=toadsleep
 }
 
 ///kill

@@ -1,4 +1,4 @@
-action_set_alarm(270, 0);
+action_set_alarm(360, 0);
 rotspd=0
 
 action_set_alarm(60, 1);

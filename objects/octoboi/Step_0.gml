@@ -41,3 +41,8 @@ if(place_meeting(x,y,zoybeanzombie))
 {
 hp-=0.1
 }
+
+if(distance_to_object(plant24)<64||distance_to_object(plant29)<64)
+{
+	hp-=0.1
+}

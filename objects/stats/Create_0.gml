@@ -77,6 +77,12 @@ if(layer_background_get_sprite(bg)==tiledesert)
 	hats=hats6
 	action_set_alarm(3000, 1);
 }
+if(layer_background_get_sprite(bg)==tilerussia)
+{
+	moosic=moosic5
+	hats=hats5
+	action_set_alarm(4000, 1);
+}
 if(room==quest1)
 {
 	moosic=loobboon
@@ -264,7 +270,22 @@ if(room==level21)
 if(room==level22)
 {
 	mnum=25
-	plant=[41]
+	plant=[43]
+}
+if(room==level23)
+{
+	mnum=25
+	plant=[44]
+}
+if(room==level24)
+{
+	mnum=25
+	plant=[45]
+}
+if(room==level25)
+{
+	mnum=25
+	plant=[45]
 }
 if(room==minigamebeach)
 {

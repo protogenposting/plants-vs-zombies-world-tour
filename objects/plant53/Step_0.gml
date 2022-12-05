@@ -1,10 +1,11 @@
-image_xscale+=0.1
-image_yscale+=0.1
+image_xscale+=0.2
+image_yscale+=0.2
 sh-=1
 if(sh<=0)
 {
 	audio_play_sound(bewm,1000,false)
-	effect_create_above(ef_explosion,x,y,1,c_red)
+	inst=instance_create(x,y,effect)
+	inst.sprite_index=EFFPOWIE
 with(basiczombie)
 {
 	if(distance_to_object(other)<64)

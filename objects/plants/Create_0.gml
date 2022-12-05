@@ -326,18 +326,27 @@ plant[41]={
 	desc:"thyme warp sends zombies back to the start"
 }
 plant[42]={
-	object: plant40,
-	cost: 225,
-	recharge:200,
-	desc:"demopea shoots out explosives with unique torchwood interactions"
+	object: plant72,
+	cost: 0,
+	recharge:2000,
+	desc:"sunbean latches onto zombies and makes light",
+	lawn: tilerussia,
 }
 plant[43]={
-	object: plant41,
-	cost: 25,
-	recharge:200,
-	desc:"spamtong shoots randomized bullets"
+	object: starmaker,
+	cost: 100,
+	recharge:8000,
+	desc:"shooting starfruit drops stars everywhere",
+	lawn: tilerussia,
 }
 plant[44]={
+	object: plant49,
+	cost: 425,
+	recharge:200,
+	desc:"nuke-shroom shoots out a large nuke",
+	lawn: tilerussia,
+}
+plant[48]={
 	object: plant42,
 	cost: 325,
 	recharge:200,
@@ -362,12 +371,7 @@ plant[47]={
 	recharge:200,
 	desc:"phat beat hurts zombies in a 3x3 area"
 }
-plant[48]={
-	object: plant49,
-	cost: 425,
-	recharge:200,
-	desc:"nuke-shroom shoots out a large nuke"
-}
+
 plant[49]={
 	object: plant51,
 	cost: 150,
@@ -484,10 +488,11 @@ plant[66]={
 	desc:"rngpea fires dicefruit across the lawn"
 }
 plant[67]={
-	object: plant36,
-	cost: 0,
-	recharge:20000,
-	desc:"sunmill spins to create sun"
+	object: plant40,
+	cost: 275,
+	recharge:200,
+	lawn: tilerussia,
+	desc:"demopea shoots out explosives with unique torchwood interactions"
 }
 plant[68]={
 	object: plant38,
@@ -659,4 +664,16 @@ zombie[11]={
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
 	entry:"hey guys coolkid95 here and today i'm gonna eat some brains!"
+}
+zombie[12]={
+	object: feddy,
+	desc:"feddy slow but tanki",
+	statsy: function(object){
+		inst=instance_create(0,0,object)
+		hp=inst.hp
+		spd=inst.spd
+		instance_destroy(inst)
+		return ("hp "+string(hp)+" spd "+string(spd*2));
+	},
+	entry:"WAS THAT THE YIFF OF 87!?!?!?"
 }

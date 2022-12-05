@@ -8,6 +8,10 @@ if(col>0)
 		inst.pfactive=true
 		inst.alarm[5]=_list[| i].pftime
 	}
+	inst=instance_create(x,y,effect)
+	inst.sprite_index=pf2
+	inst.rolling=false
+	inst.i=20
 	slots.pf-=1
 }
 

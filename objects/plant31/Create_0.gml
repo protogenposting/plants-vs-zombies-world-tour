@@ -9,3 +9,5 @@ pfactive=false
 pftime=120
 pfi=0
 pfr=1
+
+shooting=false

@@ -37,8 +37,8 @@ if(colyo&&!place_meeting(x,y,bullet22))
 {
 if(colyo.image_alpha>=1)
 {
-sprite_index=zeat
-hitsprite=zeathit
+sprite_index=graveatt
+hitsprite=tombraiserflash
 spd=0
 colyo.hp-=0.3
 }
@@ -103,7 +103,7 @@ if(hp<=10)
 {
 	armor=-1
 	armorhit=-1
-	sprite_index=sprite1
+	ogsprite=sprite1
 	hitsprite=tombraiserflash
 	alarm[1]=0
 }

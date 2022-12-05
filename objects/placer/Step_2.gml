@@ -101,6 +101,8 @@ else
 	inst.waterboi=false
 }
 }
+inst=instance_create(other.x,other.y,effect)
+inst.sprite_index=ploop
 action_kill_object();
 
 }

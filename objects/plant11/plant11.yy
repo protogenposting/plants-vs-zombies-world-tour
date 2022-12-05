@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "plant11",
   "spriteId": {
-    "name": "meowflower",
-    "path": "sprites/meowflower/meowflower.yy",
+    "name": "toadidle",
+    "path": "sprites/toadidle/toadidle.yy",
   },
   "solid": false,
   "visible": true,

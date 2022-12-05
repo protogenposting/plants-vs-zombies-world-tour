@@ -1,4 +1,4 @@
-reload=60
+reload=120
 sh=reload
 hp=100
 image_speed=0

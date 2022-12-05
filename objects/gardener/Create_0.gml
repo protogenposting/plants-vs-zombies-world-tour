@@ -23,8 +23,8 @@ hitty=false
 
 hitsprite=brownflash
 
-armor=conehead
-armorhit=conehit
+armor=-1
+armorhit=-1
 
 ogsprite=sprite1
 

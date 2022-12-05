@@ -5,3 +5,7 @@ if(instance_exists(basiczombie))
 	{
 		target=instance_nearest(x,y,basiczombie)
 	}
+	else
+	{
+		instance_destroy()
+	}

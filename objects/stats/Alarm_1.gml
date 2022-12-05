@@ -116,6 +116,18 @@ if(room==level22)
 {
 	zomb=choose(basiczombie,basiczombie,coneheadzombie,gardener,tombraiser)
 }
+if(room==level23)
+{
+	zomb=choose(basiczombie,basiczombie,coneheadzombie)
+}
+if(room==level24)
+{
+	zomb=choose(basiczombie,coneheadzombie,feddy)
+}
+if(room==level25)
+{
+	zomb=choose(basiczombie,coneheadzombie,feddy)
+}
 if(room==minigamebeach)
 {
 	zomb=choose(crab)

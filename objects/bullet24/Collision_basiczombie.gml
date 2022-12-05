@@ -3,8 +3,16 @@ other.hp-=0.01
 stats.dps+=0.01
 if(other.hp>10)
 {
-	inst=instance_create(other.x,other.y,basiczombie)
-	inst.y=other.y
+	if(other.object_index==feddy)
+	{
+		other.sprite_index=Sprite180
+		other.hp-=1
+	}
+	else
+	{
+		inst=instance_create(other.x,other.y,basiczombie)
+		inst.y=other.y
+	}
 	instance_destroy(other)
 }
 other.hitty=true

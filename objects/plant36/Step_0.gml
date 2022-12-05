@@ -2,7 +2,6 @@ image_angle+=rotspd
 if(rotspd>0)
 {
 rotspd+=1
-stats.sunny+=rotspd/100
 }
 col1+=1
 col2+=1

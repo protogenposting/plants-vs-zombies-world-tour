@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 inst=instance_create(x,y,grave)
-hp=0
+hp=10
 with(inst)
 {
 	move_snap(64,64)

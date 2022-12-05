@@ -1,38 +1,60 @@
 draw_set_color(c_black)
-ecs=64
+draw_sprite(hud,0,0,0)
+ecs=138
+why=9+98/2
+slottyoa=0
+slotty=slot[slottyoa]
+reload[slottyoa]-=1
+hasplant=true
 repeat(maxslots)
 {
-slottyoa=(ecs/64)-1
-slotty=slot[(ecs/64)-1]
 reload[slottyoa]-=1
 hasplant=true
 
 
 if(hasplant)
 {
+	slotty=slot[slottyoa]
+	pacc=0
 if(variable_struct_exists(plants.plant[slotty],"lawn"))
 		{
-			draw_sprite(plants.plant[slotty].lawn, 0, ecs + 32, 32);
+			if(plants.plant[slotty].lawn==tilemud)
+			{
+				pacc=1
+			}
+			if(plants.plant[slotty].lawn==tilesand)
+			{
+				pacc=2
+			}
+			if(plants.plant[slotty].lawn==tilevolcano)
+			{
+				pacc=3
+			}
+			if(plants.plant[slotty].lawn==tiledesert)
+			{
+				pacc=4
+			}
 		}
 		else
 		{
-			draw_sprite(tilestore, 0, ecs + 32, 32);
+			draw_sprite(tilestore, 0, ecs + 32, why);
 		}
-draw_rectangle(ecs,0,ecs+64,64,true)
-draw_sprite(object_get_sprite(plants.plant[slotty].object),0,ecs+32,32)
-draw_text(ecs+30,y+76,string_hash_to_newline(string(plants.plant[slotty].cost)))
-draw_healthbar(ecs,0,ecs+64,64,(reload[slottyoa]/plants.plant[slotty].recharge)*100,c_black,c_black,c_black,0,false,false)
+draw_sprite(Sprite178,pacc,ecs+32,why+4)
+draw_sprite(object_get_sprite(plants.plant[slotty].object),0,ecs+32,why)
+draw_sprite(Sprite176,pacc,ecs+32,why+4)
+draw_text(ecs+5,why+30,string_hash_to_newline(string(plants.plant[slotty].cost)))
+draw_healthbar(ecs,why-33,ecs+64,why+31,(reload[slottyoa]/plants.plant[slotty].recharge)*100,c_black,c_black,c_black,0,false,false)
 if(keyboard_check_pressed(ord(slottyoa+1)))
 {
-if(stats.sunny>=plants.plant[slotty].cost&&reload[(ecs/64)-1]<=0)
+if(stats.sunny>=plants.plant[slotty].cost&&reload[slottyoa]<=0)
 {
 instance_destroy(placer)
 inst=instance_create(x,y,placer)
 inst.slot=slotty
-inst.slotselected=(ecs/64)-1
+inst.slotselected=slotty
 }
 }
-if(mouse_x<ecs+64&&mouse_x>ecs&&mouse_y<64&&mouse_y>0||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+64, 64))
+if(mouse_x<ecs+64&&mouse_x>ecs&&mouse_y<why+32&&mouse_y>why-32||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+64, 64))
 {
 if(mouse_check_button_pressed(mb_left)||global.tapping)
 {
@@ -40,16 +62,18 @@ if(mouse_check_button_pressed(mb_left)||global.tapping)
 	{
 	instance_destroy(placer)
 }
-if(stats.sunny>=plants.plant[slotty].cost&&reload[(ecs/64)-1]<=0)
+if(stats.sunny>=plants.plant[slotty].cost&&reload[slottyoa]<=0)
 {
 instance_destroy(placer)
 inst=instance_create(x,y,placer)
 inst.slot=slotty
-inst.slotselected=(ecs/64)-1
+inst.slotselected=slottyoa
 }
 }
 }
-ecs+=64
+ecs+=75
+slottyoa+=1
+slotty+=1
 }
 }
 draw_rectangle(ecs,0,ecs+128+32,64,true)
@@ -67,3 +91,4 @@ if(mouse_x<ecs+128&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_press
 }
 ecs+=128
 draw_healthbar(ecs,0,ecs+128,64,((stats.num+1)/stats.mnum)*100,c_black,c_red,c_green,0,true,true)
+draw_text(33,87,string_hash_to_newline(string(stats.sunny)))

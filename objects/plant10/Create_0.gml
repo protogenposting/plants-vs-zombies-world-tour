@@ -8,8 +8,8 @@ alarm[1]=60
 
 action_set_alarm(30, 0);
 pfactive=false
-pftime=720
+pftime=120
 pfi=0
-pfr=1
+pfr=30
 
 inst=-1

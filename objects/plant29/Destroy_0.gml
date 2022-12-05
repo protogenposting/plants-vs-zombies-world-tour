@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-col=instance_place(x,y,tiletypeunplantable)
-if(col)
+	with(tiletypeunplantable)
 {
-	effect_create_above(ef_smokeup,x,y,1,c_grey)
-	instance_destroy(col)
+	if(distance_to_object(other)<64)
+	{
+		instance_destroy()
+		effect_create_above(ef_smokeup,x,y,1,c_grey)
+	}
 }
