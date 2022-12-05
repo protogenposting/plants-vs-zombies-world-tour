@@ -33,10 +33,11 @@ button[0]={
 	
 	view_enabled=false
 	view_visible[0]=true
-	camera_set_view_size(0,1366,768)
+	camera_set_view_size(view_camera[0],1366,768)
 if(instance_exists(stats))
 {
 	view_enabled=true
 	view_visible[0]=true
-	camera_set_view_size(0,1366/2,768/2)
+	camera_set_view_size(view_camera[0],1366/1.2,768/1.2)
+	camera_set_view_pos(view_camera[0],128,160-128)
 }

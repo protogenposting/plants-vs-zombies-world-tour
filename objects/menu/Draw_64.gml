@@ -100,7 +100,7 @@ if(room==alminac&&alminacy)
 {
 draw_text(0,0,"press to switch alminacs")
 draw_rectangle(0,0,128,32,true)
- if (point_in_rectangle(mouse_x, mouse_y, 0,0,128,32)&&mouse_check_button_pressed(mb_left)&&iy<=0) {
+ if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), 0,0,128,32)&&mouse_check_button_pressed(mb_left)&&iy<=0) {
 	alminacy=false
 	iy=2
  }
@@ -168,7 +168,7 @@ repeat (20) {
         draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[bnum].cost)));
         ecs += 64;
         
-        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)
+        if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), ecs-64, why, ecs, why+64)
             ) {
             draw=true
 			if(variable_struct_exists(plants.plant[bnum],"entry"))
@@ -206,7 +206,7 @@ if(room==alminac&&!alminacy)
 {
 draw_text(0,0,"press to switch alminacs")
 draw_rectangle(0,0,128,32,true)
- if (point_in_rectangle(mouse_x, mouse_y, 0,0,128,32)&&mouse_check_button_pressed(mb_left)&&iy<=0) {
+ if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), 0,0,128,32)&&mouse_check_button_pressed(mb_left)&&iy<=0) {
 	alminacy=true
 	iy=2
  }
@@ -267,7 +267,7 @@ ecs=0
 why=room_height-64
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"back")
-if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
 if(instance_exists(stats)||instance_exists(selection))
 {
@@ -300,7 +300,7 @@ if(room==title)
 why=room_height-64
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"discord")
-if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
 	url_open("https://discord.gg/AnGgzRQtgm")
 }
@@ -314,7 +314,7 @@ if(game_get_speed(gamespeed_fps)==60)
 {
 draw_text(ecs,why,"30 fps")
 }
-if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left))
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left))
 {
 	if(game_get_speed(gamespeed_fps)==30)
 {

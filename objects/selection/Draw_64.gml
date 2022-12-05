@@ -41,7 +41,7 @@ repeat (20) {
 		draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
         ecs += 64;
         
-        if (point_in_rectangle(mouse_x, mouse_y, ecs-64, why, ecs, why+64)&&selected<maxslots
+        if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), ecs-64, why, ecs, why+64)&&selected<maxslots
             ) {
             draw=true
             str=plants.plant[slotty].desc
@@ -103,7 +103,7 @@ ecs=room_width-128
 why=room_height-64
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"START")
-if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
 	audio_sound_gain(pickyoseeds,0.00001,360*2)
 inst=instance_create(x,y,slots)
@@ -121,11 +121,11 @@ instance_destroy()
 ecs-=128
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"CLEAR")
-if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"START")
-if(point_in_rectangle(mouse_x,mouse_y,ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
 slot[0]=0
 slot[1]=0

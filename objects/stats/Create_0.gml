@@ -111,6 +111,7 @@ if(room==quest6)
 }
 
 waterlevel=0
+nwaterlevel=0
 
 depth=-100000
 

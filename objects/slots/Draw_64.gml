@@ -54,7 +54,7 @@ inst.slot=slotty
 inst.slotselected=slotty
 }
 }
-if(mouse_x<ecs+64&&mouse_x>ecs&&mouse_y<why+32&&mouse_y>why-32||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+64, 64))
+if(device_mouse_x_to_gui(0)<ecs+64&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<why+32&&device_mouse_y_to_gui(0)>why-32||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+64, 64))
 {
 if(mouse_check_button_pressed(mb_left)||global.tapping)
 {
@@ -78,14 +78,14 @@ slotty+=1
 }
 draw_rectangle(ecs,0,ecs+128+32,64,true)
 draw_text(ecs,0,"plant food: "+string(pf)+"/"+string(pfcap))
-if(pf>0&&mouse_x<ecs+128+32&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_pressed(mb_left))
+if(pf>0&&device_mouse_x_to_gui(0)<ecs+128+32&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<64&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left))
 {
 	inst=instance_create(x,y,plantfood)
 }
 ecs+=128+32
 draw_rectangle(ecs,0,ecs+128,64,true)
 draw_text(ecs,0,"shovel")
-if(mouse_x<ecs+128&&mouse_x>ecs&&mouse_y<64&&mouse_y>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128, 64)&&global.tapping)
+if(device_mouse_x_to_gui(0)<ecs+128&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<64&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128, 64)&&global.tapping)
 {
 	inst=instance_create(x,y,shovel)
 }

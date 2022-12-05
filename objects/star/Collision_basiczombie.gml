@@ -1,6 +1,6 @@
 audio_play_sound(hit,1000,false)
 
-other.hp-=0.01
+other.hp-=0.1
 other.hitty=true
 other.alarm[1]=10
 inst=instance_create(other.x,other.y,effect)

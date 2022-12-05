@@ -6,7 +6,7 @@ if(col)
 	x=col.x
 	y=col.y
 	depth=col.depth-1
-	image_alpha=0
+	sprite_index=effsun
 	if(col.hitty)
 	{
 		stats.sunny+=0.75
@@ -15,10 +15,9 @@ if(col)
 	{
 		instance_destroy()
 	}
-	effect_create_above(ef_spark,x,y,1,c_yellow)
 }
 else
 {
 	move_snap(64,64)
-	image_alpha=1
+	sprite_index=Sprite181
 }

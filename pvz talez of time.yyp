@@ -203,6 +203,7 @@
     {"id":{"name":"Sprite181","path":"sprites/Sprite181/Sprite181.yy",},"order":20,},
     {"id":{"name":"endlessmenu","path":"rooms/endlessmenu/endlessmenu.yy",},"order":4,},
     {"id":{"name":"bewm","path":"sounds/bewm/bewm.yy",},"order":7,},
+    {"id":{"name":"effsun","path":"sprites/effsun/effsun.yy",},"order":168,},
     {"id":{"name":"moosic6","path":"sounds/moosic6/moosic6.yy",},"order":24,},
     {"id":{"name":"hats1","path":"sounds/hats1/hats1.yy",},"order":9,},
     {"id":{"name":"bullet23","path":"objects/bullet23/bullet23.yy",},"order":110,},
