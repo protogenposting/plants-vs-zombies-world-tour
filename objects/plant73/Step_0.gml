@@ -1,0 +1,54 @@
+/// @description Insert description here
+// You can write your code in this editor
+i-=1
+if(i<=0)
+{
+item=irandom(5)
+if(item==0)
+{
+	image_index=5
+	sprite_index=HETHICC
+	hspeed=5
+}
+else
+{
+	image_index=5
+	sprite_index=Sprite187
+	hspeed=0
+}
+if(item==1)
+{
+	inst=instance_create(x,y,bigdropplet)
+	inst.sprite_index=apol
+}
+if(item==2)
+{
+	inst=instance_create(x,y,effect)
+	inst.vspeed=-3
+	inst.sprite_index=magnet
+	for (var iy = 0; iy < instance_number(basiczombie); ++iy;)
+	{
+		enemy = instance_find(basiczombie,iy);
+		enemy.x+=64
+		if(enemy.x>room_width)
+		{
+			enemy.x=room_width
+		}
+	}
+}
+if(item==3)
+{
+	inst=instance_create(x,y+16,bullet5)
+	inst.sprite_index=snowball
+	inst.hspeed=5
+}
+if(item==4)
+{
+	inst=instance_create(x,y,dicefruitseed)
+}
+if(item==5)
+{
+	inst=instance_create(x,y,sandstormbottle)
+}
+i=image_number*(room_speed/sprite_get_speed(sprite_index))
+}

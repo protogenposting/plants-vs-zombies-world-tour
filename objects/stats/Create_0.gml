@@ -45,6 +45,10 @@ if(room==quest6)
 {
 	action_set_alarm(120, 1);
 }
+if(room==quest7)
+{
+	action_set_alarm(120, 1);
+}
 
 moosic=ooftheroof
 hats=hats1
@@ -109,6 +113,11 @@ if(room==quest6)
 	moosic=loobboon
 	hats=-1
 }
+if(room==quest7)
+{
+	moosic=loobboon
+	hats=-1
+}
 
 waterlevel=0
 nwaterlevel=0
@@ -161,6 +170,12 @@ if(room==quest6)
 {
 	mnum=7
 	plant=[62]
+	quest=true
+}
+if(room==quest7)
+{
+	mnum=20
+	plant=[71]
 	quest=true
 }
 if(room==level1)
@@ -290,7 +305,7 @@ if(room==level25)
 }
 if(room==minigamebeach)
 {
-	mnum=100
+	mnum=40
 	alarm[1]=5
 	plant=[26]
 	moosic=loobboon

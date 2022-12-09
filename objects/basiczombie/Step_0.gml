@@ -1,4 +1,3 @@
-
 x-=spd/4
 if(hp<=0)
 {
@@ -9,6 +8,7 @@ i-=1
 
 ///speed
 col=c_white
+
 if(place_meeting(x,y,tiletypewater))
 {
 if(room==endless5)
@@ -26,6 +26,12 @@ stats.dps+=0.1
 else
 {
 spd=nspd
+}
+if(frozen)
+{
+image_speed=0.5
+col=c_aqua
+spd=nspd/2
 }
 sprite_index=ogsprite
 hitsprite=brownflash
@@ -51,12 +57,6 @@ if(place_meeting(x,y,zoybeanzombie))
 spd=0
 }
 image_speed=1
-if(frozen)
-{
-image_speed=0.5
-col=c_aqua
-spd=nspd/2
-}
 
 if(withered)
 {

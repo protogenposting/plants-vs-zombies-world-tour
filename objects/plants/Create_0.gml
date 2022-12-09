@@ -1,3 +1,4 @@
+money=0
 plant[0]={
 	object: plant1,
 	cost: 100,
@@ -500,6 +501,18 @@ plant[68]={
 	recharge:200,
 	desc:"blockbuster destroys graves and zombies between them"
 }
+plant[69]={
+	object: plant41,
+	cost: 25,
+	recharge:200,
+	desc:"SPAMTONG"
+}
+plant[70]={
+	object: plant73,
+	cost: 150,
+	recharge:200,
+	desc:"Bob creates random items from his game"
+}
 var arrowwoody = {
 	object: plant50,
 	cost: 125,
@@ -663,7 +676,7 @@ zombie[11]={
 		instance_destroy(inst)
 		return ("hp "+string(hp)+" spd "+string(spd*2));
 	},
-	entry:"hey guys coolkid95 here and today i'm gonna eat some brains!"
+	entry:"hey guys Cool Kid95 here and today i'm gonna eat some brains!"
 }
 zombie[12]={
 	object: feddy,

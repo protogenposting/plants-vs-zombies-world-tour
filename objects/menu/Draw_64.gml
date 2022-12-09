@@ -81,7 +81,7 @@ why=(room_height/2)-128
 bnum=12
 if(room==quests)
 {
-repeat(6)
+repeat(7)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
 	draw_set_halign(fa_center)
@@ -293,7 +293,11 @@ else if(room==endlessmenu||room==alminac||room==quests||room==editor||room==teir
 	audio_stop_all()
 }
 }
-
+why-=64
+draw_set_halign(fa_center)
+draw_rectangle(ecs,why,ecs+128,why+64,true)
+draw_text(ecs+64,why,"$"+string(plants.money))
+draw_set_halign(fa_left)
 if(room==title)
 {
 	ecs=room_width-128

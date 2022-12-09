@@ -11,8 +11,8 @@ zapped=false
 var p1 = part_type_create();
 
 elected=false
-spd=0
-nspd=0
+spd=2
+nspd=2
 
 i=0
 nutted=false
@@ -20,9 +20,11 @@ hitty=false
 
 hitsprite=brownflash
 
-armor=conehead
-armorhit=conehit
+armor=-1
+armorhit=-1
 
 ogsprite=sprite1
 
 col=c_white
+
+iy=sprite_get_number(octohidestart)*(room_speed/sprite_get_speed(octohidestart))

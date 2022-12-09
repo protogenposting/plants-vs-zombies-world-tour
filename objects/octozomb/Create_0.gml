@@ -13,7 +13,7 @@ zapped=false
 
 var p1 = part_type_create();
 
-alarm[1]=720
+alarm[1]=720*4
 elected=false
 
 anim=0

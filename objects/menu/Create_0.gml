@@ -41,7 +41,7 @@ button[6]={
 	roomy:endless4
 }
 button[7]={
-	button:"european peach endless",
+	button:"european beach endless",
 	roomy:endless3
 }
 button[8]={
@@ -71,6 +71,10 @@ button[13]={
 button[14]={
 	button:"BEANNNS WTF",
 	roomy: quest6
+}
+button[15]={
+	button:"bob from box game real?!?!?!?",
+	roomy: quest7
 }
 draw=false
 
@@ -148,7 +152,8 @@ del_level=function(){
 	inst=instance_create(0,0,plants)
 	var _saveData = {
 		plantdata: menu.plantdatareset(),
-		level: level1
+		level: level1,
+		money: 0
 	}
 	
 	var _string = json_stringify(_saveData)
@@ -163,7 +168,8 @@ save_level=function(){
 	//make epoc array
 	var _saveData = {
 		plantdata: menu.plantdataget(),
-		level: menu.clevel
+		level: menu.clevel,
+		money: plants.money
 	}
 	
 	var _string = json_stringify(_saveData)
@@ -202,6 +208,10 @@ load_level=function(){
 			num+=1
 		}
 		menu.clevel=_loadData.level
+		if(variable_struct_exists(_loadData,"money"))
+		{
+			plants.money=_loadData.money
+		}
 	}
 	else
 	{

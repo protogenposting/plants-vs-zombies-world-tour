@@ -9,10 +9,7 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": {
-    "name": "bullety",
-    "path": "sprites/bullety/bullety.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

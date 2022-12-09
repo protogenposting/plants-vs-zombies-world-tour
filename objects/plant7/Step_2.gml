@@ -1,6 +1,6 @@
 if(place_meeting(x,y,tiletypesteam))
 {
-i-=1
+sh-=1
 steamed=true
 }
 else

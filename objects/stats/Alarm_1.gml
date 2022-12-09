@@ -128,6 +128,10 @@ if(room==level25)
 {
 	zomb=choose(basiczombie,coneheadzombie,feddy)
 }
+if(killed<13)
+{
+	zomb=basiczombie
+}
 if(room==minigamebeach)
 {
 	zomb=choose(crab)
