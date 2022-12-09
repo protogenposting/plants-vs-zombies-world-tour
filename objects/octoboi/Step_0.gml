@@ -35,21 +35,6 @@ spd=nspd/2
 }
 sprite_index=ogsprite
 hitsprite=brownflash
-coly=instance_place(x,y,plant44)
-colyo=instance_place(x,y,plant1)
-if(colyo&&!place_meeting(x,y,bullet22))
-{
-if(colyo.image_alpha>=1)
-{
-spd=0
-colyo.hp-=0.3
-}
-//PUT THE STUFF FOR SPRITE CHANGING HERE BITCH
-if(coly&&coly.image_index==0)
-{
-	spd=1
-}
-}
 if(place_meeting(x,y,zoybeanzombie))
 {
 spd=0
@@ -94,26 +79,18 @@ if(hp<=10)
 	armorhit=-1
 }
 
-if(place_meeting(x,y,plant4)&&iy<=0)
+
+coly=instance_place(x,y,plant1)
+if(coly)
 {
-	spd/=2
 	sprite_index=octohide
-}
-else if(iy>0&&place_meeting(x,y,plant4))
-{
-	iy-=1
 	spd=0
-	sprite_index=octohidestart
-}
-else if(iy>0&&!place_meeting(x,y,plant4))
-{
-	iy-=1
-	spd=0
-	sprite_index=octohideend
-}
-else if(iy<=0&&!place_meeting(x,y,plant4))
-{
-	iy=sprite_get_number(octohideend)*(room_speed/sprite_get_speed(octohideend))
+	x=coly.x
+	y=coly.y
+	if(variable_instance_exists(col,"sh"))
+	{
+		coly.sh+=1
+	}
 }
 else
 {
