@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "crab",
   "spriteId": {
-    "name": "sprite1",
-    "path": "sprites/sprite1/sprite1.yy",
+    "name": "Sprite197",
+    "path": "sprites/Sprite197/Sprite197.yy",
   },
   "solid": false,
   "visible": true,

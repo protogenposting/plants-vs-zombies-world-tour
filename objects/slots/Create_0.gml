@@ -6,11 +6,15 @@ slot[3]=0
 slot[4]=0
 slot[5]=0
 slot[6]=0
-if(room==minigamebeach)
+if(room==minigamebeach||room==minigamelawn)
 {
 	slot[0]=0
 	slot[1]=1
 	slot[2]=2
+}
+if(room==minigamebeach)
+{
+	slot[3]=5
 }
 reload[0]=5
 reload[1]=5

@@ -2,7 +2,8 @@ reload=60
 sh=reload
 hp=5
 image_speed=1
-
+spd=0
+nspd=1
 action_set_alarm(30, 0);
 pfactive=false
 pftime=120

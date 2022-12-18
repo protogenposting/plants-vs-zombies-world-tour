@@ -8,4 +8,4 @@ pftime=60
 pfi=0
 pfr=10
 
-image_speed=0
+image_speed=1

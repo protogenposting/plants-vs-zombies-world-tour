@@ -34,6 +34,10 @@ if(variable_struct_exists(plants.plant[slotty],"lawn"))
 			{
 				pacc=4
 			}
+			if(plants.plant[slotty].lawn==tilegrasskrima)
+			{
+				pacc=9
+			}
 		}
 		else
 		{
@@ -76,16 +80,14 @@ slottyoa+=1
 slotty+=1
 }
 }
-draw_rectangle(ecs,0,ecs+128+32,64,true)
-draw_text(ecs,0,"plant food: "+string(pf)+"/"+string(pfcap))
-if(pf>0&&device_mouse_x_to_gui(0)<ecs+128+32&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<64&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left))
+draw_sprite(Sprite194,pf,ecs+32,0)
+if(pf>0&&device_mouse_x_to_gui(0)<ecs+110&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<110&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left))
 {
 	inst=instance_create(x,y,plantfood)
 }
-ecs+=128+32
-draw_rectangle(ecs,0,ecs+128,64,true)
-draw_text(ecs,0,"shovel")
-if(device_mouse_x_to_gui(0)<ecs+128&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<64&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X, global.Touch_Y, ecs, 0, ecs+128, 64)&&global.tapping)
+ecs+=110
+draw_sprite(Sprite195,!instance_exists(shovel),ecs+32,0)
+if(device_mouse_x_to_gui(0)<ecs+100&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<97&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left))
 {
 	inst=instance_create(x,y,shovel)
 }

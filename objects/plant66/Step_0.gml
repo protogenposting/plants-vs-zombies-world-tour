@@ -16,18 +16,7 @@ if(pfactive)
 		pfi=pfr
 	}
 }
-if(hp>5000)
-{
-	sprite_index=wallnut4
-}
-if(hp>4000)
-{
-	sprite_index=wallnut5
-}
-if(hp>3000)
-{
-	sprite_index=wallnut6
-}
+
 if(hp>2000)
 {
 	sprite_index=wallnut1
@@ -39,6 +28,18 @@ if(hp<=2000)
 if(hp<=1000)
 {
 	sprite_index=wallnut3
+}
+if(hp>5000)
+{
+	sprite_index=wallnut4
+}
+if(hp>4000)
+{
+	sprite_index=wallnut5
+}
+if(hp>3000)
+{
+	sprite_index=wallnut6
 }
 i-=1
 if(rolling)

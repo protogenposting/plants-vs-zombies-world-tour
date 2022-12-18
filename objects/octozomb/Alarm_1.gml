@@ -3,5 +3,5 @@
 if(instance_exists(plant1))
 {
 inst=instance_create(x,y,octoboi)
+hp=-100
 }
-alarm[1]=720*2

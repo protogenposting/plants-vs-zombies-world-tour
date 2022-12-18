@@ -132,24 +132,24 @@ if(killed<13)
 {
 	zomb=basiczombie
 }
-if(room==minigamebeach)
+if(room==minigamebeach||room==minigamelawn)
 {
-	zomb=choose(crab)
+	zomb=choose(basiczombie)
 }
-instance_create(32+(64*11)+64*5,choose(160,160+64,160+128,160+192,160+192+64),zomb)
+inst=instance_create(32+(64*11)+64*5,choose(160,160+64,160+128,160+192,160+192+64),zomb)
 numyo+=1
-if(room==minigamebeach)
+action_set_alarm(random_range(2,1000-killed), 1);
+if(room==minigamebeach||room==minigamelawn)
 {
 	if(numyo>=4)
 	{
 		break;
 	}
-}
-}
-action_set_alarm(random_range(2,1000-killed), 1);
-if(room==minigamebeach)
-{
 	alarm[1]=60
+	inst.nspd=3
+	inst.spd=3
+	break;
+}
 }
 num+=1
 if(alarm[1]<20)

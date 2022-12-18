@@ -6,4 +6,4 @@ pftime=120
 pfi=0
 pfr=3
 
-i=5*(room_speed/sprite_get_speed(sprite_index))
+i=47*(room_speed/sprite_get_speed(sprite_index))

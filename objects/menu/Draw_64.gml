@@ -14,7 +14,7 @@ ecs=16
 		ecs=16
 		why+=64
 	}
-	al-=0.1
+	al-=0.01
 	why=16
 	ecs=16
 	repeat(room_height/32)
@@ -92,6 +92,21 @@ repeat(7)
 	}
 	bnum+=1
 	why+=64
+}
+var bnum=0
+repeat(array_length(event))
+{
+	if(eventactive[bnum])
+	{
+		draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
+		draw_set_halign(fa_center)
+		draw_text(ecs,why,event[bnum].button)
+		if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left))
+		{
+			room_goto(event[bnum].roomy)
+		}
+	}
+	bnum+=1
 }
 }
 draw_set_halign(fa_left)
@@ -275,15 +290,6 @@ if(instance_exists(stats)||instance_exists(selection))
 	instance_destroy(selection)
 	instance_destroy(slots)
 	instance_destroy(stats)
-	if(room>=16)
-	{
-		clevel=room
-		save_level()
-	}
-	else
-	{
-		save_level()
-	}
 	room_goto(title)
 	audio_stop_all()
 }
@@ -330,4 +336,20 @@ game_set_speed(30, gamespeed_fps);
 }
 }
 }
+
+if(room==title)
+{
+ecs+=128
+draw_text(ecs,why-16,"volume")
+draw_line(ecs,why,ecs+100,why)
+draw_rectangle(ecs+(volume*100)-16,why-16,ecs+(volume*100)+16,why+16,true)
+if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+100,why+64)&&mouse_check_button(mb_left))
+{
+	volume=(device_mouse_x_to_gui(0)-ecs)/100
+}
+}
+audio_master_gain(volume);
+
 draw_set_color(c_purple)
+
+draw_text(0,0,string(room))

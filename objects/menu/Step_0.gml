@@ -41,3 +41,10 @@ if(instance_exists(stats))
 	camera_set_view_size(view_camera[0],1366/1.2,768/1.2)
 	camera_set_view_pos(view_camera[0],128,160-128)
 }
+
+var bnum=0
+repeat(array_length(event))
+{
+	eventactive[bnum]=date_compare_datetime(date_create_datetime(current_year, event[bnum].time.starttime.month, event[bnum].time.starttime.day, 0, 0, 0), date_current_datetime())==-1&&date_compare_datetime(date_create_datetime(current_year, event[bnum].time.endtime.month, event[bnum].time.endtime.day, 0, 0, 0), date_current_datetime())==1
+	bnum+=1
+}

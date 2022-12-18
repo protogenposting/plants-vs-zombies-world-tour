@@ -1,34 +1,52 @@
-sh-=1
-inst=instance_nearest(x,y,basiczombie)
-
-if(ate)
+col=collision_line(x,y,x+128,y,basiczombie,false,true)
+iy-=1
+i-=1
+if(col&&!ate&&iy<=0)
 {
-image_index=2
+	sh-=1
+	if(sh<=0)
+	{
+	sprite_index=chomperswallow
+	col.hp-=30
+	stats.dps+=30
+	while(image_number+sprite_get_number(chomperswallow)<4)
+	{
+		sh+=1
+		image_number+=1
+	}
+	sh=sprite_get_number(chomperswallow)*(room_speed/sprite_get_speed(chomperswallow))
+	}
+	if(col.hp<=0)
+	{
+		ate=true
+		image_index=0
+		sprite_index=chompysleepstart
+		i=sprite_get_number(chompysleepstart)*(room_speed/sprite_get_speed(chompysleepstart))
+		iy=reload*4
+	}
 }
-if(collision_line(x,y,x+128,y,inst,false,true)&&sh<=0)
+else if(ate&&i<=0)
 {
-ate=false
-inst.hp-=6000
-stats.dps+=6000
-if(inst.hp>0)
+	sprite_index=chompysleep
+	if(iy<=0)
+	{
+		image_index=0
+		sprite_index=chompysleepend
+		iy=image_number*(room_speed/sprite_get_speed(sprite_index))
+		ate=false
+	}
+}
+else if(iy>0)
 {
-sh=60
-image_index=1
+	sprite_index=chompysleepend
+}
+else if (i>0&&ate)
+{
+	sprite_index=chompysleepstart
 }
 else
 {
-sh=reload
-ate=true
-}
-}
-else
-{
-image_index=0
-}
-
-if(ate)
-{
-image_index=2
+	sprite_index=chompyboi
 }
 
 ///kill

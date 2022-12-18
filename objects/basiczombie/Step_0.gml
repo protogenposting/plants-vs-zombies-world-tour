@@ -95,3 +95,8 @@ if(hp<=10)
 	armor=-1
 	armorhit=-1
 }
+if(object_index==basiczombie&&room==quest8)
+{
+	armor=Sprite200
+	armorhit=Sprite200
+}

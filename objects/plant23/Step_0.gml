@@ -10,7 +10,7 @@ if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
 		shooting=true
 		image_index=0
 		sprite_index=threepeatershoot
-		sh=9*(room_speed/sprite_get_speed(sprite_index))
+		sh=4*(room_speed/sprite_get_speed(sprite_index))
 	}
 }
 if(shooting&&sh<=0)
@@ -18,6 +18,10 @@ if(shooting&&sh<=0)
 		shooting=false
 		sprite_index=threepeater
 		inst=instance_create(x,y-6,bullet1)
+		inst.hspeed=5
+		inst=instance_create(x,y-6-64,bullet1)
+		inst.hspeed=5
+		inst=instance_create(x,y-6+64,bullet1)
 		inst.hspeed=5
 		audio_play_sound(pop,1000,false)
 		sprite_index=threepeater

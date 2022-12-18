@@ -80,6 +80,24 @@ draw=false
 
 depth=-100000
 
+
+
+
+event[0]={
+	button:"e krima",
+	roomy: quest8,
+	time:{starttime:{month:12,day:1},endtime:{month:12,day:25}}
+}
+event[1]={
+	button:"happi new year!",
+	roomy: quest9,
+	time:{starttime:{month:12,day:26},endtime:{month:12,day:31}}
+}
+
+
+
+
+
 var _strucc = {
 	button:"Saharah desert endless",
 	roomy: endless6
@@ -235,3 +253,6 @@ global.Touch_Y=0
 game_set_speed(60, gamespeed_fps);
 
 iy=0
+
+
+volume=0.5

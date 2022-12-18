@@ -1,0 +1,31 @@
+/// @description Insert description here
+// You can write your code in this editor
+effect_create_above(ef_firework,x,y,1,c_aqua)
+effecty=irandom(3)
+with(basiczombie)
+{
+	if(distance_to_object(other)<=68)
+	{
+		hp-=10
+		stats.dps+=10
+		effecty=other.effecty
+		if(effecty==0)
+		{
+			frozen=true
+		}
+		if(effecty==1)
+		{
+			withered=true
+		}
+		if(effecty==2)
+		{
+			zapped=true
+		}
+		if(effecty==3)
+		{
+			nutted=true
+		}
+		audio_play_sound(hit,1000,false)
+		alarm[0]=720
+	}
+}

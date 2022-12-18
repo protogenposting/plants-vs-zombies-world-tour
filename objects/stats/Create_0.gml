@@ -118,6 +118,16 @@ if(room==quest7)
 	moosic=loobboon
 	hats=-1
 }
+if(room==quest8)
+{
+	moosic=ooftheroofkrima
+	hats=hats1krima
+}
+if(room==quest9)
+{
+	moosic=ooftheroofkrima
+	hats=hats1krima
+}
 
 waterlevel=0
 nwaterlevel=0
@@ -178,10 +188,22 @@ if(room==quest7)
 	plant=[71]
 	quest=true
 }
+if(room==quest8)
+{
+	mnum=50
+	plant=[73]
+	quest=true
+}
+if(room==quest9)
+{
+	mnum=100
+	plant=[74]
+	quest=true
+}
 if(room==level1)
 {
 	mnum=15
-	plant=[2,3,4,5,6]
+	plant=[2,3,4,6]
 }
 if(room==level2)
 {
@@ -303,9 +325,17 @@ if(room==level25)
 	mnum=25
 	plant=[45]
 }
+if(room==minigamelawn)
+{
+	mnum=150
+	alarm[1]=5
+	plant=[5]
+	moosic=loobboon
+	hats=-1
+}
 if(room==minigamebeach)
 {
-	mnum=40
+	mnum=200
 	alarm[1]=5
 	plant=[26]
 	moosic=loobboon
@@ -322,3 +352,5 @@ aud1=audio_play_sound(moosic,1000,true)
 aud2=audio_play_sound(hats,1000,true)
 audio_sound_gain(hats,0.01,0)
 video=false
+
+mnum*=1.5

@@ -90,7 +90,7 @@ plant[10]={
 }
 plant[11]={
 	object: plant8,
-	cost: 75,
+	cost: 150,
 	recharge:200,
 	desc:"rafflesia shoot stinky doodoo farts",
 	lawn: tilemud,
@@ -513,6 +513,27 @@ plant[70]={
 	recharge:200,
 	desc:"Bob creates random items from his game"
 }
+plant[71]={
+	object: plant74,
+	cost: choose(-100,0,25,50,100,125,69,420,621,1000,123,456,789,-25,99,1),
+	recharge: irandom_range(5,5000),
+	desc:"skaiemkgjaksjdiejjdnamskdffjekasj",
+	unlocked: choose(false,false,false,false,true)
+}
+plant[72]={
+	object: plant75,
+	cost: 275,
+	recharge: 350,
+	desc:"Missle toe fires explosive presents",
+	lawn: tilegrasskrima
+}
+plant[73]={
+	object: plant76,
+	cost: 125,
+	recharge: 1000,
+	desc:"firecracker grass spins and creates stars",
+	lawn: tilegrasskrima
+}
 var arrowwoody = {
 	object: plant50,
 	cost: 125,
@@ -690,3 +711,5 @@ zombie[12]={
 	},
 	entry:"WAS THAT THE YIFF OF 87!?!?!?"
 }
+
+i=0

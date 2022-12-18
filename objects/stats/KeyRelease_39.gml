@@ -21,3 +21,12 @@ audio_stop_all()
 		audio_stop_all()
 	}
 	video_close();
+	
+	if(!quest)
+	{
+		with(menu)
+		{
+			clevel=room+1
+			save_level()
+		}
+	}
