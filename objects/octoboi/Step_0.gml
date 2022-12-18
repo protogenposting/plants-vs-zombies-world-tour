@@ -96,3 +96,9 @@ else
 {
 	sprite_index=octo
 }
+
+if(!place_meeting(x,y,tiletypewater))
+{
+	hp-=0.01
+	nspd*=0.99
+}
