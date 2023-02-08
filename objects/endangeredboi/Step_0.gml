@@ -21,16 +21,19 @@ if(i<=0)
 {
 	coly=c_white
 }
-
-
+if(ecs<0)
+{
+	ecs+=1
+}
 if(i<=0)
 {
+ecs=-15
 if(powerup==0)
 {
 inst=instance_create(x,y,bullet1)
 inst.hspeed=10
 
-i=120
+i=30
 }
 if(powerup==1)
 {

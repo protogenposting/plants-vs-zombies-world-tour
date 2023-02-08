@@ -21,3 +21,8 @@ else
 	move_snap(64,64)
 	sprite_index=Sprite181
 }
+if(instance_exists(objLightController))
+{
+light.x=x
+light.y=y
+}

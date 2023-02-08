@@ -9,6 +9,6 @@ inst=instance_create(other.x,other.y,effect)
 inst.sprite_index=splatter3
 if(other.hp<=0)
 {
-	inst=instance_create(other.x,other.y,effect)
+	inst=instance_create(other.x,other.y-16,effect)
 	inst.sprite_index=effectdead1
 }

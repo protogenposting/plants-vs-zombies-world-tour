@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(variable_instance_exists(id,"shown")&&shown)
+{
+	draw_sprite_ext(hitsprite,image_index,x,y-16,image_xscale,1,0,c_white,0.5)
+	draw_sprite_ext(hitsprite,image_index,x,(y-16)+room_height/1.5,image_xscale,1,0,c_white,0.5)
+}
 draw_sprite_ext(sprite_index,image_index,x,y-16,image_xscale,1,0,col,1)
 draw_sprite_ext(hitsprite,image_index,x,y-16,image_xscale,1,0,c_white,hitty*0.5)
 if(armor!=-1)

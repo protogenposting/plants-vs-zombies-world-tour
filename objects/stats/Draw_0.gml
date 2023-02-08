@@ -1,8 +1,7 @@
-depth=0
 draw_set_halign(fa_left)
 col=c_black
-ecs=32+64*5
-why=160
+var ecs=32+64*5
+var why=160
 repeat(5)
 {
 repeat(11)
@@ -15,13 +14,48 @@ ecs+=64
 ecs=32+64*5
 why+=64
 }
+var lay_id = layer_get_id("Compatibility_Colour");
+	var bg = layer_background_get_id(lay_id);
+	if(layer_background_get_sprite(bg)==tileunderground2)
+	{
+		var ecs=32+64*5
+		var why=(160+room_height/1.5)
+		repeat(5)
+		{
+		repeat(11)
+		{
+		draw_set_colour(col)
+		draw_rectangle(ecs,why,ecs+64,why+64,true)
+		draw_set_colour(c_white)
+		ecs+=64
+		}
+		ecs=32+64*5
+		why+=64
+		}
+	}
+if(layer_background_get_sprite(bg)!=tileunderground2)
+{
 if(instance_number(basiczombie)>=5)
 {
-audio_sound_gain(hats,100,600)
+audio_sound_gain(hats,1,600)
 }
 else
 {
 audio_sound_gain(hats,0.01,600)
+}
+}
+else
+{
+	if(!underground)
+	{
+		audio_sound_gain(hats,1,600)
+		audio_sound_gain(moosic,0.1,600)
+	}
+	else
+	{
+		audio_sound_gain(hats,0.1,600)
+		audio_sound_gain(moosic,1,600)
+	}
 }
 
 depth=-100000

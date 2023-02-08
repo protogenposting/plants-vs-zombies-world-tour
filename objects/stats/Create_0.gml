@@ -87,6 +87,11 @@ if(layer_background_get_sprite(bg)==tilerussia)
 	hats=hats5
 	action_set_alarm(4000, 1);
 }
+if(layer_background_get_sprite(bg)==tileunderground2)
+{
+	moosic=undergroundinst
+	hats=undergrounddrums
+}
 if(room==quest1)
 {
 	moosic=loobboon
@@ -142,215 +147,13 @@ if(instance_exists(tiletypeunplantable))
 }
 
 
-
-mnum=999999999999999999
-plant=[1]
-quest=false
-if(room==quest1)
-{
-	mnum=10
-	plant=[7]
-	quest=true
-}
-if(room==quest2)
-{
-	mnum=30
-	plant=[29]
-	quest=true
-}
-if(room==quest3)
-{
-	mnum=20
-	plant=[13]
-	quest=true
-}
-if(room==quest4)
-{
-	mnum=30
-	plant=[40]
-	quest=true
-}
-if(room==quest5)
-{
-	mnum=20
-	plant=[61]
-	quest=true
-}
-if(room==quest6)
-{
-	mnum=7
-	plant=[62]
-	quest=true
-}
-if(room==quest7)
-{
-	mnum=20
-	plant=[71]
-	quest=true
-}
-if(room==quest8)
-{
-	mnum=50
-	plant=[73]
-	quest=true
-}
-if(room==quest9)
-{
-	mnum=100
-	plant=[74]
-	quest=true
-}
-if(room==level1)
-{
-	mnum=15
-	plant=[2,3,4,6]
-}
-if(room==level2)
-{
-	mnum=15
-	plant=[8]
-}
-if(room==level3)
-{
-	mnum=15
-	plant=[9]
-}
-if(room==level4)
-{
-	mnum=15
-	plant=[10]
-}
-if(room==level5)
-{
-	mnum=15
-	plant=[11]
-}
-if(room==level6)
-{
-	mnum=15
-	plant=[12]
-}
-if(room==level7)
-{
-	mnum=15
-	plant=[14]
-}
-if(room==level8)
-{
-	mnum=15
-	plant=[27]
-}
-if(room==level9)
-{
-	mnum=20
-	plant=[28]
-}
-if(room==level10)
-{
-	mnum=20
-	plant=[30]
-}
-if(room==level11)
-{
-	mnum=20
-	plant=[31]
-}
-if(room==level12)
-{
-	mnum=20
-	plant=[32]
-}
-if(room==level13)
-{
-	mnum=20
-	plant=[34,21]
-}
-if(room==level14)
-{
-	mnum=20
-	plant=[22]
-}
-if(room==level15)
-{
-	mnum=20
-	plant=[23]
-}
-if(room==level16)
-{
-	mnum=20
-	plant=[25]
-}
-if(room==level17)
-{
-	mnum=20
-	plant=[35]
-}
-if(room==level18)
-{
-	mnum=20
-	plant=[36]
-}
-if(room==level19)
-{
-	mnum=20
-	plant=[37]
-}
-if(room==level20)
-{
-	mnum=25
-	plant=[38]
-}
-if(room==level21)
-{
-	mnum=25
-	plant=[39,41]
-}
-if(room==level22)
-{
-	mnum=25
-	plant=[43]
-}
-if(room==level23)
-{
-	mnum=25
-	plant=[44]
-}
-if(room==level24)
-{
-	mnum=25
-	plant=[45]
-}
-if(room==level25)
-{
-	mnum=25
-	plant=[45]
-}
-if(room==minigamelawn)
-{
-	mnum=150
-	alarm[1]=5
-	plant=[5]
-	moosic=loobboon
-	hats=-1
-}
-if(room==minigamebeach)
-{
-	mnum=200
-	alarm[1]=5
-	plant=[26]
-	moosic=loobboon
-	hats=-1
-}
-if(room==editor)
-{
-	mnum=instance_number(temp)
-	plant=[1]
-	quest=true
-	alarm[1]=0
-}
 aud1=audio_play_sound(moosic,1000,true)
 aud2=audio_play_sound(hats,1000,true)
 audio_sound_gain(hats,0.01,0)
 video=false
 
-mnum*=1.5
+
+lay=layer_create(100,"bgshit")
+
+underground=false
+plantfoods=0

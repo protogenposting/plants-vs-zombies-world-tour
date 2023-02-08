@@ -1,0 +1,47 @@
+image_speed=1
+if(distance_to_object(basiczombie)>=64)
+{
+	sh-=1
+}
+if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
+{
+	if(shooting)
+	{
+
+	}
+	else
+	{
+		shooting=true
+		image_index=0
+		sprite_index=scaremanshoot
+		sh=5*(room_speed/sprite_get_speed(sprite_index))
+	}
+}
+if(shooting&&sh<=0)
+	{
+		shooting=false
+		sprite_index=scaremanidle
+		inst=instance_create(x,y-6,bullet25)
+		inst.hspeed=5
+		audio_play_sound(pop,1000,false)
+		sprite_index=scaremanidle
+		sh=reload
+	}
+///kill
+if(hp<=0)
+{
+instance_destroy()
+}
+
+if(pfactive)
+{
+	sprite_index=PEASHOOTERPF
+	pfi-=1
+	if(pfi<=0)
+	{
+		audio_play_sound(pop,1000,false)
+		inst=instance_create(x,y+random_range(-6,6),bullet1)
+		inst.hspeed=5
+		pfi=pfr
+	}
+}

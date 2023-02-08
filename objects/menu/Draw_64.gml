@@ -44,6 +44,7 @@ why=(room_height/2)-128
 var bnum=0
 if(room==title)
 {
+	draw_sprite(logo,im,room_width/2,199/2)
 repeat(6)
 {
 	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
@@ -170,17 +171,42 @@ repeat (20) {
 			ecs+=32
 			continue;
 		}
+		pacc=0
 		if(variable_struct_exists(plants.plant[bnum],"lawn"))
 		{
-			draw_sprite(plants.plant[bnum].lawn, 0, ecs + 32, why + 32);
+			if(plants.plant[bnum].lawn==tilemud)
+			{
+				pacc=1
+			}
+			if(plants.plant[bnum].lawn==tilesand)
+			{
+				pacc=2
+			}
+			if(plants.plant[bnum].lawn==tilevolcano)
+			{
+				pacc=3
+			}
+			if(plants.plant[bnum].lawn==tiledesert)
+			{
+				pacc=4
+			}
+			if(plants.plant[bnum].lawn==tilegrasskrima)
+			{
+				pacc=9
+			}
+		}
+		if(variable_struct_exists(plants.plant[bnum],"lawn"))
+		{
+			draw_sprite(Sprite178,pacc,ecs+32,why+32)
 		}
 		else
 		{
 			draw_sprite(tilestore, 0, ecs + 32, why + 32);
 		}
-        draw_rectangle(ecs, why, ecs + 64, why + 64, true);
+		
         draw_sprite(object_get_sprite(plants.plant[bnum].object), 0, ecs + 32, why + 32);
-        draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[bnum].cost)));
+		draw_sprite(Sprite176,pacc,ecs+32,why+32)
+        draw_text(ecs+5,why+30-4+32,string_hash_to_newline(string(plants.plant[bnum].cost)))
         ecs += 64;
         
         if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), ecs-64, why, ecs, why+64)
@@ -213,7 +239,7 @@ repeat (20) {
         }
 		bnum += 1;
     }
-    why += 64;
+    why += 128;
 }
 }
 
@@ -279,7 +305,7 @@ repeat (20) {
 }
 
 ecs=0
-why=room_height-64
+why=view_get_hport(view_current)-64
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"back")
 if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
@@ -306,7 +332,7 @@ draw_text(ecs+64,why,"$"+string(plants.money))
 draw_set_halign(fa_left)
 if(room==title)
 {
-	ecs=room_width-128
+ecs=room_width-128
 why=room_height-64
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"discord")

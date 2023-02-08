@@ -1,4 +1,4 @@
 inst=instance_create(x,y,sunmover)
-inst.sunny=50
+inst.sunny=25
 
 action_kill_object();

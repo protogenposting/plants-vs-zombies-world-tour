@@ -1,16 +1,18 @@
-if(flowad)
+vsp+=0.1
+if(y<ogy)
 {
-	if(y<ogy)
+	vsp+=0.1
+}
+else
+{
+	vsp=0
+	hsp=0
+	place_meeting(x,y,plant10)
 	{
-		vsp+=0.01
-	}
-	else
-	{
-		vsp=0
-		hsp=0
+		hsp+=0.1
 	}
 }
-y+=vsp*4
+y+=vsp
 x+=hsp*2
 
 image_angle+=vsp*hsp

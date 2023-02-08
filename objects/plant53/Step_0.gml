@@ -6,13 +6,16 @@ if(sh<=0)
 	audio_play_sound(bewm,1000,false)
 	inst=instance_create(x,y,effect)
 	inst.sprite_index=EFFPOWIE
-with(basiczombie)
+	var _list = ds_list_create();
+var _num = collision_rectangle_list(x - 64, y - 64, x + 64, y + 64, basiczombie, false, true, _list, false);
+if _num > 0
 {
-	if(distance_to_object(other)<64)
-	{
-		hp-=21
-	}
+    for (var i = 0; i < _num; ++i;)
+    {
+        _list[| i].hp-=100
+    }
 }
+ds_list_destroy(_list);
 sh=reload
 instance_destroy()
 }
@@ -21,15 +24,4 @@ instance_destroy()
 if(hp<=0)
 {
 instance_destroy()
-}
-
-if(pfactive)
-{
-	pfi-=1
-	col=collision_rectangle(x-64,y-4,x+64*3,y+4,basiczombie,true,true)
-	if(pfi<=0 && col)
-	{
-		col.hp-=0.01
-		pfi=pfr
-	}
 }

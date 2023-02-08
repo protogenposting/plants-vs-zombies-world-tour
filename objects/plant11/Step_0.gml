@@ -45,3 +45,8 @@ if(pfactive)
 {
 	instance_destroy(col)
 }
+if(instance_exists(objLightController))
+{
+light.x=x
+light.y=y
+}

@@ -28,17 +28,42 @@ repeat (20) {
 			ecs+=32
 			continue;
 		}
+		pacc=0
 		if(variable_struct_exists(plants.plant[slotty],"lawn"))
 		{
-			draw_sprite(plants.plant[slotty].lawn, 0, ecs + 32, why + 32);
+			if(plants.plant[slotty].lawn==tilemud)
+			{
+				pacc=1
+			}
+			if(plants.plant[slotty].lawn==tilesand)
+			{
+				pacc=2
+			}
+			if(plants.plant[slotty].lawn==tilevolcano)
+			{
+				pacc=3
+			}
+			if(plants.plant[slotty].lawn==tiledesert)
+			{
+				pacc=4
+			}
+			if(plants.plant[slotty].lawn==tilegrasskrima)
+			{
+				pacc=9
+			}
+		}
+		if(variable_struct_exists(plants.plant[slotty],"lawn"))
+		{
+			draw_sprite(Sprite178,pacc,ecs+32,why+32)
 		}
 		else
 		{
 			draw_sprite(tilestore, 0, ecs + 32, why + 32);
 		}
-        draw_rectangle(ecs, why, ecs + 64, why + 64, true);
-	    draw_sprite(object_get_sprite(plants.plant[slotty].object), 0, ecs + 32, why + 32);
-		draw_text(ecs + 16, why, string_hash_to_newline(string(plants.plant[slotty].cost)));
+		
+        draw_sprite(object_get_sprite(plants.plant[slotty].object), 0, ecs + 32, why + 32);
+		draw_sprite(Sprite176,pacc,ecs+32,why+32)
+        draw_text(ecs+5,why+30-4+32,string_hash_to_newline(string(plants.plant[slotty].cost)))
         ecs += 64;
         
         if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), ecs-64, why, ecs, why+64)&&selected<maxslots
@@ -65,7 +90,7 @@ draw_text_ext(736-64,544,string_hash_to_newline(str),15,20)
         }
         slotty += 1;
     }
-    why += 64;
+    why += 128;
 }
 
 ecs=room_width-64
@@ -96,27 +121,37 @@ if(room==quest2)
 	inst.slot[5]=29
 	inst.slot[6]=29
 	inst.maxslots=maxslots
+	inst.mnum=mnum
+	inst.plant=plant
+	inst.quest=quest
+	inst.maxpf=maxpf
+	inst.zomb=zomb
 	instance_destroy()
 }
 
 ecs=room_width-128
-why=room_height-64
+why=view_get_hport(view_current)-64
 draw_rectangle(ecs,why,ecs+128,why+64,true)
 draw_text(ecs,why,"START")
 if(point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0),ecs,why,ecs+128,why+64)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs,why,ecs+128,why+64)&&global.tapping)
 {
-	audio_sound_gain(pickyoseeds,0.00001,360*2)
-inst=instance_create(x,y,slots)
-instance_create(x,y,stats)
-inst.slot[0]=slot[0]
-inst.slot[1]=slot[1]
-inst.slot[2]=slot[2]
-inst.slot[3]=slot[3]
-inst.slot[4]=slot[4]
-inst.slot[5]=slot[5]
-inst.slot[6]=slot[6]
-inst.maxslots=maxslots
-instance_destroy()
+	audio_sound_gain(pickyoseeds,0,360*2)
+	inst=instance_create(x,y,slots)
+	inst.slot[0]=slot[0]
+	inst.slot[1]=slot[1]
+	inst.slot[2]=slot[2]
+	inst.slot[3]=slot[3]
+	inst.slot[4]=slot[4]
+	inst.slot[5]=slot[5]
+	inst.slot[6]=slot[6]
+	inst.maxslots=maxslots
+	inst=instance_create(x,y,stats)
+	inst.mnum=mnum*1.5
+	inst.plant=plant
+	inst.quest=quest
+	inst.maxpf=maxpf
+	inst.zomb=zomb
+	instance_destroy()
 }
 ecs-=128
 draw_rectangle(ecs,why,ecs+128,why+64,true)
@@ -154,7 +189,7 @@ if(room==quest4)
 if(room==quest5)
 {
 	selected=1
-	slot[0]=61
+	slot[0]=60
 }
 if(room==quest6)
 {

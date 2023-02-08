@@ -360,11 +360,12 @@ plant[45]={
 	desc:"zoybean makes plant zombies"
 }
 plant[46]={
-	object: plant44,
+	object: plant77,
 	cost: 50,
-	recharge:500,
+	recharge: 200,
 	//desc:"celery stalker blocks and hits enemies behind it"
-	desc:"celery stalker needs nerfing don't use them"
+	desc:"scaredy shroom shoots when zombies are far away and reveals hidden zombies",
+	lawn: tilepurpgrass,
 }
 plant[47]={
 	object: plant45,

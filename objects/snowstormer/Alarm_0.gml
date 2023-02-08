@@ -1,4 +1,4 @@
-why=0
+/*why=0
 ecs=0
 repeat(room_height/64)
 {

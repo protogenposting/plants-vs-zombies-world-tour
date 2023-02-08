@@ -30,3 +30,12 @@ if(pfactive)
 		pfi=pfr
 	}
 }
+if(instance_exists(objLightController))
+{
+light.x=x
+light.y=y
+}
+var lay_id = layer_get_id("Compatibility_Colour"); var bg = layer_background_get_id(lay_id); if(y>room_height/2&&layer_background_get_sprite(bg)==tileunderground2)
+{
+	hp-=1
+}
