@@ -10,14 +10,14 @@
   "bitRate": 192,
   "compression": 3,
   "conversionMode": 0,
-  "duration": 0.835918,
+  "duration": 2.5,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "preload": true,
   "sampleRate": 44100,
-  "soundFile": "bewm",
+  "soundFile": "bewm.ogg",
   "type": 0,
   "volume": 1.0,
 }

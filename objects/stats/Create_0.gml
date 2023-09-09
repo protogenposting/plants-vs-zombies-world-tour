@@ -32,6 +32,11 @@ if(room==quest1)
 if(room==quest2)
 {
 	action_set_alarm(120, 1);
+	zomb=[basiczombie,coneheadzombie,bucketheadzombie,tombraiser,gardener]
+	mnum=30
+	plant=[29]
+	quest=true
+	maxpf=2
 }
 if(room==quest3)
 {
@@ -157,3 +162,4 @@ lay=layer_create(100,"bgshit")
 
 underground=false
 plantfoods=0
+maxpf=4
