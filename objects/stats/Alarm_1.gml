@@ -20,7 +20,7 @@ if(num>4)
 		bnum+=1
 	}
 }
-if(room==minigamebeach)
+if(room==minigamebeach||room==minigamelawn)
 {
 	zomby=basiczombie
 }
@@ -43,7 +43,7 @@ if(num<4)
 {
 	alarm[1]=720*2
 }
-if(room==minigamebeach)
+if(room==minigamebeach||room==minigamelawn)
 {
 	if(numyo>=4)
 	{

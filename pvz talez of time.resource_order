@@ -396,6 +396,7 @@
     {"name":"plant52","order":51,"path":"objects/plant52/plant52.yy",},
     {"name":"plant73","order":73,"path":"objects/plant73/plant73.yy",},
     {"name":"alminac","order":4,"path":"rooms/alminac/alminac.yy",},
+    {"name":"minigamelawn","order":23,"path":"rooms/minigamelawn/minigamelawn.yy",},
     {"name":"healyhockheal","order":125,"path":"sprites/healyhockheal/healyhockheal.yy",},
     {"name":"endless3","order":18,"path":"rooms/endless3/endless3.yy",},
     {"name":"plant35","order":34,"path":"objects/plant35/plant35.yy",},

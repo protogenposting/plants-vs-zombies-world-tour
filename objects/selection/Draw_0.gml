@@ -6,13 +6,7 @@ why=256+random_range(-1,1)
 num=0
 repeat(array_length(zomb))
 {
-	try{
-		draw_sprite_ext(object_get_sprite(zomb[num]),0,ecs,why,1,1,random_range(-1,1),c_dkgray,0.5)
-	}
-	catch(e)
-	{
-		
-	}
+	draw_sprite_ext(object_get_sprite(zomb[num]),0,ecs,why,1,1,random_range(-1,1),c_dkgray,0.5)
 	why+=random_range(63,65)
 	ecs+=random_range(-1,1)
 	num+=1

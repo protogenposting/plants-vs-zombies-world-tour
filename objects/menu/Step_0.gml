@@ -13,6 +13,7 @@ if(audio_sound_get_track_position(aud)>=nextbeat)
 	{
 		spr=irandom(array_length(bgtypes)-1)
 	}
+	show_debug_message("a")
 	nextbeat+=beatlen
 }
 if(!audio_is_playing(menutheme))
@@ -25,6 +26,7 @@ if(!audio_is_playing(menutheme))
 if(audio_sound_get_track_position(aud)>=nextbeat2)
 {
 	im=!im
+	show_debug_message("a")
 	nextbeat2+=beatlen/4
 }
 }
