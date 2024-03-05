@@ -1,6 +1,8 @@
+event_inherited()
+
 spd=0.5
 hp=32
-y+=32
+
 i=0
 
 nspd=0.5

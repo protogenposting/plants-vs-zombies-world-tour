@@ -19,42 +19,42 @@ if(room==endless5)
 }
 else if(place_meeting(x,y,tiletypestink))
 {
-spd=nspd/2
-hp-=0.1
-stats.dps+=0.1
+	spd=nspd/2
+	hp-=0.1
+	stats.dps+=0.1
 }
 else
 {
-spd=nspd
+	spd=nspd
 }
 if(frozen)
 {
-image_speed=0.5
-col=c_aqua
-spd=nspd/2
+	image_speed=0.5
+	col=c_aqua
+	spd=nspd/2
 }
 sprite_index=ogsprite
 hitsprite=brownflash
 coly=instance_place(x,y,plant44)
 colyo=instance_place(x,y,plant1)
-if(colyo&&!place_meeting(x,y,bullet22))
+if(colyo&&!place_meeting(x,y,bullet22)&&canTouchPlants)
 {
-if(colyo.image_alpha>=1)
-{
-sprite_index=zeat
-hitsprite=zeathit
-spd=0
-colyo.hp-=0.3
-}
-//PUT THE STUFF FOR SPRITE CHANGING HERE BITCH
-if(coly&&coly.image_index==0)
-{
-	spd=1
-}
+	if(colyo.image_alpha>=1)
+	{
+		sprite_index=zeat
+		hitsprite=zeathit
+		spd=0
+		colyo.hp-=0.3
+	}
+	//PUT THE STUFF FOR SPRITE CHANGING HERE BITCH
+	if(coly&&coly.image_index==0)
+	{
+		spd=1
+	}
 }
 if(place_meeting(x,y,zoybeanzombie))
 {
-spd=0
+	spd=0
 }
 image_speed=1
 

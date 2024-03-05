@@ -1,3 +1,5 @@
+event_inherited()
+
 reload=60
 sh=reload
 hp=5

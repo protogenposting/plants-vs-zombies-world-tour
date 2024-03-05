@@ -12,6 +12,6 @@ image_alpha=1
 
 shooting=false
 
-alarm[2]=60
+alarm[2]=300
 
 audio=-4
