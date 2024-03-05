@@ -39,3 +39,13 @@ if(pfactive)
 		inst.alarm[0]=60*15
 	}
 }
+
+if(audio!=-4)
+{
+	if(audio_sound_get_track_position(audio)>=1.66)
+	{
+		reload=9999999999
+		sh=9999999999999999
+		hp=1000
+	}
+}

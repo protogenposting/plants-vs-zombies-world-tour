@@ -1,4 +1,4 @@
-reload=90
+reload=70
 sh=reload
 hp=100
 image_speed=1
@@ -11,3 +11,7 @@ pfr=120/5
 image_alpha=1
 
 shooting=false
+
+alarm[2]=60
+
+audio=-4

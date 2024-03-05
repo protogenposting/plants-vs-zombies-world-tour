@@ -3,7 +3,7 @@ plant[0]={
 	object: plant1,
 	cost: 100,
 	recharge:200,
-	desc:"peashooter fires peas at zombies",
+	desc:"Peashooter fires peas at zombies. Now moves to the right BUT SHOOTS MUCH FASTER",
 	lawn: tilegrass,
 	unlocked:true,
 	entry:"'I began fighting zombies in 2009,' Peashooter says. 'Little did I know, I'd be doing that for the rest of my life.'"
@@ -12,7 +12,7 @@ plant[1]={
 	object: plant2,
 	cost: 50,
 	recharge:200,
-	desc:"sunflower produces sun",
+	desc:"Sunflower produces sun",
 	lawn: tilegrass,
 	unlocked:true,
 	entry:"After her hit single 'Zombies on Your Lawn' 13 years ago, Sunflower immediately gained tons of fans. 'Ironically, they're all after my autograph. Not what I wanted.' she says."
@@ -21,14 +21,14 @@ plant[2]={
 	object: plant66,
 	cost: 50,
 	recharge:1000,
-	desc:"wallnut blocks zombies",
+	desc:"Wallnut blocks zombies",
 	lawn: tilegrass,
 }
 plant[3]={
 	object: plant9,
 	cost: 150,
 	recharge:200,
-	desc:"ice peas fire frozen peas at zombies",
+	desc:"Ice peas fire frozen peas at zombies. After some time freezes and becomes a wall plant",
 	lawn: tilegrass,
 	entry:"Icepeas favorite season is Winter but he always eats the yellow snow. No one knows why but he’s done it multiple times."
 }
