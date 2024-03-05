@@ -1,5 +1,5 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Bulb","order":26,"path":"folders/Bulb.yy",},
     {"name":"(System)","order":1,"path":"folders/Bulb/(System).yy",},
     {"name":"(Pay no attention to that man behind the curtain)","order":1,"path":"folders/Bulb/(System)/(Pay no attention to that man behind the curtain).yy",},
@@ -20,7 +20,7 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [
+  "ResourceOrderSettings":[
     {"name":"sucknuthold","order":114,"path":"sprites/sucknuthold/sucknuthold.yy",},
     {"name":"hud","order":151,"path":"sprites/hud/hud.yy",},
     {"name":"quest9","order":14,"path":"rooms/quest9/quest9.yy",},
