@@ -278,14 +278,6 @@ if(room==level25)
 	plant=[45]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,gardener,tombraiser,feddy]
 }
-if(room==minigamelawn)
-{
-	mnum=200
-	alarm[1]=5
-	plant=[5]
-	moosic=loobboon
-	hats=-1
-}
 if(room==minigamebeach)
 {
 	mnum=200

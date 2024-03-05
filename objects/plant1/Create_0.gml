@@ -1,7 +1,7 @@
 reload=90
 sh=reload
 hp=100
-image_speed=1
+image_speed=2
 
 action_set_alarm(30, 0);
 pfactive=false

@@ -1,4 +1,4 @@
-image_speed=1
+image_speed=2
 sh-=1
 if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
 {
