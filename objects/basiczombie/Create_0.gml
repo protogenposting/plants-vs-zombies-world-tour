@@ -38,7 +38,7 @@ canTouchPlants=true
 if(variant==1)
 {
 	hp=10
-	spd=1
-	nspd=1
+	spd=2
+	nspd=2
 	canTouchPlants=false
 }
