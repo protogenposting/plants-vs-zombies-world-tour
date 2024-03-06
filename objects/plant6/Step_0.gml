@@ -1,36 +1,36 @@
 i=image_index
 if(collision_line(x-64, y, x+64, y, basiczombie, true, true))
 {
-trapping=true
+	trapping=true
 }
 else
 {
-trapping=false
+	trapping=false
 }
 
 if(!trapping)
 {
-if(image_index>=17)
-{
-	image_index=0
-}
+	if(image_index>=image_number-1)
+	{
+		image_index=0
+	}
 }
 if(i==11)
 {
-audio_play_sound(pop,1000,false)
-inst=instance_create(x,y,algae)
-inst.hspeed=15
+	//audio_play_sound(pop,1000,false)
+	//inst=instance_create(x,y,algae)
+	//inst.hspeed=15
 }
 
 if(trapping)
 {
-image_index=18
+	image_index=image_number-1
 }
 
 ///kill
 if(hp<=0)
 {
-instance_destroy()
+	instance_destroy()
 }
 
 if(pfactive)

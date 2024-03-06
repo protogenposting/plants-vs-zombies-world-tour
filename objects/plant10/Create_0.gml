@@ -1,6 +1,6 @@
 reload=1000
 sh=random_range(0,reload)
-hp=100
+hp=1
 col=c_white
 drawing=false
 

@@ -1,13 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-audio_sound_set_track_position(aud2,audio_sound_get_track_position(aud1))
+//audio_sound_set_track_position(aud2,audio_sound_get_track_position(aud1))
 
 i-=1
 if(i<=0)
 {
-dps=0
-i=room_speed
+	dps=0
+	i=room_speed
 }
 ecs=room_width
 why=room_height/2

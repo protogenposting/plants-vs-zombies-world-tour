@@ -3,6 +3,8 @@
 
 im=false
 
+alarm[1]=60
+
 plantnum=0
 plantselected=0
 zombieselected=0

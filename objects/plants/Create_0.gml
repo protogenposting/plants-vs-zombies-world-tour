@@ -1,4 +1,7 @@
 money=0
+
+
+
 plant[0]={
 	object: plant1,
 	cost: 100,
@@ -34,7 +37,7 @@ plant[3]={
 }
 plant[4]={
 	object: plant53,
-	cost: 100,
+	cost: 150,
 	recharge:2000,
 	desc:"cherry bomb go BEWM",
 	lawn: tilegrass,
@@ -52,7 +55,7 @@ plant[6]={
 	object: plant10,
 	cost: 50,
 	recharge:200,
-	desc:"chillflowers freeze and damage zombies while producing sun",
+	desc:"chillflowers freeze and damage zombies while producing sun. now has super low health!",
 	entry: "Chillflower is always cold, ‘I-I’m always making sun though! W-Which is all th-that matters!’ She says. ‘She’s my sister’ says Icepea, ‘She’s annoying though, she can’t shut up about how cold she is. Get adapted!’ Yells Icepea"
 }
 plant[7]={
@@ -68,21 +71,21 @@ plant[8]={
 	object: plant5,
 	cost: 75,
 	recharge:1000,
-	desc:"sucknuts suck up steam and block zombies",
+	desc:"Sucknuts suck up steam and block zombies. Can only hold 1 steam at a time.",
 	lawn: tilemud
 }
 plant[9]={
 	object: plant6,
-	cost: 125,
+	cost: 50,
 	recharge:200,
-	desc:"kelpshots shoot slowing kelps at zombies and drown nearby ones",
+	desc:"kelpshots shoot slowing kelps at zombies and drown nearby ones. i lied THEY DONT SHOOT ANYMORE >:))))))))",
 	lawn: tilemud,
 	waterplant:true,
 	entry:"Likes to hide a lot, his favorite game is hide and seek, his favorite animal is the chameleon. What I’m trying to say is he’s really good at hiding."
 }
 plant[10]={
 	object: plant7,
-	cost: 150,
+	cost: 200,
 	recharge:200,
 	desc:"steamshooters are boosted by steam",
 	lawn: tilemud,

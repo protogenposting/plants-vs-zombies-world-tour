@@ -1,4 +1,3 @@
-/// @description kill
 sh-=1
 if(hp<=0)
 {
@@ -31,7 +30,7 @@ if(storedsteam>0&&!instance_exists(tiletypesteam))
 				inst=instance_nearest(x,y,basiczombie)
 				inst.x+=128
 				effect_create_above(ef_smoke,inst.x,inst.y,1,c_white)
-				storedsteam-=1
+				storedsteam=0
 				sh=reload/4
 			}
 		}

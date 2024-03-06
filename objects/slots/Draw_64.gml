@@ -80,10 +80,10 @@ slottyoa+=1
 slotty+=1
 }
 }
-draw_sprite(Sprite194,pf,ecs+32,0)
+//draw_sprite(Sprite194,pf,ecs+32,0)
 if(pf>0&&device_mouse_x_to_gui(0)<ecs+110&&device_mouse_x_to_gui(0)>ecs&&device_mouse_y_to_gui(0)<110&&device_mouse_y_to_gui(0)>0&&mouse_check_button_pressed(mb_left))
 {
-	inst=instance_create(x,y,plantfood)
+	//inst=instance_create(x,y,plantfood)
 }
 ecs+=110
 draw_sprite(Sprite195,!instance_exists(shovel),ecs+32,0)

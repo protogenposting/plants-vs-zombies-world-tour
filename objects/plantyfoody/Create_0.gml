@@ -13,3 +13,4 @@ if(stats.plantfoods>stats.maxpf)
 {
 	instance_destroy()
 }
+audio_play_sound(snd_NOBADNOPLANTFOOD,1000,false)

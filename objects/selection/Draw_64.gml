@@ -81,7 +81,7 @@ repeat (20) {
 draw_set_colour(c_black)
 draw_rectangle(736-64,544,736+128,544+360,false)
 draw_set_colour(c_white)
-draw_text_ext(736-64,544,string_hash_to_newline(str),15,20)
+draw_text_ext(736-64,544,string_hash_to_newline(str),15,200)
 }
         }
         else

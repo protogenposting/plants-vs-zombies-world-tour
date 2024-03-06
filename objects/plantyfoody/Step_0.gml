@@ -12,3 +12,5 @@ if(flowad)
 y+=vsp
 
 image_angle+=2
+
+hspeed=15

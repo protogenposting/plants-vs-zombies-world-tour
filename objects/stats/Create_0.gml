@@ -162,4 +162,4 @@ lay=layer_create(100,"bgshit")
 
 underground=false
 plantfoods=0
-maxpf=4
+maxpf=0
