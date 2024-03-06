@@ -97,7 +97,7 @@
     {"id":{"name":"moon","path":"objects/moon/moon.yy",},},
     {"id":{"name":"mower","path":"objects/mower/mower.yy",},},
     {"id":{"name":"obj_mic","path":"objects/obj_mic/obj_mic.yy",},},
-    {"id":{"name":"Object156","path":"objects/Object156/Object156.yy",},},
+    {"id":{"name":"obj_dirt","path":"objects/obj_dirt/obj_dirt.yy",},},
     {"id":{"name":"objLightController","path":"objects/objLightController/objLightController.yy",},},
     {"id":{"name":"octoboi","path":"objects/octoboi/octoboi.yy",},},
     {"id":{"name":"octozomb","path":"objects/octozomb/octozomb.yy",},},

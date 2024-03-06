@@ -87,7 +87,7 @@ plant[10]={
 	object: plant7,
 	cost: 200,
 	recharge:200,
-	desc:"steamshooters are boosted by steam",
+	desc:"steamshooters are boosted by steam, becoming slower shooting shotguns",
 	lawn: tilemud,
 	entry:"He loves Lofi Hiphop, mostly because he can listen to it at his local river. But when it’s time for the zombies, he starts listening to metal and rock"
 }
@@ -95,7 +95,7 @@ plant[11]={
 	object: plant8,
 	cost: 150,
 	recharge:200,
-	desc:"rafflesia shoot stinky doodoo farts",
+	desc:"rafflesia shoot stinky doodoo farts. now shoots in bursts of 3",
 	lawn: tilemud,
 	entry:"Looks like an ordinary flower, right? Then BAM! The stench comes on. Rafflesia uses this stench to kill, but it’s also because he’s too lazy to take a shower"
 }

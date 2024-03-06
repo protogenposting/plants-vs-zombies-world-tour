@@ -74,7 +74,7 @@
     {"name":"moon","order":127,"path":"objects/moon/moon.yy",},
     {"name":"mower","order":143,"path":"objects/mower/mower.yy",},
     {"name":"obj_mic","order":148,"path":"objects/obj_mic/obj_mic.yy",},
-    {"name":"Object156","order":198,"path":"objects/Object156/Object156.yy",},
+    {"name":"obj_dirt","order":198,"path":"objects/obj_dirt/obj_dirt.yy",},
     {"name":"objLightController","order":196,"path":"objects/objLightController/objLightController.yy",},
     {"name":"octoboi","order":84,"path":"objects/octoboi/octoboi.yy",},
     {"name":"octozomb","order":83,"path":"objects/octozomb/octozomb.yy",},

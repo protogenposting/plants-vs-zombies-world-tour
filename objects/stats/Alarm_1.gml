@@ -61,3 +61,8 @@ if(alarm[1]<20)
 	alarm[1]=120
 }
 }
+alarm[1]=720*1-((stats.num+1)/stats.mnum)
+if(alarm[1]<=2)
+{
+	alarm[1]=2
+}

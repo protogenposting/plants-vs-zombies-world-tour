@@ -1,16 +1,25 @@
 sh-=1
 if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
 {
-audio_play_sound(pop,1000,false)
-inst=instance_create(x,y+6,bullet4)
-inst.hspeed=random_range(-0.1,10)
-inst=instance_create(x,y+6,bullet4)
-inst.hspeed=random_range(-0.1,10)
-inst.vspeed=random_range(-10,10)
-inst=instance_create(x,y+6,bullet4)
-inst.hspeed=random_range(-0.1,10)
-inst.vspeed=random_range(-10,10)
-sh=reload
+	audio_play_sound(pop,1000,false)
+	inst=instance_create(x,y+6,bullet4)
+	inst.hspeed=random_range(-0.1,10)
+	inst=instance_create(x,y+6,bullet4)
+	inst.hspeed=random_range(-0.1,10)
+	inst.vspeed=random_range(-10,10)
+	inst=instance_create(x,y+6,bullet4)
+	inst.hspeed=random_range(-0.1,10)
+	inst.vspeed=random_range(-10,10)
+	chain++
+	if(chain>=3)
+	{
+		sh=reload*5
+		chain=0
+	}
+	else
+	{
+		sh=reload
+	}
 }
 
 ///kill
