@@ -209,13 +209,13 @@ plant[26]={
 	object: plant26,
 	cost: 75,
 	recharge:1000,
-	desc:"healyhock heals plants in a 3x3 area and combats lava damage",
+	desc:"healyhock heals plants in a 3x3 area and combats lava damage. now sets plant hp to its own hp!",
 	lawn: tilevolcano,
 	entry:"He likes hockey what else can I say"
 }
 plant[27]={
 	object: plant27,
-	cost: 25,
+	cost: 100,
 	recharge:200,
 	desc:"windelia blows zombies back",
 	lawn: tilevolcano,
@@ -246,7 +246,7 @@ plant[30]={
 }
 plant[31]={
 	object: plant47,
-	cost: 100,
+	cost: 75,
 	recharge:200,
 	desc:"toxic flower fires toxic clouds of smoke and is immune to volcanic ash damadge",
 	lawn: tilevolcano,

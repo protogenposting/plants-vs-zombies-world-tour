@@ -151,9 +151,14 @@ if(instance_exists(tiletypeunplantable))
 	tiletypeunplantable.alarm[1]=60
 }
 
-
-aud1=audio_play_sound(moosic,1000,true)
-aud2=audio_play_sound(hats,1000,true)
+try{
+	aud1=audio_play_sound(moosic,1000,true)
+	aud2=audio_play_sound(hats,1000,true)
+}
+catch(e)
+{
+	
+}
 audio_sound_gain(hats,0.01,0)
 video=false
 

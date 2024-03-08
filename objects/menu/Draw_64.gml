@@ -45,18 +45,24 @@ var bnum=0
 if(room==title)
 {
 	draw_sprite(logo,im,room_width/2,199/2)
-repeat(6)
-{
-	draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
-	draw_set_halign(fa_center)
-	draw_text(ecs,why,button[bnum].button)
-	if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs-64,why-32,ecs+64,why+32)&&global.tapping)
+	repeat(3)
 	{
-		room_goto(button[bnum].roomy)
+		try{
+			draw_rectangle(ecs-64,why-32,ecs+64,why+32,true)
+			draw_set_halign(fa_center)
+			draw_text(ecs,why,button[bnum].button)
+			if(point_in_rectangle(mouse_x,mouse_y,ecs-64,why-32,ecs+64,why+32)&&mouse_check_button_pressed(mb_left)||point_in_rectangle(global.Touch_X,global.Touch_Y,ecs-64,why-32,ecs+64,why+32)&&global.tapping)
+			{
+				room_goto(button[bnum].roomy)
+			}
+		}
+		catch(e)
+		{
+			
+		}
+		bnum+=1
+		why+=64
 	}
-	bnum+=1
-	why+=64
-}
 }
 ecs=room_width/2
 why=(room_height/2)-128

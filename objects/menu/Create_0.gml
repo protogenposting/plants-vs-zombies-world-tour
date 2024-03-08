@@ -16,6 +16,7 @@ tiletypes=[tiletypepom,tiletypepower,tiletypesteam,tiletypesteammaker,tiletypest
 
 alminacy=true
 clevel=level1
+
 button[0]={
 	button:"adventure",
 	roomy: clevel
@@ -28,58 +29,7 @@ button[2]={
 	button:"alminac",
 	roomy: alminac
 }
-button[3]={
-	button:"plant quests",
-	roomy: quests
-}
-button[4]={
-	button:"lawn endless",
-	roomy: endless
-}
-button[5]={
-	button:"swamp endless",
-	roomy:endless2
-}
-button[6]={
-	button:"volcano endless",
-	roomy:endless4
-}
-button[7]={
-	button:"underground endless",
-	roomy:endless3
-}
-button[8]={
-	button:"russia endless",
-	roomy:endless5
-}
-button[9]={
-	button:"chilly flowers",
-	roomy: quest1
-}
-button[10]={
-	button:"SEXIEST MAN ALIVE",
-	roomy: quest3
-}
-button[11]={
-	button:"random rumble",
-	roomy: quest2
-}
-button[12]={
-	button:"sea my balls?",
-	roomy: quest4
-}
-button[13]={
-	button:"yell into ur mic time",
-	roomy: quest5
-}
-button[14]={
-	button:"BEANNNS WTF",
-	roomy: quest6
-}
-button[15]={
-	button:"bob from box game real?!?!?!?",
-	roomy: quest7
-}
+
 draw=false
 
 depth=-100000

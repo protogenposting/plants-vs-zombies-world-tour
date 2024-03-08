@@ -9,7 +9,7 @@ repeat(instance_number(plant1))
 	{
 		if(distance_to_object(other)<=70)
 		{
-			hp+=6.1*5
+			hp=other.hp
 			inst=instance_create(x,y,effect)
 			inst.depth=depth-100
 		}
