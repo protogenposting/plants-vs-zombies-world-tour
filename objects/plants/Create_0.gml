@@ -93,7 +93,7 @@ plant[10]={
 }
 plant[11]={
 	object: plant8,
-	cost: 150,
+	cost: 100,
 	recharge:200,
 	desc:"rafflesia shoot stinky doodoo farts. now shoots in bursts of 3",
 	lawn: tilemud,
