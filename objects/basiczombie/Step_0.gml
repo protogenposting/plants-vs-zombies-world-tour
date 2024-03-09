@@ -13,14 +13,13 @@ spd=nspd
 
 if(place_meeting(x,y,tiletypewater))
 {
-	spd/=1.5
 	if(room==endless5)
 	{
 		frozen=true
 		alarm[0]=360
 	}
 }
-else if(place_meeting(x,y,tiletypestink))
+if(place_meeting(x,y,tiletypestink))
 {
 	spd/=2
 	hp-=0.1
@@ -32,6 +31,7 @@ if(frozen)
 	col=c_aqua
 	spd/=2
 }
+
 var previousSpeed=spd
 sprite_index=ogsprite
 hitsprite=brownflash

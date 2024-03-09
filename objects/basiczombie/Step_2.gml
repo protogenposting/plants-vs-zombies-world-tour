@@ -4,3 +4,4 @@ if(x>160+(64*16))
 {
 	x-=1
 }
+special_function()

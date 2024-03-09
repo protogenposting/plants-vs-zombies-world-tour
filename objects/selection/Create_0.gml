@@ -143,7 +143,7 @@ if(room==level2)
 if(room==level3)
 {
 	mnum=15
-	plant=[9]
+	plant=[5]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level4)

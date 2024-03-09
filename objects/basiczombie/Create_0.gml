@@ -35,6 +35,10 @@ variant=choose(0,1)
 
 canTouchPlants=true
 
+function special_function(){
+	
+}
+
 damage=1
 
 if(variant==1&&object_index==basiczombie)

@@ -86,7 +86,7 @@ plant[9]={
 }
 plant[10]={
 	object: plant7,
-	cost: 200,
+	cost: 125,
 	recharge:200,
 	desc:"steamshooters are boosted by steam, becoming slower shooting shotguns",
 	lawn: tilemud,
