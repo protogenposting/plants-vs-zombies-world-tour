@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":153.0,
+  "duration":89.719635,
   "name":"moosic2",
   "parent":{
     "name":"Sounds",

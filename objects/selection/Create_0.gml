@@ -130,115 +130,115 @@ if(room==quest9)
 }
 if(room==level1)
 {
-	mnum=10
+	mnum=30
 	plant=[2,3,4,6]
 	zomb=[basiczombie,basiczombie,basiczombie]
 }
 if(room==level2)
 {
-	mnum=15
+	mnum=30
 	plant=[8]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level3)
 {
-	mnum=15
+	mnum=20
 	plant=[5]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level4)
 {
-	mnum=15
+	mnum=30
 	plant=[10]
 	zomb=[basiczombie,basiczombie,basiczombie]
 }
 if(room==level5)
 {
-	mnum=15
+	mnum=30
 	plant=[11]
 	zomb=[basiczombie,basiczombie,basiczombie]
 }
 if(room==level6)
 {
-	mnum=15
+	mnum=30
 	plant=[12]
 	zomb=[basiczombie,basiczombie,coneheadzombie]
 }
 if(room==level7)
 {
-	mnum=15
+	mnum=30
 	plant=[14]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,octozomb]
 }
 if(room==level8)
 {
-	mnum=15
+	mnum=30
 	plant=[27]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,octozomb]
 }
 if(room==level9)
 {
-	mnum=20
+	mnum=30
 	plant=[28]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level10)
 {
-	mnum=20
+	mnum=30
 	plant=[30]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level11)
 {
-	mnum=20
+	mnum=30
 	plant=[31]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level12)
 {
-	mnum=20
+	mnum=30
 	plant=[32]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,gardener]
 }
 if(room==level13)
 {
-	mnum=20
+	mnum=30
 	plant=[34,21]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,gardener]
 }
 if(room==level14)
 {
-	mnum=20
+	mnum=30
 	plant=[22]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level15)
 {
-	mnum=20
+	mnum=30
 	plant=[23]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level16)
 {
-	mnum=20
+	mnum=30
 	plant=[25]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level17)
 {
-	mnum=20
+	mnum=30
 	plant=[35]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie]
 }
 if(room==level18)
 {
-	mnum=20
+	mnum=30
 	plant=[36]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,gardener]
 }
 if(room==level19)
 {
-	mnum=20
+	mnum=30
 	plant=[37]
 	zomb=[basiczombie,basiczombie,conehead,bucketheadzombie,gardener,tombraiser]
 }
@@ -262,7 +262,7 @@ if(room==level22)
 }
 if(room==level23)
 {
-	mnum=25
+	mnum=20
 	plant=[44]
 	zomb=[basiczombie,basiczombie,conehead]
 }

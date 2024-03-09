@@ -36,3 +36,8 @@ if(layer_background_get_sprite(bg)==tiledesert)
 		hp+=1
 	}
 }
+
+if(hp<=0)
+{
+	instance_destroy()
+}
