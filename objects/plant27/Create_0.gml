@@ -1,6 +1,6 @@
 reload=360
 sh=0
-hp=100
+hp=1
 image_speed=0
 
 action_set_alarm(2, 0);

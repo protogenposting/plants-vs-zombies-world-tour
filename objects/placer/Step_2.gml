@@ -75,6 +75,8 @@ if(slot==8&&place_meeting(x,y,plant1)&&!place_meeting(x,y,plant4)&&layer_backgro
 	can=true
 }
 
+
+
 if(mouse_check_button_pressed(mb_left))
 {
 	if(y<160+32&&y<room_width/2||y<160+room_height/1.5+32&&y>room_height/1.5)
@@ -86,6 +88,10 @@ if(y>480-32&&y<room_width/2||y>(160+room_height/1.5+32)+256&&y>room_height/1.5)
 {
 instance_destroy()
 can=false
+}
+if(variable_struct_exists(plants.plant[slot],"plantOnTop")&&(place_meeting(x,y,plant4)||!place_meeting(x,y,tiletypewater)))
+{
+	can=true
 }
 	if(can)
 {

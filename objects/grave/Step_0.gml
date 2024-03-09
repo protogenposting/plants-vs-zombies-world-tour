@@ -28,13 +28,13 @@ else
 spd=nspd
 }
 coly=instance_place(x,y,plant44)
-colyo=instance_place(x,y,plant1)
-if(colyo&&!place_meeting(x,y,bullet22))
+plantCollision=instance_place(x,y,plant1)
+if(plantCollision&&!place_meeting(x,y,bullet22))
 {
-if(colyo.image_alpha>=1)
+if(plantCollision.image_alpha>=1)
 {
 spd=0
-colyo.hp-=3
+plantCollision.hp-=3
 }
 if(coly&&coly.image_index==0)
 {

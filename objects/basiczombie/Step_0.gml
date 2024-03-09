@@ -9,47 +9,47 @@ i-=1
 ///speed
 col=c_white
 
+spd=nspd
+
 if(place_meeting(x,y,tiletypewater))
 {
-if(room==endless5)
-{
-	frozen=true
-	alarm[0]=360
-}
+	spd/=1.5
+	if(room==endless5)
+	{
+		frozen=true
+		alarm[0]=360
+	}
 }
 else if(place_meeting(x,y,tiletypestink))
 {
-	spd=nspd/2
+	spd/=2
 	hp-=0.1
 	stats.dps+=0.1
-}
-else
-{
-	spd=nspd
 }
 if(frozen)
 {
 	image_speed=0.5
 	col=c_aqua
-	spd=nspd/2
+	spd/=2
 }
+var previousSpeed=spd
 sprite_index=ogsprite
 hitsprite=brownflash
 coly=instance_place(x,y,plant44)
-colyo=instance_place(x,y,plant1)
-if(colyo&&!place_meeting(x,y,bullet22)&&canTouchPlants)
+plantCollision=instance_place(x,y,plant1)
+if(plantCollision&&!place_meeting(x,y,bullet22)&&canTouchPlants)
 {
-	if(colyo.image_alpha>=1)
+	if(plantCollision.image_alpha>=1)
 	{
 		sprite_index=zeat
 		hitsprite=zeathit
 		spd=0
-		colyo.hp-=0.3
+		plantCollision.hp-=damage
 	}
 	//PUT THE STUFF FOR SPRITE CHANGING HERE BITCH
 	if(coly&&coly.image_index==0)
 	{
-		spd=1
+		spd=previousSpeed
 	}
 }
 if(place_meeting(x,y,zoybeanzombie))
@@ -71,8 +71,8 @@ if(elected)
 }
 if(place_meeting(x,y,zoybeanzombie))
 {
-hp-=0.1
-stats.dps+=0.1
+	hp-=0.1
+	stats.dps+=0.1
 }
 
 if(nutted)

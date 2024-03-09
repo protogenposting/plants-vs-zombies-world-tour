@@ -11,7 +11,7 @@ if(sh<=0 && collision_line(x, y, room_width, y, basiczombie, true, true))
 		shooting=true
 		image_index=0
 		sprite_index=peashot
-		sh=5*(room_speed/sprite_get_speed(sprite_index))
+		sh=5*(room_speed/(sprite_get_speed(sprite_index)*image_speed))
 	}
 }
 if(shooting&&sh<=0)

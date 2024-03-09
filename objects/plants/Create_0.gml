@@ -4,8 +4,9 @@ money=0
 
 plant[0]={
 	object: plant1,
-	cost: 100,
+	cost: 75,
 	recharge:200,
+	plantOnTop:true,
 	desc:"Peashooter fires peas at zombies. Now moves to the right BUT SHOOTS MUCH FASTER",
 	lawn: tilegrass,
 	unlocked:true,
@@ -29,7 +30,7 @@ plant[2]={
 }
 plant[3]={
 	object: plant9,
-	cost: 150,
+	cost: 75,
 	recharge:200,
 	desc:"Ice peas fire frozen peas at zombies. After some time freezes and becomes a wall plant",
 	lawn: tilegrass,

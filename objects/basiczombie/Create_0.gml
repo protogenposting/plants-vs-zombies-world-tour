@@ -35,7 +35,9 @@ variant=choose(0,1)
 
 canTouchPlants=true
 
-if(variant==1)
+damage=1
+
+if(variant==1&&object_index==basiczombie)
 {
 	hp=10
 	spd=2
