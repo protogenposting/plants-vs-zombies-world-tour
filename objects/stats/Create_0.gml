@@ -55,19 +55,19 @@ if(room==quest7)
 	action_set_alarm(120, 1);
 }
 
-moosic=ooftheroof
-hats=hats1
+moosic=mus_lawn_inst
+hats=mus_lawn_drums
 var lay_id = layer_get_id("Compatibility_Colour");
 var bg = layer_background_get_id(lay_id);
 if(layer_background_get_sprite(bg)==tilemud)
 {
-	moosic=moosic2
-	hats=hats2
+	moosic=mus_swamp_inst
+	hats=mus_swamp_drums
 }
 if(layer_background_get_sprite(bg)==tilevolcano)
 {
-	moosic=moosic3
-	hats=hats3
+	moosic=mus_volcano_inst
+	hats=mus_volcano_drums
 	action_set_alarm(3000, 1);
 }
 if(layer_background_get_sprite(bg)==tilesand)
